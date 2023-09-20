@@ -1,0 +1,101 @@
+:root {
+    --main-color1:#FFC72C;
+    --main-color2:#DA291C;
+    --main-color3:#27251F;
+
+    --header-color:#292929;
+    --header-font-color:#FFF;
+
+    --font-color-1:#292929;
+    --font-color-2:#808080;
+
+    --footer-background-color:#292929;
+
+    --footer-font-color-1:#FFFF00;
+    --footer-font-color-2:#FFFFFF;
+    --footer-font-color-3:#808080;
+} 
+
+.main-section {
+    height: 100vh;
+    max-width: 100%;
+}
+
+.main-header {
+    padding: 0 350px;
+    height: 114px;
+    background-color:  var(--header-color);
+    color: var(--header-font-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-logo {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.main-logo > img {
+    width: 80px;
+    height: 69px;
+}
+
+.header-login {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main-title-img {
+    width: 100%;
+    height: calc(100vh - 114px);
+    background-image: url(../img/창녕갈릭버거2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-slider{
+    
+}
+
+.select-order-section{
+    height: 100vh;
+    max-width: 100%;
+    background-color: white;
+}
+
+.select-order-section-tl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 240px;
+
+}
+
+.select-order-section-tl > div > h3 {
+    color: var(--main-color1);
+    font-size: 24px;
+}
+
+.select-order-section-tl > div > h2 {
+    color: var(--font-color-1);
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Select-order-button {
+    width: 600px;
+    height: 100px;
+    background-color: var(--main-color1);
+    color: var(--font-color-1);
+    font-size: 36px;
+    font-weight: 900;
+    
+    border-radius: 10px;
+    border: 5px;
+    border-style: solid;
+    border-color: var(--font-color-1);
+    box-sizing: border-box;
+}
