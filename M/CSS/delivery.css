@@ -34,7 +34,7 @@
 
 .main-logo {
     font-size: 24px;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .main-logo > img {
@@ -66,6 +66,7 @@
 }
 
 .select-order-section-tl{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,12 +75,21 @@
 
 }
 
-.select-order-section-tl > div > h3 {
+.select-order-section-title {
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.select-order-section-title > h3 {
     color: var(--main-color1);
     font-size: 24px;
 }
 
-.select-order-section-tl > div > h2 {
+.select-order-section-title > h2 {
     color: var(--font-color-1);
     font-size: 48px;
     font-weight: 900;
@@ -91,11 +101,207 @@
     background-color: var(--main-color1);
     color: var(--font-color-1);
     font-size: 36px;
-    font-weight: 900;
+    font-weight: bold;
+
+    display: block;
     
     border-radius: 10px;
     border: 5px;
     border-style: solid;
     border-color: var(--font-color-1);
     box-sizing: border-box;
+}
+
+.Select-order-button:first-of-type{
+    margin-bottom: 20px;
+}
+
+.menu-section{
+    height: 100vh;
+    max-width: 100%;
+    background-color: var(--main-color2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-header{
+    padding: 40px 350px 40px 350px;
+    background-color: var(--header-color);
+
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 48px;
+}
+
+.menu-header > img {
+    width: 128px;
+    height: 110px;
+}
+
+.menu-header-menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-header-menu > h2 {
+    color: var(--main-color1);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.menu-header-menu > h2 > span {
+    color: var(--header-font-color);
+}
+
+.menu-select-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-select-button {
+    padding-bottom: 6px;
+    color: var(--header-font-color);
+    font-size: 24px;
+    font-weight: bold;
+
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: var(--header-font-color);
+    box-sizing: border-box;
+}
+
+.menu-select-button:first-of-type {
+    color: var(--main-color1);
+    border-color: var(--main-color1);
+}
+
+.menu-nav {
+    
+}
+
+.menu-ul {
+    padding: 0 350px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-list {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px #27251f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    overflow: hidden;    
+}
+
+.menu-list > img {
+    width: 258px;
+    height: 158px;
+    object-fit: cover;
+}
+
+.menu-list > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--font-color-1);
+}
+
+.menu-list > p {
+    font-size: 12px;
+    color: var(--font-color-2);
+}
+
+.basket-order {
+    padding: 0 350px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backet-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.backet-list > li {
+    box-shadow: 2px 4px 4px #27251f;
+}
+
+.backet-list-img {
+    width: 96px;
+    height: 96px;
+
+    background-image: url(../img/맥크리스피디럭스버거.png);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 4px;
+    border: 4px;
+    border-style: solid;
+    border-color: var(--main-color1);
+    box-sizing: border-box;
+}
+
+.x-button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 100%;
+    border: 4px;
+    border-style: solid;
+    border-color: var(--main-color1);
+    box-sizing: border-box;
+    box-shadow: 2px 4px 4px #27251f;
+}
+
+.more-list {
+    width: 100px;
+    height: 42px;
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.more-list > div {
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color2);
+    border-radius: 100%;
+}
+
+.order-button {
+    width: 290px;
+    height: 100px;
+    background-color: var(--main-color1);
+    color: var(--font-color-1);
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px #27251f;
+
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.payment-section {
+    height: 100vh;
+    max-width: 100%;
 }
