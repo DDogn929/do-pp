@@ -256,6 +256,8 @@
     border-style: solid;
     border-color: var(--main-color1);
     box-sizing: border-box;
+
+    position: relative;
 }
 
 .x-button {
@@ -268,6 +270,10 @@
     border-color: var(--main-color1);
     box-sizing: border-box;
     box-shadow: 2px 4px 4px #27251f;
+
+    position: absolute;
+    right: -24px;
+    top: -24px;
 }
 
 .more-list {
@@ -304,4 +310,400 @@
 .payment-section {
     height: 100vh;
     max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-menu {
+    width: 600px;
+    height: 850px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: var(--footer-background-color);
+}
+
+.login-section {
+    width: 910px;
+    height: 600px;
+    
+    border-radius: 20px;
+    border: 10px;
+    border-style: solid;
+    border-color: var(--main-color1);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.members-login {
+    width: 100%;
+    
+    border-bottom: 9px;
+    border-style: solid;
+    border-color: var(--main-color1);
+
+    display: flex;
+}
+
+.password-login {
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    border-right: 10px;
+    border-style: solid;
+    border-color: var(--main-color1);
+}
+
+.password-login > div > span {
+    color: var(--font-color-1);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.password-login > div > p {
+    width: 400px;
+    height: 45px;
+    margin-bottom: 18px;
+    color: var(--font-color-2);
+    font-size: 18px;
+
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: var(--main-color1);
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+}
+
+.login-button-tl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.login-button {
+    width: 160px;
+    height: 70px;
+
+    color: var(--font-color-1);
+    font-size: 18px;
+    font-weight: 900;
+
+    border-radius: 20px;
+    border: 5px;
+    border-style: solid;
+    border-color: var(--main-color1);
+    box-sizing: border-box;
+}
+
+.yellow-button {
+    background-color: var(--main-color1);
+}
+
+.social-login {
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.social-login > div > span {
+    color: var(--font-color-1);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.social-login-button-tl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+}
+
+.social-login-button {
+    width: 400px;
+    height: 60px;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+
+    border-radius: 5px;
+    box-shadow: 2px 4px 4px #27251f;
+}
+
+.g-red {
+    background-color: #DA291C;
+}
+
+.n-green {
+    background-color: #1EC800;
+}
+
+.k-yellow {
+    background-color: #FFEB00;
+}
+
+.non-members-login {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.non-members-login-button {
+    width: 300px;
+    height: 70px;
+    background-color: var(--main-color1);
+    color: var(--font-color-1);
+    font-size: 28px;
+    font-weight: 900;
+
+    border-radius: 20px;
+}
+
+.store-search-section{
+    width: 600px;
+    height: 600px;
+
+    border: 10px;
+    border-bottom: 0px;
+    border-color: var(--main-color1);
+    border-style: solid;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store-search-section > div {
+    height: 480px;
+    padding: 20px;
+    padding-bottom: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.store-search-section > div > h3 {
+    padding: 40px;
+
+    color: var(--font-color-1);
+    font-size: 28px;
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.store-list > li {
+    width: auto;
+    height: 66px;
+    padding: 0 20px;
+
+    color: var(--font-color-2);
+    font-size: 14px;
+
+    border: 5px;
+    border-style: solid;
+    border-color: var(--main-color1);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.store-list > li > p:first-child {
+    color: var(--font-color-1);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-button{
+    padding: 48px;
+    background-color: var(--main-color1);
+
+    color: var(--font-color-1);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.address-search-section {
+    width: 600px;
+    height: 600px;
+
+    border: 10px;
+    border-bottom: 0px;
+    border-color: var(--main-color1);
+    border-style: solid;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.address-search-section > div {
+    height: 480px;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.address-search-section > div > h3 {
+    padding: 40px;
+
+    color: var(--font-color-1);
+    font-size: 28px;
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-search-bar {
+    width: 560px;
+    height: 60px;
+
+    border: 5px;
+    border-color: var(--main-color1);
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.address-search-section > div > p {
+    color: var(--font-color-1);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.search-ex {
+    padding: 10px 20px;
+    width: 480px;
+
+    color: var(--font-color-2);
+    font-size: 14px;
+    border: 5px;
+    border-color: var(--main-color1);
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.search-ex > p:first-of-type {
+    margin-bottom: 5px;
+
+    color: var(--font-color-1);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.select-menu-section-1 {
+    width: 1220px;
+    height: 797px;
+
+    border: 20px;
+    border-radius: 82px;
+    border-color: var(--main-color1);
+    border-style: solid;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-menu-section-1 > img {
+    width: 523px;
+    height: 523px;
+    
+    object-fit: cover;
+}
+
+.menu-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-name > h3{
+    color: var(--font-color-1);
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.burger-name > p {
+    color: var(--font-color-2);
+    font-size: 18px;
+    /* font-weight: 900; */
+}
+
+.burger-description > p {
+    color: var(--font-color-2);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.burger-ingredients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger-ingredients > p {
+    color: var(--font-color-1);
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: var(--font-color-2);
+    font-size: 14px;
+}
+
+.ingredients-list > li {
+    width: 150px;
+
+    display: flex;
+    justify-content: space-between;
 }
