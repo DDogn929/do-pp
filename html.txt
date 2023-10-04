@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/delivery.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="main-section">
+        <div class="main-header">
+            <a href="#" class="main-logo">
+                <img src="./img/logo.png" alt="main-logo">
+                <span>McDeilvery</span>
+            </a>
+            <a href="#" class="header-login">
+                <p>로그인/회원가입</p>
+            </a>
+        </div>
+
+        <div class="main-title-img">
+            <div class="main-slider">
+                <div class="main-slider-button"></div>
+                <div class="main-slider-button"></div>
+                <div class="main-slider-button"></div>
+                <div class="main-slider-button"></div>
+                <div class="main-slider-button"></div>
+                <div class="main-slider-button"></div>
+                <div class="main-slider-button"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="select-order-section">
+        <div class="select-order-section-tl">
+            <div class="select-order-section-title">
+                <h3>빠르고 간편하게 맥딜리버리!</h3>
+                <h2>주문 방식을 선택하세요</h2>
+            </div>
+            <div>
+                <button class="Select-order-button">주문배달</button>
+                <button class="Select-order-button">방문포장</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+
+        <div class="menu-header">
+            <img src="./img/logo.png" alt="M-logo">
+            <div class="menu-header-menu">
+                <h2>Mcdonald's<span> Menu</span></h2>
+                <ul class="menu-select-list">
+                    <li class="menu-select-button">버거</li>
+                    <li class="menu-select-button">맥모닝</li>
+                    <li class="menu-select-button">사이드 & 디저트</li>
+                    <li class="menu-select-button">맥카페 & 음료</li>
+                    <li class="menu-select-button">해피밀</li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="menu-nav">
+            <ul class="menu-ul">
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="basket-order">
+            <nav>
+                <ul class="backet-list">
+                    <li class="backet-list-img">
+                        <div class="x-button"></div>
+                    </li>
+                    <li class="backet-list-img">
+                        <div class="x-button"></div>
+                    </li>
+                    <li class="backet-list-img">
+                        <div class="x-button"></div>
+                    </li>
+                    <li class="backet-list-img">
+                        <div class="x-button"></div>
+                    </li>
+                    <li class="more-list">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button href="#" class="order-button">
+                <p>주문하기</p>
+                <!-- <img src="#" alt="카트 아이콘"> -->
+            </button>
+        </div>
+    </section>
+
+    <section class="payment-section">
+        <div class="payment-menu">
+            <ul class="payment-list-ul">
+                <li class="payment-list">
+                    <h3>주문배달</h3>
+                    <img src="#" alt="오토바이 아이콘">
+                </li>
+                <li class="payment-list">
+                    <h3>서구 무슨동 1000-0</h3>
+                    <p>[도로명] 무슨대로000번길 00</p>
+                    <div>주소 추가 입력</div>
+                </li>
+                <li class="payment-list">
+                    <h3>요청사항</h3>
+                    <div>요청사항 입력</div>
+                </li>
+                <li class="payment-list">
+                    <h3>결제수단</h3>
+                    <div>신용/체크카드</div>
+                </li>
+                <li class="payment-list">
+                    <h3>쿠폰</h3>
+                    <div>쿠폰번호 입력</div>
+                </li>
+            </ul>
+            
+            <button class="payment-button">
+                <p><span>123456789</span>원</p>
+                <p>결제하기</p>
+                <div class="dollar-icon">$</div>
+            </button>
+        </div>
+        <div class="total-order">
+            <h3>총 주문량 : <span>99</span>개</h3>
+            <ul class="total-order-list">
+                <li>
+                    <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <div>
+                        <p>[세트]맥크리스피™ 디럭스 버거</p>
+                        <span>+ 토핑 추가</span>
+                        <span>- 재료 빼기</span>
+                        <span>음표 변경</span>
+                        <span>사이드 변경</span>
+                        <p><span>12345</span>원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-menu">
+            <div class="footer-menu-list">
+                <ul>
+                    <li>개인정보 처리방침</li>
+                    <li>위치정보 이용약관</li>
+                    <li>사이트맵</li>
+                    <li>임차문의</li>
+                    <li>고객문의</li>
+                    <li>인재채용</li>
+                </ul>
+                
+                <ul>
+                    <li>한국맥도날드(유)</li>
+                    <li>대표이사: 김기원</li>
+                    <li>사업자등록번호: 101-81-26409</li>
+                    <li>전화주문: 1600-5252</li>
+                    <li>COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</li>
+                </ul>
+            </div>
+
+            <ul class="footer-icon-list">
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <section class="login-section">
+        <div class="members-login">
+            <div class="password-login">
+                <div>
+                    <span>회원 로그인</span>
+                    <img src="#" alt="자물쇠">
+                </div>
+                <div>
+                    <p>아이디 입력</p>
+                    <p>비밀번호 입력</p>
+                </div>
+                <div class="login-button-tl">
+                    <button class="login-button">로그인</button>
+                    <button class="login-button yellow-button">회원가입</button>
+                </div>
+            </div>
+            <div class="social-login">
+                <div>
+                    <span>소셜 로그인</span>
+                    <img src="#" alt="열쇠">
+                </div>
+                <div class="social-login-button-tl">
+                    <button class="social-login-button g-red">구글 로그인</button>
+                    <button class="social-login-button n-green">네이버 로그인</button>
+                    <button class="social-login-button k-yellow">카카오톡 로그인</button>
+                </div>
+            </div>
+        </div>
+        <div class="non-members-login">
+            <button class="non-members-login-button">비회원 주문</button>
+        </div>
+    </section>
+
+    <section class="store-search-section">
+        <div>
+            <h3>가까운 매장 위치</h3>
+            <ul class="store-list">
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+            </ul>
+        </div>
+        <button class="search-button">이 주소로 포장지 설정</button>
+    </section>
+
+    <section class="address-search-section">
+        <div>
+            <h3>주소찾기</h3>
+
+            <div class="address-search-bar">
+                <img src="#" alt="돋보기">
+            </div>
+            
+            <p>아래와 같은 형식으로 검색하시면 정확한 주소를 검색할 수 있어요.</p>
+            
+            <div class="search-ex">
+                <p>도로명 + 건물번호</p>
+                <p>예) 판교역로 330+ 제주 첨단로 </p>
+            </div>
+            
+            <div class="search-ex">
+                <p>지역명(동/리) + 건물명(아파트명)</p>
+                <p>예) 분당 주공, 연수동 주공2차</p>
+            </div>
+        </div>
+        <button class="search-button">이 주소로 배달지 설정</button>
+    </section>
+
+    <section class="select-menu-section">
+        <div class="menu-description-tl">
+            <img src="./img/맥크리스피디럭스버거.png" alt="햄버거">
+            <div class="burger-description">
+                <div class="burger-name">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </div>
+                <p>100% 통닭다리살 겉바속촉 케이준 치킨 패티,촉촉한 포테이토 브리오쉬 번, 스페셜 스모키 소스가선사하는 놀랍도록 새로운 맛의 치킨 버거!</p>
+                <div class="burger-ingredients">
+                    <p>단품 기준 영양소</p>
+                    <ul class="ingredients-list">
+                        <li>
+                            <span>중량(g):</span>
+                            <span>269g</span>
+                        </li>
+                        <li>
+                            <span>칼로리:</span>
+                            <span>600kcal</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="allergic-ingredients">
+                    <span>알레르기 성분 유발가능 식재료</span>
+                    <span>(난류,우유,대두,밀,토마토,닭고기,쇠고기)</span>
+                    <p>* 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고 있습니다.</p>
+                </div>
+                <div class="burger-set-select">
+                    <button class="burger-set-select-button">
+                        <p>
+                            <span>단품</span>
+                            <span>5200 원</span>
+                        </p>
+                    </button>
+                    <button class="burger-set-select-button">
+                        <p>
+                            <span>세트로 변경</span>
+                            <span>6500 원</span>
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="select-menu-section-2">
+        <div>
+            <div>
+                <h3>재료 추가<span>Add ingredients</span></h3>
+            </div>
+            <div>
+                <img src="#" alt="left-button">
+                <ul>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>추가 없음</p>
+                        <p>No add</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>패티 추가</p>
+                        <p>Add Patty</p>
+                        <p>+ 1500원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>패티 추가</p>
+                        <p>Add Patty</p>
+                        <p>+ 1500원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>패티 추가</p>
+                        <p>Add Patty</p>
+                        <p>+ 1500원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>패티 추가</p>
+                        <p>Add Patty</p>
+                        <p>+ 1500원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>패티 추가</p>
+                        <p>Add Patty</p>
+                        <p>+ 1500원</p>
+                    </li>
+                </ul>
+                <img src="#" alt="right-button">
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>재료 빼기<span>subtract ingredients</span></h3>
+            </div>
+            <div>
+                <img src="#" alt="left-button">
+                <ul>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>토마토</p>
+                        <p>Thomato</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>토마토</p>
+                        <p>Thomato</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>토마토</p>
+                        <p>Thomato</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>토마토</p>
+                        <p>Thomato</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>토마토</p>
+                        <p>Thomato</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="재료">
+                        <p>토마토</p>
+                        <p>Thomato</p>
+                    </li>
+                </ul>
+                <img src="#" alt="right-button">
+            </div>
+        </div>
+        <button class="backet-button">장바구니에 담기</button>
+    </section>
+
+    <section class="select-menu-section-3">
+        <div>
+            <div>
+                <h3>음료 변경<span>Drink change</span></h3>
+            </div>
+            <div>
+                <img src="#" alt="left-button">
+                <ul>
+                    <li>
+                        <img src="#" alt="음료">
+                        <p>콜라 M</p>
+                        <p>Cola M</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="음료">
+                        <p>사이다 M</p>
+                        <p>Cider M</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="음료">
+                        <p>사이다 M</p>
+                        <p>Cider M</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="음료">
+                        <p>사이다 M</p>
+                        <p>Cider M</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="음료">
+                        <p>사이다 M</p>
+                        <p>Cider M</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="음료">
+                        <p>사이다 M</p>
+                        <p>Cider M</p>
+                        <p>+ 0원</p>
+                    </li>
+                </ul>
+                <img src="#" alt="right-button">
+            </div>
+        </div>
+        <div>
+            <div>
+                <h3>사이드 변경<span>Side change</span></h3>
+            </div>
+            <div>
+                <img src="#" alt="left-button">
+                <ul>
+                    <li>
+                        <img src="#" alt="사이드">
+                        <p>후렌치 후라이 M</p>
+                        <p>French Fries M</p>
+                        <p>+ 0원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="사이드">
+                        <p>후렌치 후라이 L</p>
+                        <p>French Fries L</p>
+                        <p>+ 1000원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="사이드">
+                        <p>후렌치 후라이 L</p>
+                        <p>French Fries L</p>
+                        <p>+ 1000원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="사이드">
+                        <p>후렌치 후라이 L</p>
+                        <p>French Fries L</p>
+                        <p>+ 1000원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="사이드">
+                        <p>후렌치 후라이 L</p>
+                        <p>French Fries L</p>
+                        <p>+ 1000원</p>
+                    </li>
+                    <li>
+                        <img src="#" alt="사이드">
+                        <p>후렌치 후라이 L</p>
+                        <p>French Fries L</p>
+                        <p>+ 1000원</p>
+                    </li>
+                </ul>
+                <img src="#" alt="right-button">
+            </div>
+        </div>
+        <button class="backet-button">장바구니에 담기</button>
+    </section>
+</body>
+</html>

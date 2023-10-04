@@ -8,8 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <section class="main-section">
+    <header>
         <div class="main-header">
             <a href="#" class="main-logo">
                 <img src="./img/logo.png" alt="main-logo">
@@ -19,6 +18,9 @@
                 <p>로그인/회원가입</p>
             </a>
         </div>
+    </header>
+    
+    <section class="main-section">
 
         <div class="main-title-img">
             <div class="main-slider">
@@ -40,25 +42,31 @@
                 <h2>주문 방식을 선택하세요</h2>
             </div>
             <div>
-                <button class="Select-order-button">주문배달</button>
-                <button class="Select-order-button">방문포장</button>
+                <button class="Select-order-button">주문배달
+                    <img src="./img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘">
+                </button>
+                <button class="Select-order-button">방문포장
+                    <img src="./img/fa6-solid_person-walking.svg" alt="걷는 사람 아이콘">
+                </button>
             </div>
         </div>
     </section>
 
     <section class="menu-section">
 
-        <div class="menu-header">
-            <img src="./img/logo.png" alt="M-logo">
-            <div class="menu-header-menu">
-                <h2>Mcdonald's<span> Menu</span></h2>
-                <ul class="menu-select-list">
-                    <li class="menu-select-button">버거</li>
-                    <li class="menu-select-button">맥모닝</li>
-                    <li class="menu-select-button">사이드 & 디저트</li>
-                    <li class="menu-select-button">맥카페 & 음료</li>
-                    <li class="menu-select-button">해피밀</li>
-                </ul>
+        <div class="menu-header-tl">
+            <div class="menu-header">
+                <img src="./img/logo.png" alt="M-logo">
+                <div class="menu-header-menu">
+                    <h2>Mcdonald's<span> Menu</span></h2>
+                    <ul class="menu-select-list">
+                        <li class="menu-select-button menu-select-button-action">버거</li>
+                        <li class="menu-select-button">맥모닝</li>
+                        <li class="menu-select-button">사이드 & 디저트</li>
+                        <li class="menu-select-button">맥카페 & 음료</li>
+                        <li class="menu-select-button">해피밀</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -132,7 +140,7 @@
             
             <button href="#" class="order-button">
                 <p>주문하기</p>
-                <!-- <img src="#" alt="카트 아이콘"> -->
+                <img src="./img/ph_shopping-cart-fill.svg" alt="카트 아이콘">
             </button>
         </div>
     </section>
@@ -141,8 +149,9 @@
         <div class="payment-menu">
             <ul class="payment-list-ul">
                 <li class="payment-list">
-                    <h3>주문배달</h3>
-                    <img src="#" alt="오토바이 아이콘">
+                    <h3>주문배달
+                        <img src="./img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘">
+                    </h3>
                 </li>
                 <li class="payment-list">
                     <h3>서구 무슨동 1000-0</h3>
@@ -171,17 +180,19 @@
         </div>
         <div class="total-order">
             <h3>총 주문량 : <span>99</span>개</h3>
-            <ul>
+            <ul class="total-order-list">
                 <li>
                     <img src="./img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
-                    <div>
-                        <p>[세트]맥크리스피™ 디럭스 버거</p>
-                        <span>+ 토핑 추가</span>
-                        <span>- 재료 빼기</span>
-                        <span>음표 변경</span>
-                        <span>사이드 변경</span>
-                        <p><span>12345</span>원</p>
-                    </div>
+                    <ul class="total-order-inner-list">
+                        <li>[세트]맥크리스피™ 디럭스 버거</li>
+                        <li>
+                            <span class="total-order-select">+ 토핑 추가</span>
+                            <span class="total-order-select">- 재료 빼기</span>
+                            <span class="total-order-select">음표 변경</span>
+                            <span class="total-order-select">사이드 변경</span>
+                        </li>
+                        <li><span>12345</span>원</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -190,7 +201,7 @@
     <footer>
         <div class="footer-menu">
             <div class="footer-menu-list">
-                <ul>
+                <ul class="footer-list-1">
                     <li>개인정보 처리방침</li>
                     <li>위치정보 이용약관</li>
                     <li>사이트맵</li>
@@ -199,7 +210,7 @@
                     <li>인재채용</li>
                 </ul>
                 
-                <ul>
+                <ul class="footer-list-2">
                     <li>한국맥도날드(유)</li>
                     <li>대표이사: 김기원</li>
                     <li>사업자등록번호: 101-81-26409</li>
@@ -210,16 +221,16 @@
 
             <ul class="footer-icon-list">
                 <li>
-                    <a href="#"></a>
+                    <img src="./img/ri_facebook-fill.svg" alt="페이스북">
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <img src="./img/mdi_instagram.svg" alt="인스타">
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <img src="./img/mdi_youtube.svg" alt="유투브">
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <img src="./img/ri_twitter-x-fill.svg" alt="트위터">
                 </li>
             </ul>
         </div>
@@ -310,41 +321,47 @@
         <button class="search-button">이 주소로 배달지 설정</button>
     </section>
 
-    <section class="select-menu-section-1">
-        <img src="./img/맥크리스피디럭스버거.png" alt="햄버거">
-        <div class="burger-description">
-            <div class="burger-name">
-                <h3>맥크리스피™ 디럭스 버거</h3>
-                <p>McCrispy™ Deluxe Burger</p>
-            </div>
-            <p>100% 통닭다리살 겉바속촉 케이준 치킨 패티,촉촉한 포테이토 브리오쉬 번, 스페셜 스모키 소스가선사하는 놀랍도록 새로운 맛의 치킨 버거!</p>
-            <div class="burger-ingredients">
-                <p>단품 기준 영양소</p>
-                <ul class="ingredients-list">
-                    <li>
-                        <span>중량(g):</span>
-                        <span>269g</span>
-                    </li>
-                    <li>
-                        <span>칼로리:</span>
-                        <span>600kcal</span>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <span>알레르기 성분 유발가능 식재료</span>
-                <span>(난류,우유,대두,밀,토마토,닭고기,쇠고기)</span>
-                <p>* 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고 있습니다.</p>
-            </div>
-            <div>
-                <button>
-                    <span>단품</span>
-                    <span>5200 원</span>
-                </button>
-                <button>
-                    <span>세트로 변경</span>
-                    <span>6500 원</span>
-                </button>
+    <section class="select-menu-section">
+        <div class="menu-description-tl">
+            <img src="./img/맥크리스피디럭스버거.png" alt="햄버거">
+            <div class="burger-description">
+                <div class="burger-name">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </div>
+                <p>100% 통닭다리살 겉바속촉 케이준 치킨 패티,촉촉한 포테이토 브리오쉬 번, 스페셜 스모키 소스가선사하는 놀랍도록 새로운 맛의 치킨 버거!</p>
+                <div class="burger-ingredients">
+                    <p>단품 기준 영양소</p>
+                    <ul class="ingredients-list">
+                        <li>
+                            <span>중량(g):</span>
+                            <span>269g</span>
+                        </li>
+                        <li>
+                            <span>칼로리:</span>
+                            <span>600kcal</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="allergic-ingredients">
+                    <span>알레르기 성분 유발가능 식재료</span>
+                    <span>(난류,우유,대두,밀,토마토,닭고기,쇠고기)</span>
+                    <p>* 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고 있습니다.</p>
+                </div>
+                <div class="burger-set-select">
+                    <button class="burger-set-select-button">
+                        <p>
+                            <span>단품</span>
+                            <span>5200 원</span>
+                        </p>
+                    </button>
+                    <button class="burger-set-select-button">
+                        <p>
+                            <span>세트로 변경</span>
+                            <span>6500 원</span>
+                        </p>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
