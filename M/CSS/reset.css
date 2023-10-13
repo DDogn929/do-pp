@@ -58,3 +58,8 @@ button{
 	overflow:visible;
 	cursor:pointer;
 }
+
+input {
+	border-style: solid;
+	border: 0;
+}
