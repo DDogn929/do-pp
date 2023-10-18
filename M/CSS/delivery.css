@@ -1107,14 +1107,119 @@ footer {
     position: absolute;
     top: -20px;
     right: -20px;
-/* 
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    background-color: transparent;
+}
 
-    border: 8px;
-    border-radius: 50%;
-    border-color: var(--main-color2);
-    border-style: solid;
-    box-sizing: border-box; */
+.select-menu-section-2{
+    
+}
+
+.select-menu-section-2-tl{
+    position: relative;
+
+    width: 1220px;
+    height: 797px;
+
+    padding: 60px 61px 33px 61px;
+
+    border-radius: 82px;
+    border: 20px solid var(--main-color1);
+    box-sizing: border-box;
+    background: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backspace-button {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    background-color: transparent;
+}
+
+.option-select{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.option-select > h3 {
+    width: 100%;
+    padding-bottom: 18px;
+
+    color: var(--font-color-1);
+    font-size: 24px;
+    font-weight: 700;
+
+    border-bottom: 2px solid var(--main-color1);
+    box-sizing: border-box;
+}
+
+.option-select > h3 > span {
+    color: var(--font-color-2);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.option-select-list {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option-select-list > ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+}
+
+.option-select-list-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--font-color-1);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.option-select-list-button > img {
+    display: block;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 80px;
+    border: 5px solid var(--main-color1);
+    box-sizing: border-box;
+}
+
+.option-select-list-button > p:nth-of-type(2) {
+    color: var(--font-color-2);
+    font-weight: 500;
+}
+
+.backet-button {
+    width: 428px;
+    height: 74px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    border-radius: 10px;
+    border: 5px solid var(--main-color1);
+
+    color: var(--font-color-1);
+    font-size: 32px;
+    font-weight: 900;
 }
