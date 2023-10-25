@@ -41,7 +41,7 @@
                 <h3>빠르고 간편하게 맥딜리버리!</h3>
                 <h2>주문 방식을 선택하세요</h2>
             </div>
-            <div>
+            <div class="Select-order-button-tl">
                 <button class="Select-order-button">주문배달
                     <img src="img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘">
                 </button>
@@ -71,7 +71,18 @@
         </div>
 
         <nav class="menu-nav">
+            <p class="heightProtect">브라우저를 최대화 해주세요</p>
             <ul class="menu-ul">
+                <li class="menu-list">
+                    <img src="img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
+                <li class="menu-list">
+                    <img src="img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                    <h3>맥크리스피™ 디럭스 버거</h3>
+                    <p>McCrispy™ Deluxe Burger</p>
+                </li>
                 <li class="menu-list">
                     <img src="img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
                     <h3>맥크리스피™ 디럭스 버거</h3>
@@ -148,55 +159,72 @@
     </section>
 
     <section class="payment-section">
-        <div class="payment-menu">
-            <ul class="payment-list-ul">
-                <li class="payment-list">
-                    <h3>주문배달
-                        <img src="img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘">
-                    </h3>
-                </li>
-                <li class="payment-list">
-                    <h3>서구 무슨동 1000-0</h3>
-                    <p>[도로명] 무슨대로000번길 00</p>
-                    <input type="text" name="tel" placeholder="주소 추가 입력" class="payment-list-input">
-                </li>
-                <li class="payment-list">
-                    <h3>요청사항</h3>
-                    <input type="text" name="tel" placeholder="요청사항 입력" class="payment-list-input">
-                </li>
-                <li class="payment-list">
-                    <h3>결제수단</h3>
-                    <div class="payment-list-input">신용/체크카드</div>
-                </li>
-                <li class="payment-list">
-                    <h3>쿠폰</h3>
-                    <input type="text" name="tel" placeholder="쿠폰번호 입력" class="payment-list-input">
-                </li>
-            </ul>
-            
-            <button class="payment-button">
-                <p><span>123456789</span>원</p>
-                <p>결제하기</p>
-                <div class="dollar-icon">$</div>
-            </button>
-        </div>
-        <div class="total-order">
-            <h3>총 주문량 : <span>99</span>개</h3>
-            <ul class="total-order-list">
-                <li>
-                    <img src="img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
-                    <ul class="total-order-inner-list">
-                        <li>[세트]맥크리스피™ 디럭스 버거</li>
+        <div class="section-container">
+            <div class="payment-menu">
+                <ul class="payment-list-ul">
+                    <li class="payment-list">
+                        <h3>주문배달
+                            <img src="img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘">
+                        </h3>
+                    </li>
+                    <li class="payment-list">
+                        <h3>서구 무슨동 1000-0</h3>
+                        <p>[도로명] 무슨대로000번길 00</p>
+                        <input type="text" name="tel" placeholder="주소 추가 입력" class="payment-list-input">
+                    </li>
+                    <li class="payment-list">
+                        <h3>요청사항</h3>
+                        <input type="text" name="tel" placeholder="요청사항 입력" class="payment-list-input">
+                    </li>
+                    <li class="payment-list">
+                        <h3>결제수단</h3>
+                        <div class="payment-list-input">신용/체크카드</div>
+                    </li>
+                    <li class="payment-list">
+                        <h3>쿠폰</h3>
+                        <input type="text" name="tel" placeholder="쿠폰번호 입력" class="payment-list-input">
+                    </li>
+                </ul>
+                
+                <button class="payment-button">
+                    <p><span>123456789</span>원</p>
+                    <p>결제하기</p>
+                    <div class="dollar-icon">$</div>
+                </button>
+            </div>
+            <div class="total-order-tl">
+                <div class="total-order">
+                    <h3>총 주문량 : <span>99</span>개</h3>
+                    <ul class="total-order-list">
                         <li>
-                            <span class="total-order-select">+ 토핑 추가</span>
-                            <span class="total-order-select">- 재료 빼기</span>
-                            <span class="total-order-select">음표 변경</span>
-                            <span class="total-order-select">사이드 변경</span>
+                            <img src="img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                            <ul class="total-order-inner-list">
+                                <li>[세트]맥크리스피™ 디럭스 버거</li>
+                                <li>
+                                    <span class="total-order-select">+ 토핑 추가</span>
+                                    <span class="total-order-select">- 재료 빼기</span>
+                                    <span class="total-order-select">음표 변경</span>
+                                    <span class="total-order-select">사이드 변경</span>
+                                </li>
+                                <li><span>12345</span>원</li>
+                            </ul>
                         </li>
-                        <li><span>12345</span>원</li>
+                        <li>
+                            <img src="img/맥크리스피디럭스버거.png" alt="맥크리스피디럭스버거">
+                            <ul class="total-order-inner-list">
+                                <li>[세트]맥크리스피™ 디럭스 버거</li>
+                                <li>
+                                    <span class="total-order-select">+ 토핑 추가</span>
+                                    <span class="total-order-select">- 재료 빼기</span>
+                                    <span class="total-order-select">음표 변경</span>
+                                    <span class="total-order-select">사이드 변경</span>
+                                </li>
+                                <li><span>12345</span>원</li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -275,6 +303,18 @@
         <div>
             <h3>가까운 매장 위치<img src="img/fluent_search-12-filled.svg" alt="검색 아이콘"></h3>
             <ul class="store-list">
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
+                <li>
+                    <p>인천광역시 서구 경명대로 265 (경서동)</p>
+                    <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>
+                </li>
                 <li>
                     <p>인천광역시 서구 경명대로 265 (경서동)</p>
                     <p>인천광역시 서구 경서동 374-10 인천 서구 견인보관소</p>

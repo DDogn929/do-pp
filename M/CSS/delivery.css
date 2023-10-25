@@ -17,7 +17,7 @@
 } 
 
 .main-section {
-    height: 100vh;
+    height: calc(100vh - 114px);
     max-width: 100%;
 }
 
@@ -73,12 +73,11 @@ header {
 }
 
 .select-order-section-tl{
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 240px;
+    gap: 72px;
 }
 
 .select-order-section-title {
@@ -102,8 +101,11 @@ header {
     font-weight: bolder;
 }
 
-.Select-order-button {
+.Select-order-button-tl{
+}
 
+.Select-order-button {
+    margin: 0 auto;
     width: 600px;
     height: 100px;
     background-color: var(--main-color1);
@@ -128,13 +130,12 @@ header {
 }
 
 .menu-section{
+    position: relative;
+    margin: 0 auto;
+
     height: 100vh;
     max-width: 100%;
     background-color: var(--main-color2);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .menu-header-tl{
@@ -144,7 +145,7 @@ header {
 .menu-header{
     max-width: 1200px;
     margin:  0 auto;
-    padding: 40px 32px 40px 32px;
+    padding: 12px 32px;
 
     display: flex;
     /* justify-content: space-between; */
@@ -204,15 +205,17 @@ header {
     max-width: 1200px;
 
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 20px 0;
     
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 .menu-list {
-    margin-bottom: 20px;
+    width: 194px;
+    height: 100%;
+
     padding: 15px;
     background-color: white;
     border-radius: 10px;
@@ -222,20 +225,19 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 
     overflow: hidden;    
 }
 
 .menu-list > img {
-    width: 258px;
-    height: 158px;
+    width: 100%;
     object-fit: cover;
 }
 
 .menu-list > h3 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 900;
     color: var(--font-color-1);
 }
 
@@ -254,9 +256,11 @@ header {
 }
 
 .shopping-cart-tl {
-    position: relative;
+    position: absolute;
     display: flex;
 
+    bottom: 5px;
+    
     /* width:100%; */
 }
 
@@ -364,26 +368,35 @@ header {
     height: 100vh;
     max-width: 100%;
 
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 20px; */
+}
+
+.section-container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 16px;
+    height: 100%;
 }
 
 .payment-menu {
     width: 600px;
-    height: 850px;
+    padding: 32px 0;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .payment-list-ul {
     padding:  20px;
-
     border: 20px;
+
     border-style: solid;
     border-color: var(--main-color1);
     box-sizing: border-box;
@@ -391,6 +404,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    max-height: 100%;
+    overflow-y: scroll;
 }
 
 .payment-list {
@@ -470,19 +486,20 @@ header {
     align-items: center;
 }
 
-.total-order{
-    width: 600px;
-    height: 850px;
-    padding: 20px;
+.total-order-tl{
+    padding: 32px 0;
+}
 
+.total-order{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
     border: 20px;
     border-style: solid;
     border-color: var(--main-color1);
-    box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    box-sizing: border-box;
 }
 
 .total-order > h3 {
@@ -499,9 +516,17 @@ header {
 }
 
 .total-order-list{
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: scroll;
+
+    /* background-color: var(--main-color1);
+    border: var(--main-color1) solid 2px; */
 }
 
 .total-order-list > li {
@@ -735,6 +760,7 @@ footer {
 
 .k-yellow {
     background-color: #FFEB00;
+    color: var(--main-color3);
 }
 
 .non-members-login {
@@ -801,6 +827,8 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .store-list > li {
@@ -1226,4 +1254,38 @@ footer {
     color: var(--font-color-1);
     font-size: 32px;
     font-weight: 900;
+}
+
+@media screen and (max-width:744px) {
+
+
+
+}
+
+@media screen and (max-width:375px) {
+
+
+
+}
+
+
+.heightProtect {
+    display: none;
+}
+
+@media screen and (max-height:800px) and (min-width:1200px){
+    
+    
+    .heightProtect {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        display: block;
+        color: white;
+        font-size: 72px;
+    }
+    
+    .menu-ul {
+        display: none
+    }
 }
