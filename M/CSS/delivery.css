@@ -17,7 +17,7 @@
 } 
 
 .main-section {
-    height: calc(100vh - 114px);
+    height: calc(100vh - 79.5px);
     max-width: 100%;
 }
 
@@ -344,22 +344,11 @@ header {
     box-shadow: 2px 4px 4px #27251f;
 }
 
-.x-button {
+.backet-list-img > img {
     position: absolute;
-
     top: -24px;
     right: -24px;
-
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    background-image: url("../img/octicon_x-circle-16.svg");
-    background-size: cover;
     border-radius: 50%;
-    /* border: 4px;
-    border-style: solid;
-    border-color: var(--main-color1);
-    box-sizing: border-box; */
     box-shadow: 2px 4px 4px #27251f;
 }
 
@@ -1298,14 +1287,57 @@ footer {
 }
 
 @media screen and (max-width:744px) {
-
-
-
+    .main-slider-button {
+        box-shadow: none;
+    }
 }
 
 @media screen and (max-width:375px) {
 
+    .main-header{
+        justify-content: center;
+        height: 79.5px;
+    }
 
+    .main-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .main-logo > img {
+        width: 40px;
+        height: 34.5px;
+    }
+
+    .header-login {
+        display: none;
+    }
+
+    .main-title-img {
+        height: calc(100vh - 379.5px);
+        background-image: url(../img/맥윙2.jpg);
+    }
+
+    .main-slider{
+
+    }
+
+    .main-slider-button {
+        width: 10px;
+        height: 10px;
+        border: 2px;
+    }
+
+    .select-button {
+        width: 30px;
+        height: 30px;
+        border: 3px;
+    }
 
 }
 
@@ -1327,6 +1359,7 @@ footer {
     }
     
     .menu-ul {
-        display: none
+        display: none;
     }
+
 }
