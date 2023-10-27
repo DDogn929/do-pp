@@ -55,6 +55,8 @@ header {
 }
 
 .main-title-img {
+    position: relative;
+
     width: 100%;
     height: calc(100vh - 114px);
     background-image: url(../img/창녕갈릭버거2.jpg);
@@ -63,7 +65,31 @@ header {
 }
 
 .main-slider{
-    
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.main-slider-button {
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color3);
+    border-radius: 50%;
+    border: 5px white solid;
+    box-shadow: 2px 4px 4px #27251f;
+}
+
+.select-button {
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-color1);
+    border: 10px var(--main-color3) solid;
 }
 
 .select-order-section{
@@ -279,15 +305,24 @@ header {
     background-size: cover;
 }
 
+.backet-list-tl {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 21px;
+    box-sizing: border-box;
+}
+
 .backet-list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-}
-
-.backet-list > li {
-    box-shadow: 2px 4px 4px #27251f;
 }
 
 .backet-list-img {
@@ -305,6 +340,8 @@ header {
     border-style: solid;
     border-color: var(--main-color1);
     box-sizing: border-box;
+
+    box-shadow: 2px 4px 4px #27251f;
 }
 
 .x-button {
@@ -316,11 +353,13 @@ header {
     width: 40px;
     height: 40px;
     background-color: white;
+    background-image: url("../img/octicon_x-circle-16.svg");
+    background-size: cover;
     border-radius: 50%;
-    border: 4px;
+    /* border: 4px;
     border-style: solid;
     border-color: var(--main-color1);
-    box-sizing: border-box;
+    box-sizing: border-box; */
     box-shadow: 2px 4px 4px #27251f;
 }
 
@@ -334,6 +373,8 @@ header {
     align-items: center;
     justify-content: center;
     gap: 12px;
+
+    box-shadow: 2px 4px 4px #27251f;
 }
 
 .more-list > div {
@@ -344,9 +385,9 @@ header {
 }
 
 .order-button {
-    position: absolute;
+    /* position: absolute;
     top: 10%;
-    right: 5%;
+    right: 5%; */
 
     width: 290px;
     height: 100px;
