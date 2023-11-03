@@ -45,22 +45,11 @@ header {
     font-weight: bold;
 }
 
-.menu-header-m-tl {
-    margin: 0 auto;
-    background-color: var(--main-color3);
-}
-
-.menu-header-m {
-    height: 79.5px;
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .header-button{
     position: relative;
     width: 60px;
     height: 60px;
+    display: none;
 }
 
 .yellow-cart{
@@ -195,6 +184,7 @@ header {
 .menu-section{
     position: relative;
     margin: 0 auto;
+    padding: 79.5px 0;
 
     height: 100vh;
     max-width: 100%;
@@ -288,9 +278,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 12px;
-
-    overflow: hidden;    
+    gap: 12px; 
 }
 
 .menu-list > img {
@@ -298,15 +286,23 @@ header {
     object-fit: cover;
 }
 
-.menu-list > h3 {
+.menu-list-txt {
+
+}
+
+.menu-list-txt > h3 {
     font-size: 16px;
     font-weight: 900;
     color: var(--font-color-1);
 }
 
-.menu-list > p {
+.menu-list-txt > p:first-of-type {
     font-size: 12px;
     color: var(--font-color-2);
+}
+
+.menu-list-m {
+    display: none;
 }
 
 .basket-order {
@@ -1333,10 +1329,13 @@ footer {
 
 
     .main-header {
-        padding: 0 32px;
+        padding: 0 10px;
         max-width: 375px;
         height: 79.5px;
-        justify-content: center;
+    }
+
+    .main-button {
+        display: block;
     }
 
     .main-logo > img {
@@ -1350,6 +1349,10 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .header-button {
+        display: block;
     }
 
     .header-login {
@@ -1446,7 +1449,7 @@ footer {
     }
 
     .menu-header-menu {
-        padding: 10px;
+        padding: 10px 0;
         gap: 10px;
         height: 110px;
     }
@@ -1465,10 +1468,9 @@ footer {
     }
 
     .menu-select-list {
-        width: 900px;
-        justify-content: left;
+        width: 750px;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
     }
 
     .menu-select-button {
@@ -1486,6 +1488,47 @@ footer {
         background-color: var(--header-color);
         color: var(--header-font-color);
         border: none;
+    }
+
+    .menu-ul {
+        max-width: 375px;
+        height: calc(100vh - 79.5px - 130px - 105px );
+
+        padding: 10px 0;
+        
+
+        overflow-x: scroll;
+    }
+
+    .menu-list{
+        width: 100%;
+        height: 80px;
+        padding: 10px;
+        border-radius: 0px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-list > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-list-txt > p:first-of-type {
+        display: none;
+    }
+
+    .menu-list-txt{
+        
+    }
+
+    .menu-list-m {
+        display: block;
+    }
+
+    .basket-order {
+        display: none;
     }
 
 }
