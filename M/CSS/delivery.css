@@ -625,6 +625,7 @@ header {
 }
 
 .total-order-inner-list > li:last-of-type {
+    font-weight: 900;
     text-align: right;
 }
 
@@ -1572,9 +1573,9 @@ footer {
 
     .payment-menu {
         height: 100vh;
-        padding: 0;
+        padding-bottom: 0;
         gap: 0;
-        background-color: var(--main-color3);
+        background-color: #FFF;
     }
 
     .payment-list-ul {
@@ -1617,6 +1618,25 @@ footer {
     .total-order > h3 {
         display: flex;
         justify-content: space-between;
+    }
+
+    .total-order-inner-list > li:first-of-type {
+        width: 212px;
+        height: 20px;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .total-order-inner-list > li:nth-of-type(2) {
+        font-size: 14px;
+        /* display: flex;
+        justify-content: space-between; */
+    }
+
+    .total-order-inner-list > li:last-of-type {
+        font-size: 16px;
     }
 }
 
