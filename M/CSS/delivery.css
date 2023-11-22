@@ -1268,12 +1268,13 @@ footer {
 .option-slide-container {
     width: 100%;
     margin: 0 16px;
+    overflow: hidden;
 }
 
 .option-slide-container > ul {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
-    justify-content: space-between;
+    gap: 16px;
 }
 
 .option-select-list-button {
@@ -1861,10 +1862,6 @@ footer {
 
         justify-content: center;
         gap: 50px;
-    }
-
-    .option-slide-container {
-        overflow: hidden;
     }
 
     .backet-button {

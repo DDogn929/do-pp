@@ -17,3 +17,8 @@
 
 갭 = 갭영역 / 갭의갯수
 
+목표: Ul에 해당 값을 넣어 버튼 클릭을 이용해 index값을 변경 할 수 있게 만들자!
+
+transform: translateX(calc((-132px + -16px)*0));
+
+
