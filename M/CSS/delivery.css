@@ -87,9 +87,33 @@ header {
 .main-title-img {
     width: 100%;
     height: calc(100vh - 114px);
-    background-image: url(../img/창녕갈릭버거2.jpg);
-    background-position: center;
-    background-size: cover;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.main-content > img {
+
+}
+
+.slider {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.l {
+    left: 0;
+}
+
+.r {
+    right: 0;
 }
 
 .main-slider{

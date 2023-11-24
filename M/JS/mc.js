@@ -1,11 +1,35 @@
 const optionSelectList = document.getElementsByClassName("option-select-list")
 
+for (let i = 0; i <optionSelectList.length; i++) {
+    const element = optionSelectList[i];
 
-const leftButton = optionSelectList[0].querySelector('.option-left-button')
-const rightButton = optionSelectList[0].querySelector('.option-right-button')
-const slider = optionSelectList[0].querySelector('ul')
+        
+    const leftButton = element.querySelector('.option-left-button')
+    const rightButton = element.querySelector('.option-right-button')
+    const slider = element.querySelector('ul')
 
-.addEventListener("click",)
+    let index = 0
+
+    leftButton.addEventListener("click",()=>{
+        if(index > 0) {
+        index--
+            slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`;
+        }
+
+        // index에 따라 translate 적용해주는 구문 넣기
+    })
+
+    rightButton.addEventListener("click",()=>{
+        if(index < slider.childElementCount -1) {
+            index++
+            slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`;
+        }
+    })
+    
+}
+
+
+
 
 
 
