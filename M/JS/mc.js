@@ -1,45 +1,39 @@
-const optionSelectList = document.getElementsByClassName('option-select-list')
+const optionSelectList = document.getElementsByClassName("option-select-list");
 
-const leftButton = optionSelectList[0].querySelector('.option-left-button')
-const rightButton = optionSelectList[0].querySelector('.option-right-button')
-const slider = optionSelectList[0].querySelector('ul')
-const optionSelectButton =  optionSelectList[0].querySelector('.option-select-list-button')
+for (let i = 0; i <optionSelectList.length; i++) {
+    const element = optionSelectList[i];
 
-let index = 0;
+        
+    const leftButton = element.querySelector('.option-left-button');
+    const rightButton = element.querySelector('.option-right-button');
+    const slider = element.querySelector('ul');
 
-console.log()
+    let index = 0;
 
-leftButton.addEventListener('click',()=>{
+    leftButton.addEventListener("click",()=>{
+        if(index > 0) {
+        index--
+            slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`;
+        }
 
-    index--
+        // index에 따라 translate 적용해주는 구문 넣기
+    })
+
+    rightButton.addEventListener("click",()=>{
+        if(index < slider.childElementCount -1) {
+            index++
+            slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`;
+        }
+    })
     
-    if(index >= 0) {
-        slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`
-    }
-    
-    // alert('이것은 왼쪽버튼입니다');
-})
-
-rightButton.addEventListener('click',()=>{
-
-    index++
-
-    if(index < slider.childElementCount) {
-        slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`
-    }
-
-    // alert('이것은 오른쪽버튼입니다');
-})
-
-// for (let i = 0; i < optionSelectButton.length; i++) {
-    
-// }
+}
 
 
-// transform: translateX(calc((-132px + -16px)*index));
+
+
+
 
 // const ul = document.getElementsByClassName("option-slide-container")
 // const optionList = document.getElementsByClassName("option-select-list-button")
 // const leftButton = document.getElementsByClassName("option-left-button")
 // const rightButton = document.getElementsByClassName("option-right-button")
-

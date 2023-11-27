@@ -20,6 +20,7 @@
     height: calc(100vh - 114px);
     max-width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 header {
@@ -87,32 +88,43 @@ header {
 .main-title-img {
     width: 100%;
     height: calc(100vh - 114px);
-    position: relative;
     display: flex;
+    position: relative;
     overflow: hidden;
 }
 
+.main-title-img > ul {
+    display: flex;
+}
+
 .main-content {
+    padding: 100px 0;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .main-content > img {
-
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
 }
 
-.slider {
+.slider-l {
     position: absolute;
     width: 100px;
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.l {
     left: 0;
 }
 
-.r {
+.slider-r {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
     right: 0;
 }
 
@@ -357,12 +369,12 @@ header {
 .cart-bottom {
     margin-top: 139px;
 
-    width: 800px;
+    min-width: 800px;
     height: 22px;
     background-color: var(--main-color1);
     
-    background-image: url('img/cart-bottom.png');
-    background-size: cover;
+    /* background-image: url('../img/cart-bottom.png');
+    background-size: cover; */
 }
 
 .backet-list-tl {
@@ -1289,6 +1301,12 @@ footer {
     align-items: center;
 }
 
+.option-button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .option-slide-container {
     width: 100%;
     margin: 0 16px;
@@ -1767,7 +1785,7 @@ footer {
 
     .login-section {
         width: 100%;
-        height: calc(100vh - 80px -);
+        height: calc(100vh - 80px);
         border-radius: 5px;
     }
 
