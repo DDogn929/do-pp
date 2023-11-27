@@ -1,11 +1,10 @@
 const sliderTl = document.querySelector('.main-title-img');
+const sliderButton =document.querySelectorAll('.main-slider-button');
 
 const slider = sliderTl.querySelector('.main-title-img > ul')
 const mainContent = sliderTl.querySelectorAll('.main-content');
 const leftButton = sliderTl.querySelector('.slider-l');
 const rightButton = sliderTl.querySelector('.slider-r');
-
-const sliderButton =sliderTl.querySelectorAll('.main-slider-button')
 
 let index = 0;
 

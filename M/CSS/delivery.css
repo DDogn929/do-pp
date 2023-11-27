@@ -137,12 +137,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
 }
 
 .main-slider-button{
     width: 30px;
     height: 30px;
+    margin: 25px;
     background-color: var(--main-color3);
     border: #FFF 5px solid;
     border-radius: 50%;
@@ -1482,9 +1482,10 @@ footer {
     .main-title-img {
         width: 100%;
         height: calc(100vh - 80px - 220px - 60px);
-        background-image: url(../img/맥윙2.jpg);
-        background-position: center;
-        background-size: cover;
+    }
+
+    .main-content {
+        padding: 0;
     }
 
     .main-slider{
