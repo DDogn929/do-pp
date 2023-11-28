@@ -116,6 +116,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
+    top: 0;
     left: 0;
 }
 
@@ -125,6 +126,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
+    top: 0;
     right: 0;
 }
 
@@ -139,10 +141,13 @@ header {
     justify-content: center;
 }
 
+.main-slider > li {
+    padding: 25px;
+}
+
 .main-slider-button{
     width: 30px;
     height: 30px;
-    margin: 25px;
     background-color: var(--main-color3);
     border: #FFF 5px solid;
     border-radius: 50%;
