@@ -739,7 +739,15 @@ footer {
     justify-content: center;
     align-items: center;
 
-    background-color: #00000080;
+    background-color: #00000080;    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    display: none;
+
+    
 }
 
 .login-section {
@@ -1500,8 +1508,13 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 0px;
         background-color: var(--main-color3);
+        z-index: 9;
+    }
+
+    .main-slider > li {
+        padding: 20px;
     }
     
     .main-slider-button{
@@ -1517,6 +1530,18 @@ footer {
         height: 30px;
         background-color: var(--main-color1);
         border: none;
+    }
+
+    .slider-l > img {
+        width: 50px;
+        height: 100px;
+    }
+
+    .slider-r > img{
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 100px;
     }
 
     .select-order-section{
@@ -1637,7 +1662,7 @@ footer {
 
     .menu-list{
         width: 100%;
-        height: 80px;
+        height: 100px;
         padding: 0;
         border-radius: 0px;
         flex-direction: row;
@@ -1648,8 +1673,8 @@ footer {
     }
 
     .menu-list > img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100%;
 
         border-right: 5px solid var(--main-color1);
     }

@@ -15,6 +15,7 @@ console.log(mainContent);
 
 
 function apply() {
+    nextButtonClicked();
     slider.style.transition = `0.5s`
     slider.style.transform = `translateX(calc((-100vw)*${index}))`;
     for(let i = 0 ; i < sliderButton.length ; i ++) {
@@ -75,7 +76,7 @@ intervalId = setInterval(slideTransition, 3000);
 
 function nextButtonClicked() {
     clearInterval(intervalId); // 타이머 초기화
-    slideTransition(); // 바로 다음 슬라이드로 이동
+    // slideTransition(); // 바로 다음 슬라이드로 이동
     intervalId = setInterval(slideTransition, 3000); // 3초 간격으로 다시 인터벌 설정
 }
 
