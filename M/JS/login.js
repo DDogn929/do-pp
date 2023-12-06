@@ -6,6 +6,7 @@ const login = document.querySelector('.login');
 const memberIn = login.querySelector('.member-login-button');
 const noMemberIn = login.querySelector('.non-members-login-button');
 const socialIn = login.querySelectorAll('.social-login-button');
+const xButton = login.querySelector('.x-button-1 > img')
 
 const store = document.querySelector('.store-search-m');
 const storeSet = store.querySelector('.search-button');
@@ -18,9 +19,14 @@ let logined = false;
 let deliveryed = false;
 let packaginged = false;
 
+function reset () {
+    deliveryed = false;
+    packaginged = false;
+}
+
 function openLogin () {
     if(logined) {
-        // 실행할부분
+        setLogin()
     }else{
         login.style.display = 'flex';
     }
@@ -28,7 +34,7 @@ function openLogin () {
 
 function setLogin () {
 
-    if(deliveryed = true) {
+    if(deliveryed) {
         login.style.display = 'none';
         address.style.display = 'flex';
         logined = true;
@@ -41,8 +47,8 @@ function setLogin () {
 }
 
 delivery.addEventListener("click",()=>{
-    openLogin ();
     deliveryed = true;
+    openLogin ();
 
     console.log(deliveryed);
     console.log(packaginged);
@@ -50,8 +56,8 @@ delivery.addEventListener("click",()=>{
 })
 
 packaging.addEventListener("click",()=>{
-    openLogin ();
     packaginged = true;
+    openLogin ();
     
     console.log(deliveryed);
     console.log(packaginged);
@@ -61,13 +67,11 @@ packaging.addEventListener("click",()=>{
 memberIn.addEventListener("click",()=>{
     setLogin ();
 
-
     console.log('회원로그인');
 })
 
 noMemberIn.addEventListener("click",()=>{
     setLogin ();
-
 
     console.log('비회원로그인');
 })
@@ -77,8 +81,7 @@ for (let i = 0; i < socialIn.length; i++) {
     socialIn[i].addEventListener("click",()=>{
         setLogin ();
     
-    
-        console.log('회원로그인');
+        console.log('소셜로그인');
     })
     
 }
@@ -87,8 +90,27 @@ storeSet.addEventListener("click",()=>{
     store.style.display = 'none';
 })
 
+store.addEventListener("click",()=>{
+    store.style.display = 'none';
+    reset()
+})
+
 addressSet.addEventListener("click",()=>{
     address.style.display = 'none';
+})
+
+address.addEventListener("click",()=>{
+    address.style.display = 'none';
+    reset()
+
+})
+
+xButton.addEventListener("click",()=>{
+    login.style.display = 'none';
+    
+    deliveryed = false;
+    packaginged = false;
+    console.log('로그인취소');
 })
 
 

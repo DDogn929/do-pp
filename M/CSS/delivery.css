@@ -287,7 +287,7 @@ header {
     box-sizing: border-box;
 }
 
-.menu-select-button-action {
+.button-action {
     color: var(--main-color1);
     border-color: var(--main-color1);
 }
@@ -751,6 +751,8 @@ footer {
 }
 
 .login-section {
+    position: relative;
+
     margin: 0 auto;
     
     max-width: 910px;
@@ -891,10 +893,7 @@ footer {
     left: 16px;
 }
 
-.non-members-login {
-    width: 100%;
-    height: 100vh;
-    
+.non-members-login {   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -911,7 +910,15 @@ footer {
     border-radius: 20px;
 }
 
+.x-button-1 > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+}
+
 .store-search-section{
+    position: relative;
     margin: 0 auto;
     width: 600px;
     height: 600px;
@@ -994,6 +1001,7 @@ footer {
 }
 
 .address-search-section {
+    position: relative;
     max-width: 600px;
     height: 600px;
     margin: 0 auto;
@@ -1603,6 +1611,10 @@ footer {
         text-align: center;
     }
 
+    .menu-header-menu > h2 > span {
+        color: var(--font-color-1);
+    }
+
     .menu-nav {
         height: calc(100vh - 125px - 80px - 130px);
         overflow: hidden;
@@ -1629,13 +1641,13 @@ footer {
         padding: 14px 16px;
         font-size: 24px;
         border-radius: 100px;
+        color: var(--font-color-1);
         border: 2px solid #FFC72C;
-        background: #DA291C;
-        box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        /* background: #DA291C; */
+        /* box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25); */
     }
 
-
-    .menu-select-button-action {
+    .button-action {
         background-color: var(--header-color);
         color: var(--header-font-color);
         border: none;
@@ -1643,6 +1655,7 @@ footer {
 
     .menu-section {
         padding: 0 32px;
+        background-color: #FFF;
     }
 
     .menu-header-tl {
@@ -1815,7 +1828,7 @@ footer {
 
     .login-section {
         width: 100%;
-        height: calc(100vh - 80px);
+        /* height: calc(100vh - 80px); */
         border-radius: 5px;
     }
 

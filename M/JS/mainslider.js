@@ -69,15 +69,15 @@ function slideTransition() {
         index = 0;
         apply()
     }
-    console.log("3초마다 작동");
+    console.log("5초마다 작동");
 }
 
-intervalId = setInterval(slideTransition, 3000);
+intervalId = setInterval(slideTransition, 5000);
 
 function nextButtonClicked() {
     clearInterval(intervalId); // 타이머 초기화
     // slideTransition(); // 바로 다음 슬라이드로 이동
-    intervalId = setInterval(slideTransition, 3000); // 3초 간격으로 다시 인터벌 설정
+    intervalId = setInterval(slideTransition, 5000); // 5초 간격으로 다시 인터벌 설정
 }
 
 // transform: translateX(calc((100vw)*0));
