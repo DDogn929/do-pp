@@ -83,6 +83,11 @@ header {
 .header-login {
     font-size: 18px;
     font-weight: 600;
+    padding: 30px;
+}
+
+.header-login .out {
+    display: none;
 }
 
 .main-title-img {
@@ -527,14 +532,26 @@ header {
     color: var(--font-color-1);
     font-size: 24px;
     font-weight: 900;
-
-    display: flex;
-    gap: 4px;
-    align-items: center;
 }
 
-.payment-list > h3 > img {
+.payment-delivery {
+    display: flex;
+    gap: 4px;
+}
+
+.payment-delivery > img {
     width: 28px;
+    height: 28px;
+    object-fit: cover;
+}
+
+.payment-packaging {
+    display: none;
+    gap: 4px;
+}
+
+.payment-packaging > img {
+    width: 18px;
     height: 28px;
     object-fit: cover;
 }
@@ -560,6 +577,47 @@ header {
 
     display: flex;
     align-items: center;
+}
+
+.Select-payment {
+    overflow: hidden;
+}
+
+.Select-payment > div {
+    width: 100%;
+    /* text-align: center; */
+    line-height: 40px;
+    color: #808080;
+    font-size: 18px;
+    font-weight: 500;
+
+    background-color: #fff;
+    border: 5px solid #FFC72C;
+
+    margin-top: 16px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.submenu > li {
+    line-height: 50px;
+    background-color: #fff;
+    border-top: 2px solid var(--main-color1);
+}
+
+.submenu {
+    height: 0; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+}
+
+.Select-payment > div:hover {
+    background-color: #fff;
+    transition-duration: 0.5s;
+}
+
+.Select-payment > div:hover .submenu {
+    height: 158px; /*서브메뉴 li한개의 높이 50*5*/
+    transition-duration: 1s;
 }
 
 .payment-button {

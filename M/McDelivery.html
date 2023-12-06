@@ -19,7 +19,9 @@
                 <span>McDeilvery</span>
             </a>
             <a href="#" class="header-login">
-                <p>로그인/회원가입</p>
+                <span class="in">로그인/회원가입</span>
+                <span class="out">로그아웃</span>
+                <!-- <span class="nonmember">비회원</span> -->
             </a>
 
             <div class="header-button">
@@ -279,8 +281,9 @@
             <div class="payment-menu">
                 <ul class="payment-list-ul">
                     <li class="payment-list">
-                        <h3>주문배달
-                            <img src="img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘">
+                        <h3>
+                            <span class="payment-delivery">주문배달<img src="img/ri_e-bike-2-fill.svg" alt="오토바이 아이콘"></span>
+                            <span class="payment-packaging">방문포장<img src="img/fa6-solid_person-walking.svg" alt="걷는 사람 아이콘"></span>
                         </h3>
                     </li>
                     <li class="payment-list">
@@ -294,7 +297,18 @@
                     </li>
                     <li class="payment-list">
                         <h3>결제수단</h3>
-                        <div class="payment-list-input">신용/체크카드</div>
+                        <!-- <div class="payment-list-input">신용/체크카드</div> -->
+                        <div class="Select-payment">
+                            <div>
+                              <p>결제방식선택</p>
+                              <ul class="submenu">
+                                <li>카드결제</li>
+                                <li>현금결제</li>
+                                <li>휴대폰결제</li>
+                              </ul>
+                            </div>
+                        </div>
+                      
                     </li>
                     <li class="payment-list">
                         <h3>쿠폰</h3>

@@ -1,3 +1,8 @@
+const headerLogin = document.querySelector('.header-login')
+const loginSet = headerLogin.querySelector('.in')
+const loginSetOut = headerLogin.querySelector('.out')
+
+
 const order = document.querySelector('.Select-order-button-tl');
 const delivery = order.querySelector('.delivery');
 const packaging = order.querySelector('.packaging');
@@ -14,14 +19,24 @@ const storeSet = store.querySelector('.search-button');
 const address = document.querySelector('.address-search');
 const addressSet = address.querySelector('.search-button');
 
+const payment = document.querySelector('.payment-section')
+const setDelivery = payment.querySelector('.payment-delivery')
+const setPackaging = payment.querySelector('.payment-packaging')
+
 let logined = false;
 
 let deliveryed = false;
 let packaginged = false;
 
+
 function reset () {
     deliveryed = false;
     packaginged = false;
+}
+
+function loginOut () {
+    loginSet.style.display = 'none';
+    loginSetOut.style.display = 'flex';
 }
 
 function openLogin () {
@@ -38,29 +53,45 @@ function setLogin () {
         login.style.display = 'none';
         address.style.display = 'flex';
         logined = true;
-    } else {
+        loginOut ()
+    } else if (packaginged) {
         login.style.display = 'none';
         store.style.display = 'flex';
         logined = true;
+        loginOut ()
+    } else {
+        login.style.display = 'none';
+        logined = true;
+        loginOut ()
     }
 
 }
 
+headerLogin.addEventListener("click",()=>{
+    if(logined){
+        loginSet.style.display = 'flex';
+        loginSetOut.style.display = 'none';
+        logined = false;
+    } else {
+        login.style.display = 'flex';
+    }
+})
+
 delivery.addEventListener("click",()=>{
     deliveryed = true;
     openLogin ();
+    setDelivery.style.display = 'flex';
+    setPackaging.style.display = 'none';
 
-    console.log(deliveryed);
-    console.log(packaginged);
     console.log('배달주문');
 })
 
 packaging.addEventListener("click",()=>{
     packaginged = true;
     openLogin ();
+    setDelivery.style.display = 'none';
+    setPackaging.style.display = 'flex';
     
-    console.log(deliveryed);
-    console.log(packaginged);
     console.log('방문포장');
 })
 
