@@ -3,13 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
     <title>McDonald's Menu</title>
 </head>
+<style>
+
+    .menu-ul {
+        max-width: 1200px;
+    
+        margin: 0 auto;
+        padding: 20px 0;
+        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .menu-list {
+        width: 194px;
+        height: 100%;
+    
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 2px 4px 4px #00000040;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px; 
+    }
+    
+    .menu-list > img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .menu-list-h2 {
+        font-size: 16px;
+        font-weight: 900;
+        color: var(--font-color-1);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .menu-list-txt {
+        font-size: 12px;
+        color: #808080;
+    }
+
+    .menu-list-txt2 {
+        font-weight: 700;
+        font-size: 12px;
+        color: #202020;
+    }
+
+    .menu-list-txt:first-of-type {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    ul > .menu-list-txt {
+        padding: 0 20px;
+        text-align: left;
+    }
+    
+</style>
 <body>
 
 <h1>McDonald's Menu</h1>
 
-<ul id="menuList"></ul>
+<ul class="menu-ul"></ul>
 
 <script>
     // Get the menu data
@@ -17,6 +83,7 @@
         "menu": [
             {
                 "burgerName": "빅맥®",
+                "imgUrl" : "../buger_img/빅맥.png",
                 "engName": "Big Mac®",
                 "description": "세계적으로 가장 유명한 맥도날드의 대표적인 버거. 특별한 빅맥 소스와 얇게 썬 양상추, 피클, 얇은 치즈, 얇게 썬 양파, 그리고 세 개의 빅맥 번으로 만든 100% 소고기 패티를 더블레이어로 즐기는 맛",
                 "sellingTime": "10:30AM~4AM",
@@ -33,6 +100,7 @@
             },
             {
                 "burgerName": "쿼터파운더® 치즈",
+                "imgUrl" : "../buger_img/쿼터파운더치즈.png",
                 "engName": "Quarter Pounder® with Cheese",
                 "description": "쿼터파운더®치즈\n쿼터파운더라는 이름에서 알 수 있듯이 두 배 이상 커진 1/4파운드(113그램) 비프와 부드러운 치즈 두 장의 환상궁합! 두툼한 순 쇠고기 패티와 신선한 치즈의 풍부한 맛으로 세계적으로 사랑받고 있는 맥도날드의 대표적인 프리미엄 버거",
                 "sellingTime": "10:30AM~4AM",
@@ -49,6 +117,7 @@
             },
             {
                 "burgerName": "맥치킨™",
+                "imgUrl" : "../buger_img/맥치킨.png",
                 "engName": "McChicken™",
                 "description": "가장 특별한 맥도날드의 치킨 버거! 바삭한 튀김옷에 뒤집어 살짝 익혀진 닭고기 패티, 양상추, 마요네즈, 레몬애니바터 소스, 바삭한 맥치킨 번으로 완성된 닭고기의 특별함!",
                 "sellingTime": "10:30AM~4AM",
@@ -65,6 +134,7 @@
             },
             {
                 "burgerName": "맥스파이시™ 상하이 버거",
+                "imgUrl" : "../buger_img/맥스파이시상하이.png",
                 "engName": "McSpicy™ Shanghai Burger",
                 "description": "중국의 매운 요리에서 영감을 받은 맥도날드의 새로운 상하이 버거. 맥스파이시 소스와 함께 튀겨진 양상추, 고소한 콘, 그리고 스프링클 튀김 양파를 곁들인 맥도날드만의 특별함!",
                 "sellingTime": "10:30AM~4AM",
@@ -81,6 +151,7 @@
             },
             {
                 "burgerName": "빅맥®",
+                "imgUrl" : "../buger_img/빅맥.png",
                 "engName": "Big Mac®",
                 "description": "세계적으로 가장 유명한 맥도날드의 대표적인 버거. 특별한 빅맥 소스와 얇게 썬 양상추, 피클, 얇은 치즈, 얇게 썬 양파, 그리고 세 개의 빅맥 번으로 만든 100% 소고기 패티를 더블레이어로 즐기는 맛",
                 "sellingTime": "10:30AM~4AM",
@@ -99,31 +170,35 @@
     };
 
     // Get the menu list container
-    const menuListContainer = document.getElementById('menuList');
+    const Container = document.querySelector('.menu-ul');
 
     // Loop through each item in the menu data and create HTML
     menuData.menu.forEach(item => {
         const listItem = document.createElement('li');
+        listItem.classList.add('menu-list');
 
         listItem.innerHTML = `
-            <h2>${item.burgerName} - ${item.engName}</h2>
-            <p>Description: ${item.description}</p>
-            <p>Selling Time: ${item.sellingTime}</p>
-            <p>Nutritional Info:
+            <img src="${item.imgUrl}" alt="버거이미지">
+            <h2 class="menu-list-h2">${item.burgerName} - ${item.engName}</h2>
+            <p class="menu-list-txt">${item.description}</p>
+            <p class="menu-list-txt2">판매시간: ${item.sellingTime}</p>
+            <p class="menu-list-txt2">영양정보:
                 <ul>
-                    <li>Weight: ${item.nutritionalInfo.weight}</li>
-                    <li>Calories: ${item.nutritionalInfo.calories}</li>
-                    <li>Sugar: ${item.nutritionalInfo.sugar}</li>
-                    <li>Protein: ${item.nutritionalInfo.protein}</li>
-                    <li>Saturated Fat: ${item.nutritionalInfo.saturatedFat}</li>
-                    <li>Sodium: ${item.nutritionalInfo.sodium}</li>
+                    <li class="menu-list-txt">중량(g): ${item.nutritionalInfo.weight}</li>
+                    <li class="menu-list-txt">칼로리: ${item.nutritionalInfo.calories}</li>
+                    <li class="menu-list-txt">설탕: ${item.nutritionalInfo.sugar}</li>
+                    <li class="menu-list-txt">단백질: ${item.nutritionalInfo.protein}</li>
+                    <li class="menu-list-txt">포화지방: ${item.nutritionalInfo.saturatedFat}</li>
+                    <li class="menu-list-txt">나트륨: ${item.nutritionalInfo.sodium}</li>
                 </ul>
             </p>
-            <p>Allergy Info: ${item.allergyInfo}</p>
-            <p>Origin Info: ${item.originInfo}</p>
+            <ul>
+                <li class="menu-list-txt">${item.allergyInfo}</li>
+                <li class="menu-list-txt">원산지: ${item.originInfo}</li>
+            </ul>
         `;
 
-        menuListContainer.appendChild(listItem);
+        Container.appendChild(listItem);
     });
 </script>
 

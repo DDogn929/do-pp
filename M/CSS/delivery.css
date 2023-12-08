@@ -1450,9 +1450,9 @@ footer {
 
 .m-down-button-section {
     display: none;
-
     position: relative;
-    height: 100vh;
+    transition: 1s;
+    transform: translateY(100vh);
 }
 
 .m-down-button-tl {
