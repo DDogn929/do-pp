@@ -11,7 +11,7 @@ const login = document.querySelector('.login');
 const memberIn = login.querySelector('.member-login-button');
 const noMemberIn = login.querySelector('.non-members-login-button');
 const socialIn = login.querySelectorAll('.social-login-button');
-const xButton = login.querySelector('.x-button-1 > img')
+const xButton = login.querySelectorAll('.x-button-img')
 
 const store = document.querySelector('.store-search-m');
 const storeSet = store.querySelector('.search-button');
@@ -79,6 +79,7 @@ headerLogin.addEventListener("click",()=>{
 
 delivery.addEventListener("click",()=>{
     deliveryed = true;
+    packaginged = false;
     openLogin ();
     setDelivery.style.display = 'flex';
     setPackaging.style.display = 'none';
@@ -87,6 +88,7 @@ delivery.addEventListener("click",()=>{
 })
 
 packaging.addEventListener("click",()=>{
+    deliveryed = false;
     packaginged = true;
     openLogin ();
     setDelivery.style.display = 'none';
@@ -121,27 +123,39 @@ storeSet.addEventListener("click",()=>{
     store.style.display = 'none';
 })
 
-store.addEventListener("click",()=>{
-    store.style.display = 'none';
-    reset()
-})
+// store.addEventListener("click",()=>{
+//     store.style.display = 'none';
+//     reset()
+// })
 
 addressSet.addEventListener("click",()=>{
     address.style.display = 'none';
 })
 
-address.addEventListener("click",()=>{
-    address.style.display = 'none';
-    reset()
+// address.addEventListener("click",()=>{
+//     address.style.display = 'none';
+//     reset()
 
+// })
+
+xButton[0].addEventListener("click",()=>{
+    login.style.display = 'none';
+    reset()
+    console.log('로그인취소');
 })
 
-xButton.addEventListener("click",()=>{
-    login.style.display = 'none';
-    
-    deliveryed = false;
-    packaginged = false;
-    console.log('로그인취소');
+xButton[1].addEventListener("click",()=>{
+    store.style.display = 'none';
+    address.style.display = 'none';
+    reset()
+    console.log('선택취소');
+})
+
+xButton[2].addEventListener("click",()=>{
+    store.style.display = 'none';
+    address.style.display = 'none';
+    reset()
+    console.log('선택취소');
 })
 
 
