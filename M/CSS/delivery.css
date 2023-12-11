@@ -1019,15 +1019,14 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 12px;
     height: 100vh;
     overflow-y: scroll;
 }
 
-.store-list > li {
+.store-item {
     width: auto;
-    height: 66px;
-    padding: 0 20px;
+    padding: 12px 16px;
 
     color: var(--font-color-2);
     font-size: 14px;
@@ -1040,10 +1039,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
 }
 
-.store-list > li > p:first-child {
+.store-header {
+    margin-bottom: 5px;
     color: var(--font-color-1);
     font-size: 18px;
     font-weight: 600;
