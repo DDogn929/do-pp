@@ -11,7 +11,8 @@ const login = document.querySelector('.login');
 const memberIn = login.querySelector('.member-login-button');
 const noMemberIn = login.querySelector('.non-members-login-button');
 const socialIn = login.querySelectorAll('.social-login-button');
-const xButton = login.querySelectorAll('.x-button-img')
+
+let xButton = Array.from(document.querySelectorAll(".x-button-img"));
 
 const store = document.querySelector('.store-search-m');
 const storeSet = store.querySelector('.search-button');
