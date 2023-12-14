@@ -14,7 +14,7 @@ const menuData = {
             "saturatedFat": "14g",
             "sodium": "1171mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류,우유,대두,밀,돼지고기,토마토,쇠고기)",
+            "allergyInfo": "(난류,우유,대두,밀,돼지고기,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산 돼지고기(베이컨):외국산(아일랜드,스페인,캐나다)",
             "cost": "7,500원",
             "setCost": "8,900원"
@@ -33,7 +33,7 @@ const menuData = {
                 "saturatedFat": "11g",
                 "sodium": "1080mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류,우유,대두,밀,돼지고기,토마토,쇠고기) * 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고 있습니다.",
+            "allergyInfo": "(난류,우유,대두,밀,돼지고기,토마토,쇠고기) * 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고 있습니다.",
             "originInfo": "쇠고기:호주산 돼지고기(베이컨):외국산(아일랜드,스페인,캐나다)",
             "cost": "7,000원",
             "setCost": "8,500원"
@@ -52,7 +52,7 @@ const menuData = {
             "saturatedFat": "12g",
             "sodium": "827mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (밀,대두,우유,토마토,쇠고기)",
+            "allergyInfo": "(밀,대두,우유,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "5,500원",
             "setCost": "6,900원"
@@ -71,7 +71,7 @@ const menuData = {
                 "saturatedFat": "20g",
                 "sodium": "1151mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (우유, 대두, 밀, 토마토, 쇠고기)",
+            "allergyInfo": "(우유, 대두, 밀, 토마토, 쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "7,400원",
             "setCost": "9,000원"
@@ -90,7 +90,7 @@ const menuData = {
             "saturatedFat": "13g",
             "sodium": "966mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (우유,대두,밀,토마토,쇠고기)",
+            "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "5,500원",
             "setCost": "7,600원"
@@ -109,7 +109,7 @@ const menuData = {
                 "saturatedFat": "5g",
                 "sodium": "1296mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류, 우유, 대두, 밀, 토마토, 닭고기, 쇠고기)",
+            "allergyInfo": "(난류, 우유, 대두, 밀, 토마토, 닭고기, 쇠고기)",
             "originInfo": "닭고기: 브라질산 또는 태국산",
             "cost": "6,800원",
             "setCost": "7,900원"
@@ -128,7 +128,7 @@ const menuData = {
                 "saturatedFat": "5g",
                 "sodium": "1294mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류, 우유, 대두, 밀, 토마토, 닭고기, 쇠고기)",
+            "allergyInfo": "(난류, 우유, 대두, 밀, 토마토, 닭고기, 쇠고기)",
             "originInfo": "닭고기: 브라질산 또는 태국산",
             "cost": "5,900원",
             "setCost": "7,400원"
@@ -147,7 +147,7 @@ const menuData = {
             "saturatedFat": "4g",
             "sodium": "849mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (밀,대두,토마토,닭고기)",
+            "allergyInfo": "(밀,대두,토마토,닭고기)",
             "originInfo": "닭고기:브라질산 또는 태국산",
             "cost": "5,500원",
             "setCost": "6,900원"
@@ -166,7 +166,7 @@ const menuData = {
                 "saturatedFat": "10g",
                 "sodium": "930mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류, 우유, 대두, 밀, 돼지고기, 토마토, 쇠고기)",
+            "allergyInfo": "(난류, 우유, 대두, 밀, 돼지고기, 토마토, 쇠고기)",
             "originInfo": "소고기: 호주산 돼지고기(베이컨):외국산(아일랜드, 스페인, 캐나다)",
             "cost": "6,400원",
             "setCost": "7,800원"
@@ -185,7 +185,7 @@ const menuData = {
                 "saturatedFat":"7g",
                 "sodium":"1742mg"
             },
-            "allergyInfo":"알레르기 유발 가능 식재료 (난류,우유,대두,밀,토마토,닭고기)",
+            "allergyInfo":"(난류,우유,대두,밀,토마토,닭고기)",
             "originInfo":"닭고기:국내산",
             "cost": "5,000원",
             "setCost": "7,200원"
@@ -204,7 +204,7 @@ const menuData = {
             "saturatedFat": "3g",
             "sodium": "632mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (밀,대두,계란,토마토,닭고기)",
+            "allergyInfo": "(밀,대두,계란,토마토,닭고기)",
             "originInfo": "닭고기:브라질산 또는 태국산",
             "cost": "3,500원",
             "setCost": "5,000원"
@@ -223,7 +223,7 @@ const menuData = {
                 "saturatedFat":"13g",
                 "sodium":"997mg"
             },
-            "allergyInfo":"알레르기 유발 가능 식재료 (난류,우유,대두,밀,돼지고기,조개,굴)",
+            "allergyInfo":"(난류,우유,대두,밀,돼지고기,조개,굴)",
             "originInfo":"돼지고기:국내산",
             "cost": "4,500원",
             "setCost": "6,000원"
@@ -242,7 +242,7 @@ const menuData = {
                 "saturatedFat":"7g",
                 "sodium":"748mg"
             },
-            "allergyInfo":"알레르기 유발 가능 식재료 (난류,대두,밀,돼지고기,조개,굴)",
+            "allergyInfo":"(난류,대두,밀,돼지고기,조개,굴)",
             "originInfo":"돼지고기:국내산",
             "cost": "3,900원",
             "setCost": "5,600원"
@@ -261,7 +261,7 @@ const menuData = {
                 "saturatedFat":"6g",
                 "sodium":"670mg"
             },
-            "allergyInfo":"알레르기 유발 가능 식재료 (난류,대두,밀,돼지고기,조개,굴)",
+            "allergyInfo":"(난류,대두,밀,돼지고기,조개,굴)",
             "originInfo":"돼지고기:국내산",
             "cost": "3,100원",
             "setCost": "4,900원"
@@ -280,7 +280,7 @@ const menuData = {
                 "saturatedFat":"1.7g",
                 "sodium":"808mg"
             },
-            "allergyInfo":"알레르기 유발 가능 식재료 (난류,우유,대두,밀,토마토,새우,쇠고기,굴)",
+            "allergyInfo":"(난류,우유,대두,밀,토마토,새우,쇠고기,굴)",
             "originInfo":"새우패티:태국산",
             "cost": "4,700원",
             "setCost": "6,000원"
@@ -299,7 +299,7 @@ const menuData = {
                 "saturatedFat": "5g",
                 "sodium": "1001mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류,우유,대두,밀,토마토,새우,쇠고기,굴)",
+            "allergyInfo": "(난류,우유,대두,밀,토마토,새우,쇠고기,굴)",
             "originInfo": "새우패티:태국산 쇠고기:호주산",
             "cost": "5,800원",
             "setCost": "7,800원"
@@ -318,7 +318,7 @@ const menuData = {
                 "saturatedFat": "11g",
                 "sodium": "933mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (난류,우유,대두,밀,돼지고기,토마토,쇠고기)",
+            "allergyInfo": "(난류,우유,대두,밀,돼지고기,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산 돼지고기(베이컨):외국산(아일랜드,스페인,캐나다)",
             "cost": "5,800원",
             "setCost": "7,700원"
@@ -337,7 +337,7 @@ const menuData = {
                 "saturatedFat": "6g",
                 "sodium": "612mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (우유,대두,밀,토마토,쇠고기)",
+            "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "2,700원",
             "setCost": "4,700원"
@@ -356,7 +356,7 @@ const menuData = {
                 "saturatedFat": "12g",
                 "sodium": "896mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (우유,대두,밀,토마토,쇠고기)",
+            "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "4,700원",
             "setCost": "6,000원"
@@ -375,7 +375,7 @@ const menuData = {
                 "saturatedFat": "17g",
                 "sodium": "1230mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (우유,대두,밀,토마토,쇠고기)",
+            "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "5,800원",
             "setCost": "5,800원"
@@ -394,10 +394,10 @@ const menuData = {
                 "saturatedFat": "3g",
                 "sodium": "450mg"
             },
-            "allergyInfo": "알레르기 유발 가능 식재료 (대두,밀,토마토,쇠고기)",
+            "allergyInfo": "(대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
             "cost": "2,500원",
-            "setCost": "단품 주문만 가능"
+            "setCost": "3,900원"
 
         },
     ]
@@ -405,6 +405,14 @@ const menuData = {
 
 // Get the menu list container
 const Container = document.querySelector('.menu-ul');
+
+let menuList = Array.from(document.querySelectorAll(".menu-list"));
+
+const menuSelect = document.querySelector('.menu-description-1');
+let xButton2 = Array.from(menuSelect.querySelectorAll(".x-button-img2"));
+
+const optionSelect = document.querySelector('.menu-description-2');
+
 
 // Loop through each item in the menu data and create HTML
 menuData.menu.forEach(item => {
@@ -420,5 +428,47 @@ menuData.menu.forEach(item => {
         </div>
     `;
 
+    listItem.addEventListener("click",()=>{
+        menuSelect.style.display = 'flex';
+
+        menuSelect.querySelector('h3').innerText = item.burgerName
+        menuSelect.querySelector('.eng-name').innerText = item.engName
+        menuSelect.querySelector('.description').innerText = item.description
+        menuSelect.querySelector('.weight').innerText = item.weight
+        menuSelect.querySelector('.calories').innerText = item.calories
+        menuSelect.querySelector('.allergy-info').innerText = item.allergyInfo
+        menuSelect.querySelector('.cost').innerText = item.cost
+        menuSelect.querySelector('.setCost').innerText = item.setCost
+        menuSelect.querySelector('img').setAttribute('src',item.imgUrl) 
+
+    })
+
     Container.appendChild(listItem);
 });
+
+const backet = document.querySelector('.backet-list');
+const singleButton = document.querySelector('.single');
+const cart = [];
+
+singleButton.addEventListener("click",()=>{
+    menuSelect.style.display = 'none';
+
+    cart.push(menuSelect.querySelector('h3').innerText)
+
+    const 받아야되는형태 = {
+        메뉴이름 : menuSelect.querySelector('h3').innerText,
+        메뉴이미지: 이미지.getAttribute('src'),
+        추가메뉴 : ['양상추','패티'] ,
+        메뉴금액 : 5500
+    }
+    console.log(cart)
+
+
+    // const backetItem = document.createElement('li');
+    // backet.appendChild(backetItem);
+    // console.log(backet.childElementCount)
+})
+
+xButton2[0].addEventListener("click",()=>{
+    menuSelect.style.display = 'none';
+})

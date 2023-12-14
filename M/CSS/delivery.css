@@ -299,12 +299,12 @@ header {
 }
 
 .menu-nav {
-    height: calc(100vh - 123px - 182px);
-    overflow-y: scroll;
 }
 
 .menu-ul {
     max-width: 1200px;
+    height: calc(100vh - 125px - 225px);
+    overflow-y: scroll;
 
     margin: 0 auto;
     padding: 20px 0;
@@ -1184,14 +1184,14 @@ footer {
 .menu-description-tl {
     position: relative;
 
-    width: 1220px;
-    height: 797px;
+    max-width: 1220px;
+    height: calc(100vh - 100px);
     padding: 0 54px;
     margin: 0 auto;
     background-color: #fff;
 
     border: 20px solid var(--main-color1);
-    border-radius: 82px;
+    border-radius: 24px;
     box-sizing: border-box;
 
     display: flex;
@@ -1200,7 +1200,7 @@ footer {
     gap: 64px;
 }
 
-.menu-description-tl > img {
+.img-url {
     width: 523px;
     height: 523px;
     
@@ -1212,7 +1212,7 @@ footer {
 }
 
 .burger-description {
-    height: 523px;
+    width: 50%;
 
     display: flex;
     flex-direction: column;
@@ -1300,9 +1300,6 @@ footer {
     line-height: 20px;  
 
     padding: 16px 0;
-    border-bottom: 3px;
-    border-color: var(--main-color1);
-    border-style: solid;
     box-sizing: border-box;
 }
 
@@ -1980,7 +1977,7 @@ footer {
         gap: 8px;
     }
 
-    .menu-description-tl > img {
+    .img-url {
         width: 355px;
         height: 282px;
 
@@ -1988,7 +1985,9 @@ footer {
         border-radius: 0px;
     }
 
-    .burger-description
+    .burger-description {
+        width: 100%;
+    }
 
     .burger-name  {
         text-align: center;
