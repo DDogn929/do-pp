@@ -13,6 +13,7 @@ for (let i = 0; i <optionSelectList.length; i++) {
     leftButton.addEventListener("click",()=>{
         if(index > 0) {
         index--
+            slider.style.transition = `0.5s`
             slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`;
         }
 
@@ -22,6 +23,7 @@ for (let i = 0; i <optionSelectList.length; i++) {
     rightButton.addEventListener("click",()=>{
         if(index < slider.childElementCount -1) {
             index++
+            slider.style.transition = `0.5s`
             slider.style.transform = `translateX(calc((-132px + -16px)*${index}))`;
         }
     })

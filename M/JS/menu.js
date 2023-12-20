@@ -409,7 +409,10 @@ const Container = document.querySelector('.menu-ul');
 let menuList = Array.from(document.querySelectorAll(".menu-list"));
 
 const menuSelect = document.querySelector('.menu-description-1');
-let xButton2 = Array.from(menuSelect.querySelectorAll(".x-button-img2"));
+let xButton2 = Array.from(document.querySelectorAll(".x-button-img2"));
+let backButton = Array.from(document.querySelectorAll(".backspace-button"));
+let addButton = Array.from(document.querySelectorAll(".backet-button"));
+
 
 const optionSelect = document.querySelector('.menu-description-2');
 
@@ -452,23 +455,37 @@ const cart = [];
 
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
-
-    cart.push(menuSelect.querySelector('h3').innerText)
-
-    const 받아야되는형태 = {
-        메뉴이름 : menuSelect.querySelector('h3').innerText,
-        메뉴이미지: 이미지.getAttribute('src'),
-        추가메뉴 : ['양상추','패티'] ,
-        메뉴금액 : 5500
-    }
-    console.log(cart)
-
+    optionSelect.style.display = 'flex';
 
     // const backetItem = document.createElement('li');
     // backet.appendChild(backetItem);
     // console.log(backet.childElementCount)
 })
 
+addButton[0].addEventListener("click",()=>{
+    optionSelect.style.display = 'none';
+
+    cart.push(menuSelect.querySelector('h3').innerText)
+
+    const 받아야되는형태 = {
+        메뉴이름 : menuSelect.querySelector('h3').innerText,
+        메뉴이미지: 이미지.getAttribute('src'),
+        추가메뉴 : ['양상추','패티'],
+        메뉴금액 : 5500
+    }
+
+    console.log(cart)
+})
+
 xButton2[0].addEventListener("click",()=>{
     menuSelect.style.display = 'none';
+})
+
+xButton2[1].addEventListener("click",()=>{
+    optionSelect.style.display = 'none';
+})
+
+backButton[0].addEventListener("click",()=>{
+    optionSelect.style.display = 'none';
+    menuSelect.style.display = 'flex';
 })
