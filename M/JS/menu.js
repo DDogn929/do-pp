@@ -16,8 +16,8 @@ const menuData = {
             },
             "allergyInfo": "(난류,우유,대두,밀,돼지고기,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산 돼지고기(베이컨):외국산(아일랜드,스페인,캐나다)",
-            "cost": "7,500원",
-            "setCost": "8,900원"
+            "cost": "7,500",
+            "setCost": "8,900"
         },
         {
             "burgerName": "미트칠리 BLT 버거",
@@ -35,8 +35,8 @@ const menuData = {
             },
             "allergyInfo": "(난류,우유,대두,밀,돼지고기,토마토,쇠고기) * 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고 있습니다.",
             "originInfo": "쇠고기:호주산 돼지고기(베이컨):외국산(아일랜드,스페인,캐나다)",
-            "cost": "7,000원",
-            "setCost": "8,500원"
+            "cost": "7,000",
+            "setCost": "8,500"
         },
         {
             "burgerName": "빅맥®",
@@ -54,8 +54,8 @@ const menuData = {
             },
             "allergyInfo": "(밀,대두,우유,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "5,500원",
-            "setCost": "6,900원"
+            "cost": "5,500",
+            "setCost": "6,900"
         },
         {
             "burgerName": "더블 쿼터파운더® 치즈",
@@ -73,8 +73,8 @@ const menuData = {
             },
             "allergyInfo": "(우유, 대두, 밀, 토마토, 쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "7,400원",
-            "setCost": "9,000원"
+            "cost": "7,400",
+            "setCost": "9,000"
         },
         {
             "burgerName": "쿼터파운더® 치즈",
@@ -92,8 +92,8 @@ const menuData = {
             },
             "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "5,500원",
-            "setCost": "7,600원"
+            "cost": "5,500",
+            "setCost": "7,600"
         },
         {
             "burgerName": "맥크리스피™ 디럭스 버거",
@@ -111,8 +111,8 @@ const menuData = {
             },
             "allergyInfo": "(난류, 우유, 대두, 밀, 토마토, 닭고기, 쇠고기)",
             "originInfo": "닭고기: 브라질산 또는 태국산",
-            "cost": "6,800원",
-            "setCost": "7,900원"
+            "cost": "6,800",
+            "setCost": "7,900"
         },
         {
             "burgerName": "맥크리스피™ 클래식 버거",
@@ -130,8 +130,8 @@ const menuData = {
             },
             "allergyInfo": "(난류, 우유, 대두, 밀, 토마토, 닭고기, 쇠고기)",
             "originInfo": "닭고기: 브라질산 또는 태국산",
-            "cost": "5,900원",
-            "setCost": "7,400원"
+            "cost": "5,900",
+            "setCost": "7,400"
         },
         {
             "burgerName": "맥스파이시™ 상하이 버거",
@@ -149,8 +149,8 @@ const menuData = {
             },
             "allergyInfo": "(밀,대두,토마토,닭고기)",
             "originInfo": "닭고기:브라질산 또는 태국산",
-            "cost": "5,500원",
-            "setCost": "6,900원"
+            "cost": "5,500",
+            "setCost": "6,900"
         },
         {
             "burgerName": "1955® 버거",
@@ -168,8 +168,8 @@ const menuData = {
             },
             "allergyInfo": "(난류, 우유, 대두, 밀, 돼지고기, 토마토, 쇠고기)",
             "originInfo": "소고기: 호주산 돼지고기(베이컨):외국산(아일랜드, 스페인, 캐나다)",
-            "cost": "6,400원",
-            "setCost": "7,800원"
+            "cost": "6,400",
+            "setCost": "7,800"
         },
         {
             "burgerName":"맥치킨® 모짜렐라",
@@ -187,8 +187,8 @@ const menuData = {
             },
             "allergyInfo":"(난류,우유,대두,밀,토마토,닭고기)",
             "originInfo":"닭고기:국내산",
-            "cost": "5,000원",
-            "setCost": "7,200원"
+            "cost": "5,000",
+            "setCost": "7,200"
         },
         {
             "burgerName": "맥치킨™",
@@ -206,8 +206,8 @@ const menuData = {
             },
             "allergyInfo": "(밀,대두,계란,토마토,닭고기)",
             "originInfo": "닭고기:브라질산 또는 태국산",
-            "cost": "3,500원",
-            "setCost": "5,000원"
+            "cost": "3,500",
+            "setCost": "5,000"
         },
         {
             "burgerName":"더블 불고기 버거",
@@ -225,8 +225,8 @@ const menuData = {
             },
             "allergyInfo":"(난류,우유,대두,밀,돼지고기,조개,굴)",
             "originInfo":"돼지고기:국내산",
-            "cost": "4,500원",
-            "setCost": "6,000원"
+            "cost": "4,500",
+            "setCost": "6,000"
         },
         {
             "burgerName":"에그 불고기 버거",
@@ -244,8 +244,8 @@ const menuData = {
             },
             "allergyInfo":"(난류,대두,밀,돼지고기,조개,굴)",
             "originInfo":"돼지고기:국내산",
-            "cost": "3,900원",
-            "setCost": "5,600원"
+            "cost": "3,900",
+            "setCost": "5,600"
         },
         {
             "burgerName":"불고기 버거",
@@ -263,8 +263,8 @@ const menuData = {
             },
             "allergyInfo":"(난류,대두,밀,돼지고기,조개,굴)",
             "originInfo":"돼지고기:국내산",
-            "cost": "3,100원",
-            "setCost": "4,900원"
+            "cost": "3,100",
+            "setCost": "4,900"
         },
         {
             "burgerName":"슈슈 버거",
@@ -282,8 +282,8 @@ const menuData = {
             },
             "allergyInfo":"(난류,우유,대두,밀,토마토,새우,쇠고기,굴)",
             "originInfo":"새우패티:태국산",
-            "cost": "4,700원",
-            "setCost": "6,000원"
+            "cost": "4,700",
+            "setCost": "6,000"
         },
         {
             "burgerName": "슈비 버거",
@@ -301,8 +301,8 @@ const menuData = {
             },
             "allergyInfo": "(난류,우유,대두,밀,토마토,새우,쇠고기,굴)",
             "originInfo": "새우패티:태국산 쇠고기:호주산",
-            "cost": "5,800원",
-            "setCost": "7,800원"
+            "cost": "5,800",
+            "setCost": "7,800"
         },
         {
             "burgerName": "베이컨 토마토 디럭스",
@@ -320,8 +320,8 @@ const menuData = {
             },
             "allergyInfo": "(난류,우유,대두,밀,돼지고기,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산 돼지고기(베이컨):외국산(아일랜드,스페인,캐나다)",
-            "cost": "5,800원",
-            "setCost": "7,700원"
+            "cost": "5,800",
+            "setCost": "7,700"
         },
         {
             "burgerName": "치즈버거",
@@ -339,8 +339,8 @@ const menuData = {
             },
             "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "2,700원",
-            "setCost": "4,700원"
+            "cost": "2,700",
+            "setCost": "4,700"
         },
         {
             "burgerName": "더블 치즈버거",
@@ -358,8 +358,8 @@ const menuData = {
             },
             "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "4,700원",
-            "setCost": "6,000원"
+            "cost": "4,700",
+            "setCost": "6,000"
         },
         {
             "burgerName": "트리플 치즈버거",
@@ -377,8 +377,8 @@ const menuData = {
             },
             "allergyInfo": "(우유,대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "5,800원",
-            "setCost": "5,800원"
+            "cost": "5,800",
+            "setCost": "5,800"
         },
         {
             "burgerName": "햄버거",
@@ -396,8 +396,8 @@ const menuData = {
             },
             "allergyInfo": "(대두,밀,토마토,쇠고기)",
             "originInfo": "쇠고기:호주산",
-            "cost": "2,500원",
-            "setCost": "3,900원"
+            "cost": "2,500",
+            "setCost": "3,900"
 
         },
     ]
@@ -462,16 +462,18 @@ singleButton.addEventListener("click",()=>{
     // console.log(backet.childElementCount)
 })
 
+
 addButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
 
     cart.push(menuSelect.querySelector('h3').innerText)
-
-    const 받아야되는형태 = {
+    
+    const 내가선택한메뉴 = {
         메뉴이름 : menuSelect.querySelector('h3').innerText,
-        메뉴이미지: 이미지.getAttribute('src'),
-        추가메뉴 : ['양상추','패티'],
-        메뉴금액 : 5500
+        메뉴이미지: menuSelect.querySelector('img').getAttribute('src'),
+        재료추가 : ['양상추','패티'],
+        재료빼기 : ['없음'],
+        메뉴금액 : menuSelect.querySelector('.cost').innerText
     }
 
     console.log(cart)
