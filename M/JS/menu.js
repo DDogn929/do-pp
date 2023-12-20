@@ -414,6 +414,8 @@ let backButton = Array.from(document.querySelectorAll(".backspace-button"));
 let addButton = Array.from(document.querySelectorAll(".backet-button"));
 
 
+
+
 const optionSelect = document.querySelector('.menu-description-2');
 
 
@@ -461,7 +463,10 @@ singleButton.addEventListener("click",()=>{
     // backet.appendChild(backetItem);
     // console.log(backet.childElementCount)
 })
+// 추가 및 뺀 재료는 배열에 담고 배열을 밑 선택한메뉴 배열에 다시 담는다.
 
+const nowAddSelect = [];
+const nowSubSelect = [];
 
 addButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
@@ -471,8 +476,9 @@ addButton[0].addEventListener("click",()=>{
     const 내가선택한메뉴 = {
         메뉴이름 : menuSelect.querySelector('h3').innerText,
         메뉴이미지: menuSelect.querySelector('img').getAttribute('src'),
-        재료추가 : ['양상추','패티'],
-        재료빼기 : ['없음'],
+        // 내가선택한메뉴.재료추기.추가
+        재료추가 : nowAddSelect,
+        재료빼기 : nowSubSelect,
         메뉴금액 : menuSelect.querySelector('.cost').innerText
     }
 
