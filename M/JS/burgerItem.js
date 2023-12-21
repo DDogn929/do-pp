@@ -1,95 +1,250 @@
 const burgerItem = {
-    "item": [
+    "addItem": [
         {
-            "itemName": "패티",
-            "itemEngName": "Patty",
+            "imgUrl": "#",
+            "name": "추가 없음",
+            "engName": "No add",
+            "cost": "0"
+        },
+        {
+            "imgUrl": "#",
+            "name": "패티",
+            "engName": "Patty",
             "cost": "1500"
         },
         {
-            "itemName": "베이컨",
-            "itemEngName": "Bacon",
+            "imgUrl": "#",
+            "name": "베이컨",
+            "engName": "Bacon",
             "cost": "800"
         },
         {
-            "itemName": "후라이드 에그",
-            "itemEngName": "Fried Egg",
+            "imgUrl": "#",
+            "name": "후라이드 에그",
+            "engName": "Fried Egg",
             "cost": "800"
         },
         {
-            "itemName": "그릴드 머쉬룸",
-            "itemEngName": "Grilled Mushrooms",
+            "imgUrl": "#",
+            "name": "그릴드 머쉬룸",
+            "engName": "Grilled Mushrooms",
             "cost": "800"
         },
         {
-            "itemName": "치즈",
-            "itemEngName": "Cheese",
+            "imgUrl": "#",
+            "name": "치즈",
+            "engName": "Cheese",
             "cost": "800"
         },
         {
-            "itemName": "양상추",
-            "itemEngName": "Lettuce",
+            "imgUrl": "#",
+            "name": "양상추",
+            "engName": "Lettuce",
             "cost": "500"
         },
         {
-            "itemName": "양파",
-            "itemEngName": "Onion",
+            "imgUrl": "#",
+            "name": "양파",
+            "engName": "Onion",
             "cost": "300"
         },
         {
-            "itemName": "토마토",
-            "itemEngName": "Tomamo",
+            "imgUrl": "#",
+            "name": "토마토",
+            "engName": "Tomamo",
             "cost": "500"
         },
         {
-            "itemName": "피클",
-            "itemEngName": "Pickle",
+            "imgUrl": "#",
+            "name": "피클",
+            "engName": "Pickle",
             "cost": "300"
         },
         {
-            "itemName": "할라피뇨",
-            "itemEngName": "Jalapeño",
+            "imgUrl": "#",
+            "name": "할라피뇨",
+            "engName": "Jalapeño",
             "cost": "300"
+        }
+    ],
+
+    "subtract": [
+        {
+            "imgUrl": "#",
+            "name": "빼기 없음",
+            "engName": "No Subtract",
+        },
+        {
+            "imgUrl": "#",
+            "name": "치즈",
+            "engName": "Cheese",
+        },
+        {
+            "imgUrl": "#",
+            "name": "양상추",
+            "engName": "Lettuce",
+        },
+        {
+            "imgUrl": "#",
+            "name": "양파",
+            "engName": "Onion",
+        },
+        {
+            "imgUrl": "#",
+            "name": "토마토",
+            "engName": "Tomamo",
+        },
+        {
+            "imgUrl": "#",
+            "name": "피클",
+            "engName": "Pickle",
+        },
+        {
+            "imgUrl": "#",
+            "name": "할라피뇨",
+            "engName": "Jalapeño",
         }
     ]
 }
+
+const itemContainer = document.querySelector('.item-container')
+const subtractContainer = document.querySelector('.subtract-container')
+
+burgerItem.addItem.forEach(item => {
+    const addItem = document.createElement('li');
+    addItem.classList.add('option-select-list-button');
+    addItem.classList.add('add-item');
+
+    addItem.innerHTML = `
+        <img src="${item.imgUrl}" alt="재료" class="add-item-button option-select-button">
+        <p>${item.name}</p>
+        <p>${item.engName}</p>
+        <p>+ <span>${item.cost}</span>원</p>
+    `;
+
+    itemContainer.appendChild(addItem);
+});
+
+burgerItem.subtract.forEach(item => {
+    const subtract = document.createElement('li');
+    subtract.classList.add('option-select-list-button');
+    subtract.classList.add('subtract-item');
+
+    subtract.innerHTML = `
+        <img src="${item.imgUrl}" alt="재료" class="subtract-item-button option-select-button">
+        <p>${item.name}</p>
+        <p>${item.engName}</p>
+    `;
+
+    subtractContainer.appendChild(subtract);
+});
 
 let addItem = Array.from(document.querySelectorAll(".add-item"));
 let addItemBtn = Array.from(document.querySelectorAll(".add-item-button"));
 let subtract = Array.from(document.querySelectorAll(".subtract-item"));
 let subtractBtn = Array.from(document.querySelectorAll(".subtract-item-button"));
 
+const optionSelectList = document.getElementsByClassName("option-select-list");
+let optionSlide = Array.from(document.querySelectorAll(".option-slide"));
+
+function optionReset () {
+
+    for (let i = 0; i < addItem.length; i++) {
+        addItemBtn[i].classList.remove('option-select-button-on');
+    }
+    for (let i = 0; i < subtract.length; i++) {
+        subtractBtn[i].classList.remove('option-select-button-on');
+    }
+
+    positionReset()
+    
+    addItemBtn[0].classList.add('option-select-button-on');
+    subtractBtn[0].classList.add('option-select-button-on');
+}
+
+for (let i = 0; i <optionSelectList.length; i++) {
+    const element = optionSelectList[i];
+
+    const leftButton = element.querySelector('.option-left-button');
+    const rightButton = element.querySelector('.option-right-button');
+
+    let nowPosition = 0;
+
+    
+    function positionReset() {
+        for (let i = 0; i < optionSlide.length; i++) {
+            optionSlide[i].style.transform = `translateX(calc(0*${nowPosition})))`;  
+        }
+        console.log('reset')
+    }
+
+    leftButton.addEventListener("click",()=>{
+        if(nowPosition > 0) {
+        nowPosition--
+            optionSlide[i].style.transition = `0.5s`
+            optionSlide[i].style.transform = `translateX(calc((-132px + -16px)*${nowPosition}))`;
+        }
+
+        // nowPosition에 따라 translate 적용해주는 구문 넣기
+    })
+
+    rightButton.addEventListener("click",()=>{
+        if(nowPosition < optionSlide[i].childElementCount -1) {
+            nowPosition++
+            optionSlide[i].style.transition = `0.5s`
+            optionSlide[i].style.transform = `translateX(calc((-132px + -16px)*${nowPosition}))`;
+        }
+    })
+
+}
+
 for (let i = 0; i < addItem.length; i++) {
+
+    addItemBtn[0].classList.add('option-select-button-on');
+
     addItem[0].addEventListener("click",()=>{
         addItemBtn[i].classList.remove('option-select-button-on');
         addItemBtn[0].classList.add('option-select-button-on');
+        nowAddSelect.pop(burgerItem.addItem[i].name)
+        console.log(nowAddSelect)
     })
 
     addItem[i].addEventListener("click",()=>{
         if(addItemBtn[i].classList.contains('option-select-button-on')){
             addItemBtn[i].classList.remove('option-select-button-on');
+            nowAddSelect.pop(burgerItem.addItem[i].name)
         } else {
             addItemBtn[i].classList.add('option-select-button-on');
             addItemBtn[0].classList.remove('option-select-button-on');
+            nowAddSelect.push(burgerItem.addItem[i].name)
         }
+        console.log(nowAddSelect)
     })
     
 }
 
 for (let i = 0; i < subtract.length; i++) {
+
+    subtractBtn[0].classList.add('option-select-button-on');
+
     subtract[0].addEventListener("click",()=>{
         subtractBtn[i].classList.remove('option-select-button-on');
         subtractBtn[0].classList.add('option-select-button-on');
+        nowSubSelect.pop(burgerItem.subtract[i].name)
+        console.log(nowSubSelect)
     })
 
     subtract[i].addEventListener("click",()=>{
         if(subtractBtn[i].classList.contains('option-select-button-on')){
             subtractBtn[i].classList.remove('option-select-button-on');
+            nowSubSelect.pop(burgerItem.subtract[i].name)
         } else {
             subtractBtn[i].classList.add('option-select-button-on');
             subtractBtn[0].classList.remove('option-select-button-on');
+            nowSubSelect.push(burgerItem.subtract[i].name)
         }
+        console.log(nowSubSelect)
     })
-    
 }
 // burgerItem.item.forEach(item => {
 

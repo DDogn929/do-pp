@@ -453,7 +453,6 @@ menuData.menu.forEach(item => {
 
 const backet = document.querySelector('.backet-list');
 const singleButton = document.querySelector('.single');
-const cart = [];
 
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
@@ -465,13 +464,17 @@ singleButton.addEventListener("click",()=>{
 })
 // 추가 및 뺀 재료는 배열에 담고 배열을 밑 선택한메뉴 배열에 다시 담는다.
 
+const cart = [];
 const nowAddSelect = [];
 const nowSubSelect = [];
 
+function selectreset() {
+    nowAddSelect.splice(0, nowAddSelect.length);
+    nowSubSelect.splice(0, nowAddSelect.length);
+}
+
 addButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
-
-    cart.push(menuSelect.querySelector('h3').innerText)
     
     const 내가선택한메뉴 = {
         메뉴이름 : menuSelect.querySelector('h3').innerText,
@@ -482,6 +485,9 @@ addButton[0].addEventListener("click",()=>{
         메뉴금액 : menuSelect.querySelector('.cost').innerText
     }
 
+    cart.push(내가선택한메뉴)
+
+    optionReset()
     console.log(cart)
 })
 
@@ -490,10 +496,14 @@ xButton2[0].addEventListener("click",()=>{
 })
 
 xButton2[1].addEventListener("click",()=>{
+    optionReset()
+    selectreset()
     optionSelect.style.display = 'none';
 })
 
 backButton[0].addEventListener("click",()=>{
+    optionReset()
+    selectreset()
     optionSelect.style.display = 'none';
     menuSelect.style.display = 'flex';
 })

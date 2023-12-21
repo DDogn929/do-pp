@@ -30,7 +30,7 @@ let deliveryed = false;
 let packaginged = false;
 
 
-function reset () {
+function loginReset () {
     deliveryed = false;
     packaginged = false;
 }
@@ -141,21 +141,21 @@ addressSet.addEventListener("click",()=>{
 
 xButton[0].addEventListener("click",()=>{
     login.style.display = 'none';
-    reset()
+    loginReset()
     console.log('로그인취소');
 })
 
 xButton[1].addEventListener("click",()=>{
     store.style.display = 'none';
     address.style.display = 'none';
-    reset()
+    loginReset()
     console.log('선택취소');
 })
 
 xButton[2].addEventListener("click",()=>{
     store.style.display = 'none';
     address.style.display = 'none';
-    reset()
+    loginReset()
     console.log('선택취소');
 })
 
