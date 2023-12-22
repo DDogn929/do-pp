@@ -745,12 +745,22 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5px;
+    gap: 6px;
+    padding: 0 12px;
+}
+
+.total-option {
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .total-order-select {
     color: var(--font-color-2);
     font-size: 16px;
+}
+
+.subtract-slot {
+    color: var(--main-color2);
 }
 
 .total-order-inner-list > li:first-child {
@@ -760,6 +770,7 @@ header {
 .total-order-inner-list > li:last-of-type {
     font-weight: 900;
     text-align: right;
+    
 }
 
 footer {

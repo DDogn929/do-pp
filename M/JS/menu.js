@@ -470,7 +470,7 @@ const nowSubSelect = [];
 
 function selectreset() {
     nowAddSelect.splice(0, nowAddSelect.length);
-    nowSubSelect.splice(0, nowAddSelect.length);
+    nowSubSelect.splice(0, nowSubSelect.length);
 }
 
 addButton[0].addEventListener("click",()=>{
@@ -480,14 +480,16 @@ addButton[0].addEventListener("click",()=>{
         메뉴이름 : menuSelect.querySelector('h3').innerText,
         메뉴이미지: menuSelect.querySelector('img').getAttribute('src'),
         // 내가선택한메뉴.재료추기.추가
-        재료추가 : nowAddSelect,
-        재료빼기 : nowSubSelect,
+        재료추가 : nowAddSelect.slice(),
+        재료빼기 : nowSubSelect.slice(),
         메뉴금액 : menuSelect.querySelector('.cost').innerText
     }
 
     cart.push(내가선택한메뉴)
 
-    optionReset()
+    selectreset();
+    optionReset();
+
     console.log(cart)
 })
 

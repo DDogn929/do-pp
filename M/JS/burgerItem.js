@@ -208,11 +208,16 @@ for (let i = 0; i < addItem.length; i++) {
         nowAddSelect.pop(burgerItem.addItem[i].name)
         console.log(nowAddSelect)
     })
+    
 
     addItem[i].addEventListener("click",()=>{
+
         if(addItemBtn[i].classList.contains('option-select-button-on')){
             addItemBtn[i].classList.remove('option-select-button-on');
-            nowAddSelect.pop(burgerItem.addItem[i].name)
+            const noAdd = nowAddSelect.filter((element) => element !== burgerItem.addItem[i].name)
+            nowAddSelect.splice(0, nowAddSelect.length);
+            Array.prototype.push.apply(nowAddSelect, noAdd);
+
         } else {
             addItemBtn[i].classList.add('option-select-button-on');
             addItemBtn[0].classList.remove('option-select-button-on');
@@ -237,7 +242,9 @@ for (let i = 0; i < subtract.length; i++) {
     subtract[i].addEventListener("click",()=>{
         if(subtractBtn[i].classList.contains('option-select-button-on')){
             subtractBtn[i].classList.remove('option-select-button-on');
-            nowSubSelect.pop(burgerItem.subtract[i].name)
+            const noSub = nowSubSelect.filter((element) => element !== burgerItem.subtract[i].name)
+            nowSubSelect.splice(0, nowSubSelect.length);
+            Array.prototype.push.apply(nowSubSelect, noSub);
         } else {
             subtractBtn[i].classList.add('option-select-button-on');
             subtractBtn[0].classList.remove('option-select-button-on');
