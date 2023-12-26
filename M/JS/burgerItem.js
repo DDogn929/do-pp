@@ -4,67 +4,67 @@ const burgerItem = {
             "imgUrl": "#",
             "name": "추가 없음",
             "engName": "No add",
-            "cost": "0"
+            "cost": 0
         },
         {
             "imgUrl": "#",
             "name": "패티",
             "engName": "Patty",
-            "cost": "1500"
+            "cost": 1500
         },
         {
             "imgUrl": "#",
             "name": "베이컨",
             "engName": "Bacon",
-            "cost": "800"
+            "cost": 800
         },
         {
             "imgUrl": "#",
             "name": "후라이드 에그",
             "engName": "Fried Egg",
-            "cost": "800"
+            "cost": 800
         },
         {
             "imgUrl": "#",
             "name": "그릴드 머쉬룸",
             "engName": "Grilled Mushrooms",
-            "cost": "800"
+            "cost": 800
         },
         {
             "imgUrl": "#",
             "name": "치즈",
             "engName": "Cheese",
-            "cost": "800"
+            "cost": 800
         },
         {
             "imgUrl": "#",
             "name": "양상추",
             "engName": "Lettuce",
-            "cost": "500"
+            "cost": 500
         },
         {
             "imgUrl": "#",
             "name": "양파",
             "engName": "Onion",
-            "cost": "300"
+            "cost": 300
         },
         {
             "imgUrl": "#",
             "name": "토마토",
             "engName": "Tomamo",
-            "cost": "500"
+            "cost": 500
         },
         {
             "imgUrl": "#",
             "name": "피클",
             "engName": "Pickle",
-            "cost": "300"
+            "cost": 300
         },
         {
             "imgUrl": "#",
             "name": "할라피뇨",
             "engName": "Jalapeño",
-            "cost": "300"
+            "cost": 300
         }
     ],
 

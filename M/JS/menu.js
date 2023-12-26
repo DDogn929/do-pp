@@ -468,13 +468,42 @@ const cart = [];
 const nowAddSelect = [];
 const nowSubSelect = [];
 
+const totalOrderList = document.querySelector('.total-order-list');
+
+const totalCount = document.querySelector('.total-count');
+const totalCost = document.querySelector('.total-cost');
+
 function selectreset() {
     nowAddSelect.splice(0, nowAddSelect.length);
     nowSubSelect.splice(0, nowSubSelect.length);
 }
+function listReset() {
+    for (let i = 0; i < totalOrderList.childElementCount -1; i++) {
+        totalOrderList.removeChild(totalOrderList.childNodes[i])
+    }
+}
 
 addButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
+
+    // 문자열에서 숫자만 남기고 형태를 Number로 변환
+    const str = menuSelect.querySelector('.cost').innerText;
+    const regex = /[^0-9]/g;
+    const result = str.replace(regex, "");
+    const cost = parseInt(result);
+
+    console.log('추가된 항목',nowAddSelect);
+
+    let addSelectionCost = 0;
+
+    for(let i = 0 ; i < nowAddSelect.length ; i ++) {
+        addSelectionCost += burgerItem.addItem.find(element => element.name ===  nowAddSelect[i]).cost
+    }
+
+    console.log('추가된 항목의 금액 합계:', addSelectionCost)
+
+    // 추가된 항목의 금액을 구하기
+
     
     const selectMenu = {
         menuName : menuSelect.querySelector('h3').innerText,
@@ -482,16 +511,49 @@ addButton[0].addEventListener("click",()=>{
         // 내가선택한메뉴.재료추기.추가
         addItem : nowAddSelect.slice(),
         subItem : nowSubSelect.slice(),
-        menuCost : menuSelect.querySelector('.cost').innerText
+        menuCost : (cost + addSelectionCost).toLocaleString()
     }
 
+    console.log(selectMenu.menuCost)
+    console.log(selectMenu);
     cart.push(selectMenu)
+    console.log(cart)
 
     selectreset();
     optionReset();
 
-    console.log(cart)
+    cart.forEach(item => {
+        
+        const orderList = document.createElement('li');
+        orderList.classList.add('order-list');
+    
+        orderList.innerHTML = `
+            <img src="${item.menuImg}" alt="버거" class="">
+            <ul class="total-order-inner-list">
+                <li>${item.menuName}</li>
+                <li>
+                    <p class="total-order-select add-slot">${item.addItem}</p>
+                    <p class="total-order-select subtract-slot">-${item.subItem}</p>
+                </li>
+                <li><span class="menu-cost">${item.menuCost}</span>원</li>
+            </ul>
+        `;
+        totalOrderList.appendChild(orderList);
+    });
+
+    listReset();
+
+    totalCount.innerText = `${totalOrderList.childElementCount}`
+    // totalCost.innerText = `${}`
+
+    // <span class="total-order-select chg-drink">음표 변경</span>
+    // <span class="total-order-select chg-side">사이드 변경</span>
 })
+
+// totalOrderList.childNodes[i].children[1].lastChild
+// totalOrderList.childNodes[0].children[1].children[2].innerText
+
+// totalCount.innerText = cart.length
 
 xButton2[0].addEventListener("click",()=>{
     menuSelect.style.display = 'none';
@@ -509,25 +571,3 @@ backButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
     menuSelect.style.display = 'flex';
 })
-
-const totalOrderList = document.querySelector('.total-order-list');
-
-cart.forEach(item => {
-    const orderList = document.createElement('li');
-
-    orderList.innerHTML = `
-        <img src="${item.menuImg}" alt="버거" class="">
-        <ul class="total-order-inner-list">
-            <li>${item.menuName}</li>
-            <li>
-                <span class="total-order-select add-slot">+ 토핑 추가</span>
-                <span class="total-order-select subtract-slot">- 재료 빼기</span>
-                <span class="total-order-select chg-drink">음표 변경</span>
-                <span class="total-order-select chg-side">사이드 변경</span>
-            </li>
-            <li><span class="total-cost">${item.menuCost}</span>원</li>
-        </ul>
-    `;
-
-    totalOrderList.appendChild(orderList);
-});
