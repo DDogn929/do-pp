@@ -476,16 +476,16 @@ function selectreset() {
 addButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
     
-    const 내가선택한메뉴 = {
-        메뉴이름 : menuSelect.querySelector('h3').innerText,
-        메뉴이미지: menuSelect.querySelector('img').getAttribute('src'),
+    const selectMenu = {
+        menuName : menuSelect.querySelector('h3').innerText,
+        menuImg: menuSelect.querySelector('img').getAttribute('src'),
         // 내가선택한메뉴.재료추기.추가
-        재료추가 : nowAddSelect.slice(),
-        재료빼기 : nowSubSelect.slice(),
-        메뉴금액 : menuSelect.querySelector('.cost').innerText
+        addItem : nowAddSelect.slice(),
+        subItem : nowSubSelect.slice(),
+        menuCost : menuSelect.querySelector('.cost').innerText
     }
 
-    cart.push(내가선택한메뉴)
+    cart.push(selectMenu)
 
     selectreset();
     optionReset();
@@ -509,3 +509,25 @@ backButton[0].addEventListener("click",()=>{
     optionSelect.style.display = 'none';
     menuSelect.style.display = 'flex';
 })
+
+const totalOrderList = document.querySelector('.total-order-list');
+
+cart.forEach(item => {
+    const orderList = document.createElement('li');
+
+    orderList.innerHTML = `
+        <img src="${item.menuImg}" alt="버거" class="">
+        <ul class="total-order-inner-list">
+            <li>${item.menuName}</li>
+            <li>
+                <span class="total-order-select add-slot">+ 토핑 추가</span>
+                <span class="total-order-select subtract-slot">- 재료 빼기</span>
+                <span class="total-order-select chg-drink">음표 변경</span>
+                <span class="total-order-select chg-side">사이드 변경</span>
+            </li>
+            <li><span class="total-cost">${item.menuCost}</span>원</li>
+        </ul>
+    `;
+
+    totalOrderList.appendChild(orderList);
+});
