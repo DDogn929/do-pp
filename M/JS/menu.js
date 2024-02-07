@@ -414,8 +414,6 @@ let backButton = Array.from(document.querySelectorAll(".backspace-button"));
 let addButton = Array.from(document.querySelectorAll(".backet-button"));
 
 
-
-
 const optionSelect = document.querySelector('.menu-description-2');
 
 
@@ -469,6 +467,7 @@ const nowAddSelect = [];
 const nowSubSelect = [];
 
 const totalOrderList = document.querySelector('.total-order-list');
+const backetCart = document.querySelector('.backet-list')
 
 const totalCount = document.querySelector('.total-count');
 const totalCost = document.querySelector('.total-cost');
@@ -477,8 +476,10 @@ function selectreset() {
     nowAddSelect.splice(0, nowAddSelect.length);
     nowSubSelect.splice(0, nowSubSelect.length);
 }
+
 function listReset() {
-    for (let i = 0; i < totalOrderList.childElementCount -1; i++) {
+    for (let i = 0; i < cart.length -1; i++) {
+        backetCart.removeChild(backetCart.childNodes[i])
         totalOrderList.removeChild(totalOrderList.childNodes[i])
     }
 }
@@ -523,6 +524,13 @@ addButton[0].addEventListener("click",()=>{
     optionReset();
 
     cart.forEach(item => {
+        const backetList = document.createElement('li');
+        backetList.classList.add('backet-list-img');
+
+        backetList.innerHTML = `
+            <img src="${item.menuImg}" alt="버거" class=""> 
+        `
+        backetCart.appendChild(backetList);
         
         const orderList = document.createElement('li');
         orderList.classList.add('order-list');
@@ -532,8 +540,8 @@ addButton[0].addEventListener("click",()=>{
             <ul class="total-order-inner-list">
                 <li>${item.menuName}</li>
                 <li>
-                    <p class="total-order-select add-slot">${item.addItem}</p>
-                    <p class="total-order-select subtract-slot">-${item.subItem}</p>
+                    <p class="total-order-select add-slot">+ ${item.addItem}</p>
+                    <p class="total-order-select subtract-slot">- ${item.subItem}</p>
                 </li>
                 <li><span class="menu-cost">${item.menuCost}</span>원</li>
             </ul>
@@ -543,17 +551,26 @@ addButton[0].addEventListener("click",()=>{
 
     listReset();
 
+    let allCost = 0;
+
+    for(let i = 0 ; i < cart.length ; i ++) {
+        
+        const str = cart[i].menuCost;
+        const regex = /[^0-9]/g;
+        const result = str.replace(regex, "");
+        const cost = parseInt(result);
+    
+        allCost += cost
+    }
+    // 전체 주문 금액
+    console.log('항목 전체 금액 합계:', allCost)
+    totalCost.innerText = `${allCost.toLocaleString()}`
+
     totalCount.innerText = `${totalOrderList.childElementCount}`
-    // totalCost.innerText = `${}`
 
     // <span class="total-order-select chg-drink">음표 변경</span>
     // <span class="total-order-select chg-side">사이드 변경</span>
 })
-
-// totalOrderList.childNodes[i].children[1].lastChild
-// totalOrderList.childNodes[0].children[1].children[2].innerText
-
-// totalCount.innerText = cart.length
 
 xButton2[0].addEventListener("click",()=>{
     menuSelect.style.display = 'none';
