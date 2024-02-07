@@ -479,7 +479,7 @@ function selectreset() {
 
 function listReset() {
     for (let i = 0; i < cart.length -1; i++) {
-        backetCart.removeChild(backetCart.childNodes[i])
+        backetCart.removeChild(backetCart.childNodes[i+1])
         totalOrderList.removeChild(totalOrderList.childNodes[i])
     }
 }
@@ -518,38 +518,47 @@ addButton[0].addEventListener("click",()=>{
     console.log(selectMenu.menuCost)
     console.log(selectMenu);
     cart.push(selectMenu)
+    console.log('카트 : ')
     console.log(cart)
 
     selectreset();
     optionReset();
 
-    cart.forEach(item => {
+    // cart.forEach(item => {
+        // li태그 생성
         const backetList = document.createElement('li');
         backetList.classList.add('backet-list-img');
 
         backetList.innerHTML = `
-            <img src="${item.menuImg}" alt="버거" class=""> 
+            <img src="${selectMenu.menuImg}" alt="버거" class=""> 
+            <img src="img/octicon_x-circle-16.svg" alt="X-버튼" class="">
         `
+        // 장바구니 안에 들어가는 컨텐츠
         backetCart.appendChild(backetList);
         
         const orderList = document.createElement('li');
         orderList.classList.add('order-list');
     
         orderList.innerHTML = `
-            <img src="${item.menuImg}" alt="버거" class="">
+            <img src="${selectMenu.menuImg}" alt="버거" class="">
             <ul class="total-order-inner-list">
-                <li>${item.menuName}</li>
+                <li>${selectMenu.menuName}</li>
                 <li>
-                    <p class="total-order-select add-slot">+ ${item.addItem}</p>
-                    <p class="total-order-select subtract-slot">- ${item.subItem}</p>
+                    <p class="total-order-select add-slot">+ ${selectMenu.addItem}</p>
+                    <p class="total-order-select subtract-slot">- ${selectMenu.subItem}</p>
                 </li>
-                <li><span class="menu-cost">${item.menuCost}</span>원</li>
+                <li><span class="menu-cost">${selectMenu.menuCost}</span>원</li>
             </ul>
         `;
+        
         totalOrderList.appendChild(orderList);
-    });
+        
 
-    listReset();
+        console.log(backet.childElementCount , "카트리스트");
+        console.log(totalOrderList.childElementCount , "주문리스트");
+    // });
+
+    // listReset();
 
     let allCost = 0;
 
@@ -562,6 +571,7 @@ addButton[0].addEventListener("click",()=>{
     
         allCost += cost
     }
+    
     // 전체 주문 금액
     console.log('항목 전체 금액 합계:', allCost)
     totalCost.innerText = `${allCost.toLocaleString()}`

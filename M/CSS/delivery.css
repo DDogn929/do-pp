@@ -548,7 +548,10 @@ header {
     padding-bottom: 16px;
     margin-bottom: 16px;
     border-bottom: 4px solid var(--main-color1);
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .payment-list > h3 {
