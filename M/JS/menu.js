@@ -413,7 +413,7 @@ let xButton2 = Array.from(document.querySelectorAll(".x-button-img2"));
 let backButton = Array.from(document.querySelectorAll(".backspace-button"));
 let addButton = Array.from(document.querySelectorAll(".backet-button"));
 
-
+let productIndex = 0;
 const optionSelect = document.querySelector('.menu-description-2');
 
 
@@ -497,6 +497,18 @@ addButton[0].addEventListener("click",()=>{
 
     let addSelectionCost = 0;
 
+    let cartXBtn = Array.from(document.querySelectorAll(".x-button"));
+
+    for (let i = 0; i < cart.length; i++) {
+        cartXBtn[i].addEventListener("click",()=>{
+            cart.splice(i,1)
+            backetCart.removeChild(backetCart.childNodes[i+1]);
+            // cartOrderList.;
+            // cart[i].index
+        }) 
+    }
+    // 카트랑 리스트를 추가하는 부분을 밖으로 꺼낸뒤 for문으로 다시만들어서 랜더링되게만들자!
+
     for(let i = 0 ; i < nowAddSelect.length ; i ++) {
         addSelectionCost += burgerItem.addItem.find(element => element.name ===  nowAddSelect[i]).cost
     }
@@ -507,6 +519,7 @@ addButton[0].addEventListener("click",()=>{
 
     
     const selectMenu = {
+        index : productIndex++*2,
         menuName : menuSelect.querySelector('h3').innerText,
         menuImg: menuSelect.querySelector('img').getAttribute('src'),
         // 내가선택한메뉴.재료추기.추가
@@ -530,8 +543,8 @@ addButton[0].addEventListener("click",()=>{
         backetList.classList.add('backet-list-img');
 
         backetList.innerHTML = `
-            <img src="${selectMenu.menuImg}" alt="버거" class=""> 
-            <img src="img/octicon_x-circle-16.svg" alt="X-버튼" class="">
+            <img src="${selectMenu.menuImg}" alt="버거" class="cart-item"> 
+            <img src="img/octicon_x-circle-16.svg" alt="X-버튼" class="x-button">
         `
         // 장바구니 안에 들어가는 컨텐츠
         backetCart.appendChild(backetList);

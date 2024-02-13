@@ -17,7 +17,7 @@ const sideItem = {
             "cost": 3400,
         },
         {
-            "imgUrl": "img/side_img/nuggets.png",
+            "imgUrl": "img/side_img/tenders.png",
             "name": "맥스파이시®치킨 텐더",
             "engName": "McSpicy® Chicken Tenders",
             "description": "부드러운 100% 닭안심살을 스파이시 시즈닝으로 매콤 바삭하게 튀겨낸 치킨 텐더! 2가지 소스로 입맛에 맞게 즐겨보세요!",
@@ -25,7 +25,7 @@ const sideItem = {
             "cost": 3500,
         },
         {
-            "imgUrl": "img/side_img/nuggets.png",
+            "imgUrl": "img/side_img/hash_brown.png",
             "name": "해쉬 브라운",
             "engName": "Hash Brown",
             "description": "씹으면 바삭바삭, 속은 부드러운 감자의 고소함.",
@@ -33,7 +33,7 @@ const sideItem = {
             "cost": 3000,
         },
         {
-            "imgUrl": "img/side_img/nuggets.png",
+            "imgUrl": "img/side_img/golden_m_cheese_sticks.png",
             "name": "골든 모짜렐라 치즈스틱",
             "engName": "Golden Mozzarella Cheese Sticks",
             "description": "속이 꽉 찬 황금빛 바삭함! 자연 모짜렐라 치즈로 빈틈 없이 고소한 맥도날드 치즈스틱을 2조각과 4조각으로 다양하게 즐겨보세요!",
@@ -41,7 +41,7 @@ const sideItem = {
             "cost": 3300,
         },
         {
-            "imgUrl": "img/side_img/nuggets.png",
+            "imgUrl": "img/side_img/tomato_chicken_snack_wrap.png",
             "name": "토마토 치킨 스낵랩",
             "engName": "Tomato Chicken Snack Wrap",
             "description": "상큼한 토마토와 바삭한 치킨의 조합! 매콤한 스파이시 어니언 소스로 더 맛있게!",
@@ -49,7 +49,7 @@ const sideItem = {
             "cost": 3800,
         },
         {
-            "imgUrl": "img/side_img/nuggets.png",
+            "imgUrl": "img/side_img/shanghai_snack_wrap.png",
             "name": "상하이 치킨 스낵랩",
             "engName": "Shanghai Chicken Snack Wrap",
             "description": "매콤한 치킨에 달콤한 화이트 마요 소스로 매콤달콤하게! 베이컨에 양상추, 또띠아까지 어우러져 씹는 맛까지 즐겁다!",
@@ -57,7 +57,7 @@ const sideItem = {
             "cost": 3800,
         },
         {
-            "imgUrl": "img/side_img/nuggets.png",
+            "imgUrl": "img/side_img/coleslaw.png",
             "name": "코울슬로",
             "engName": "Coleslaw",
             "description": "양배추, 당근, 양파가 상큼하고 크리미한 마요 드레싱과 어우러져 아삭하게 씹히는 샐러드",
@@ -68,7 +68,7 @@ const sideItem = {
     
     "addDrink": [
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/cola.png",
             "name": "코카-콜라",
             "engName": "Coca-Cola",
             "description": "갈증해소 뿐만이 아니라 기분까지 상쾌하게! 코카-콜라",
@@ -76,7 +76,7 @@ const sideItem = {
             "cost": 2400,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/zero_cola.png",
             "name": "코카-콜라 제로",
             "engName": "Coca-Cola Zero",
             "description": "상쾌한 맛은 살리면서 웰빙 트렌드에 맞춰 설탕과 칼로리를 제로로 줄인 코카-콜라 제로",
@@ -84,7 +84,7 @@ const sideItem = {
             "cost": 2400,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/sprite.png",
             "name": "스프라이트",
             "engName": "Sprite",
             "description": "청량함에 레몬, 라임향을 더한 시원함!",
@@ -92,7 +92,7 @@ const sideItem = {
             "cost": 2400,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/fanta.png",
             "name": "환타",
             "engName": "Fanta",
             "description": "톡 쏘는 오렌지 향!",
@@ -100,7 +100,7 @@ const sideItem = {
             "cost": 2400,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/vanilla_shake.png",
             "name": "바닐라 쉐이크 Medium",
             "engName": "Vanilla Shake Medium",
             "description": "신선한 우유에 달콤한 바닐라 시럽으로 맛을 더한 깔끔한 쉐이크!",
@@ -108,7 +108,7 @@ const sideItem = {
             "cost": 3500,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/strawberry_shake.png",
             "name": "딸기 쉐이크 Medium",
             "engName": "Strawberry Shake Medium",
             "description": "신선한 우유에 달콤한 딸기 시럽으로 맛을 더한 깔끔한 쉐이크!",
@@ -116,7 +116,7 @@ const sideItem = {
             "cost": 3500,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/choco_shake.png",
             "name": "초코 쉐이크 Medium",
             "engName": "Chocolate Shake Medium",
             "description": "신선한 우유에 달콤한 초코렛 시럽으로 맛을 더한 깔끔한 쉐이크!",
@@ -124,7 +124,7 @@ const sideItem = {
             "cost": 3500,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/orange_juice.png",
             "name": "오렌지 주스",
             "engName": "Orange Juice",
             "description": "비타민 C를 함유한 4년 연속 세계 판매 1위 100% 오렌지 주스.",
@@ -132,7 +132,7 @@ const sideItem = {
             "cost": 2400,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/water.png",
             "name": "생수",
             "engName": "Mineral Water",
             "description": "활력을 되찾아주는 깔끔한 미네랄 생수.",
@@ -140,7 +140,7 @@ const sideItem = {
             "cost": 2000,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/plum_peach_chiller.png",
             "name": "자투 천도복숭아 칠러",
             "engName": "Plum Peach Chiller",
             "description": "상콤한 자두와 달콤한 천도복숭아의 만남! 자두 천도복숭아 칠러",
@@ -149,7 +149,7 @@ const sideItem = {
             "smallcost": 1900,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/jeju_hallabong.png",
             "name": "제주 한라봉 칠러",
             "engName": "Jeju Hallabong Chiller",
             "description": "제주 한라봉의 상큼새콤한 맛과 향을 즐겨보세요!",
@@ -158,7 +158,7 @@ const sideItem = {
             "smallcost": 1900,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/vanilla_latte.png",
             "name": "바닐라 라떼",
             "engName": "Vanilla Latte",
             "description": "바로 내린 100% 친환경 커피의 진한 맛과 향, 1A등급 우유, 그리고 천연 바닐라 향으로 달콤함까지!",
@@ -166,7 +166,7 @@ const sideItem = {
             "cost": 4500,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/ice_vanilla_latte.png",
             "name": "아이스 바닐라 라떼",
             "engName": "Iced Vanilla Latte",
             "description": "바로 내린 100% 친환경 커피의 진한 맛과 향, 1A등급 우유, 그리고 천연 바닐라 향으로 달콤함까지!",
@@ -174,7 +174,7 @@ const sideItem = {
             "cost": 4500,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/cafe_latte.png",
             "name": "카페라떼",
             "engName": "Café Latte",
             "description": "바로 내린 100% 친환경 커피가 신선한 우유를 만나 더 신선하고 부드럽게!",
@@ -182,7 +182,7 @@ const sideItem = {
             "cost": 4000,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/Dcfn_latte.png",
             "name": "디카페인 카페라떼",
             "engName": "Decaffeine Café Latte",
             "description": "바로 내린 100% 친환경 커피가 신선한 우유를 만나 더 신선하고 부드럽게!",
@@ -190,7 +190,7 @@ const sideItem = {
             "cost": 4200,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/ice_latte.png",
             "name": "아이스 카페라떼",
             "engName": "Iced Café Latte",
             "description": "바로 내린 100% 친환경 커피가 신선한 우유를 만나 더 신선하고 부드럽게!",
@@ -198,7 +198,7 @@ const sideItem = {
             "cost": 4000,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/Dcfn_ice_latte.png",
             "name": "디카페인 아이스 카페라떼",
             "engName": "Decaffeine Iced Café Latte",
             "description": "바로 내린 100% 친환경 커피가 신선한 우유를 만나 더 신선하고 부드럽게!",
@@ -206,7 +206,7 @@ const sideItem = {
             "cost": 4200,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/americano.png",
             "name": "아메리카노",
             "engName": "Americano",
             "description": "바로 내린 100% 친환경 커피로 더 신선하게! 더 풍부하게!",
@@ -214,7 +214,7 @@ const sideItem = {
             "cost": 3300,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/Dcfn_americano.png",
             "name": "디카페인 아메리카노",
             "engName": "Decaffeine Americano",
             "description": "바로 내린 100% 친환경 커피로 더 신선하게! 더 풍부하게!",
@@ -222,7 +222,7 @@ const sideItem = {
             "cost": 3500,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/ice_americano.png",
             "name": "아이스 아메리카노",
             "engName": "Iced Americano",
             "description": "바로 내린 100% 친환경 커피로 더 신선하게! 더 풍부하게!",
@@ -230,7 +230,7 @@ const sideItem = {
             "cost": 3300,
         },
         {
-            "imgUrl": "img/drink_img/.png",
+            "imgUrl": "img/drink_img/Dcfn_ice_americano.png",
             "name": "디카페인 아이스 아메리카노",
             "engName": "Decaffeine Iced Americano",
             "description": "바로 내린 100% 친환경 커피로 더 신선하게! 더 풍부하게!",
