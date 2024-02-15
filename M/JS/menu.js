@@ -462,7 +462,7 @@ singleButton.addEventListener("click",()=>{
 })
 // 추가 및 뺀 재료는 배열에 담고 배열을 밑 선택한메뉴 배열에 다시 담는다.
 
-const cart = [];
+let cart = [];
 const nowAddSelect = [];
 const nowSubSelect = [];
 
@@ -507,128 +507,151 @@ addButton[0].addEventListener("click",()=>{
 
     
     const selectMenu = {
-        index : productIndex++*2,
+        index : productIndex++,
         menuName : menuSelect.querySelector('h3').innerText,
         menuImg: menuSelect.querySelector('img').getAttribute('src'),
         // 내가선택한메뉴.재료추기.추가
         addItem : nowAddSelect.slice(),
         subItem : nowSubSelect.slice(),
-        menuCost : (cost + addSelectionCost).toLocaleString()
+        menuCost : (cost + addSelectionCost).toLocaleString(),
+        xBtm : "img/octicon_x-circle-16.svg",
     }
 
     console.log(selectMenu.menuCost)
     console.log(selectMenu);
     cart.push(selectMenu)
-    console.log('카트 : ')
-    console.log(cart)
 
     selectreset();
     optionReset();
 
-    // cart.forEach(item => {
-        // li태그 생성
+    resetCartAndOrderlist();
+    makeCartObject();
+    makeOrderlistObject();
+    // overList()
+    calcCost()
 
-        function makeLi(imgUrl) {
-            const backetList = document.createElement('li');
-            backetList.classList.add('backet-list-img');
+    // <span class="total-order-select chg-drink">음표 변경</span>
+    // <span class="total-order-select chg-side">사이드 변경</span>
+})
 
-            const cartItem = document.createElement('img');
-            cartItem.src = imgUrl;
-            cartItem.alt = imgUrl;
 
-            const xBtn = document.createElement('img');
-            xBtn.classList.add('x-button');
-            xBtn.src = "img/octicon_x-circle-16.svg";
-            xBtn.alt = "X-버튼";
+// 
 
-            backetList.append(cartItem,xBtn);
+function resetCartAndOrderlist() {
+    backetCart.replaceChildren();
+    totalOrderList.replaceChildren();
+}
 
-            // const backetList = document.createElement('li');
-            // backetList.classList.add('backet-list-img');
 
-            // backetList.innerHTML = `
-            //     <img src="${selectMenu.menuImg}" alt="버거" class="cart-item"> 
-            //     <img src="img/octicon_x-circle-16.svg" alt="X-버튼" class="x-button">
-            // `
 
-            // 장바구니 안에 들어가는 컨텐츠
-            backetCart.appendChild(backetList);
 
-            return backetCart
-        }
 
-        function makeList(imgUrl) {
-            const orderList = document.createElement('li');
-            orderList.classList.add('order-list');
-            
-            const orderListImg = document.createElement('img');
-            orderListImg.src = imgUrl;
-            orderListImg.alt = imgUrl;
 
-            const innerList = document.createElement('ul');
-            innerList.classList.add('total-order-inner-list');
+function makeCartObject(){
+    for(let i = 0 ; i < cart.length ; i ++){
 
-            const listName = document.createElement('li');
-            listName.innerText = selectMenu.menuName;
-
-            const listSlot = document.createElement('li');
-
-            const pSlot = document.createElement('p');
-            pSlot.classList.add('add-slot');
-            pSlot.append('+', selectMenu.addItem);
-
-            const mSlot = document.createElement('p');
-            mSlot.classList.add('subtract-slot');
-            mSlot.append('-', selectMenu.subItem);
-            
-            listSlot.append(pSlot,mSlot);
-
-            const listCost = document.createElement('li');
-            const liMenuCost = document.createElement('span');
-            liMenuCost.classList.add('menu-cost');
-            liMenuCost.innerText = selectMenu.menuCost;
-            listCost.append(liMenuCost,'원')
-
-            innerList.append(listName,listSlot,listCost);
-
-            orderList.append(orderListImg,innerList);
+        const backetList = document.createElement('li');
+        backetList.classList.add('backet-list-img');
         
-            // orderList.innerHTML = `
-            //     <img src="${selectMenu.menuImg}" alt="버거" class="">
-            //     <ul class="total-order-inner-list">
-            //         <li>${selectMenu.menuName}</li>
-            //         <li>
-            //             <p class="total-order-select add-slot">+ ${selectMenu.addItem}</p>
-            //             <p class="total-order-select subtract-slot">- ${selectMenu.subItem}</p>
-            //         </li>
-            //         <li><span class="menu-cost">${selectMenu.menuCost}</span>원</li>
-            //     </ul>
-            // `;
-            
-            totalOrderList.appendChild(orderList);
+        const cartItem = document.createElement('img');
+        cartItem.src = cart[i].menuImg;
+        cartItem.alt = cart[i].menuImg;
 
-            return totalOrderList
-        }
-     
-        makeLi(selectMenu.menuImg)
-        makeList(selectMenu.menuImg)
+        const xBtn = document.createElement('img');
+        xBtn.classList.add('x-button');
+        xBtn.src = "img/octicon_x-circle-16.svg";
+        xBtn.alt = "X-버튼";
+        xBtn.addEventListener('click',()=>{
+            const index = cart[i].index;
 
-        console.log(backet.childElementCount , "카트리스트");
-        console.log(totalOrderList.childElementCount , "주문리스트");
-    // });
+            console.log(index);
+            cart = cart.filter((element) => element.index != index)
 
-    // listReset();
+            resetCartAndOrderlist();
+            makeCartObject();
+            makeOrderlistObject();
+            // overList()
+            calcCost()
 
+        })
+        
+        backetList.append(cartItem,xBtn);
+        
+        // 장바구니 안에 들어가는 컨텐츠
+        backetCart.appendChild(backetList);
+    }
+}
+
+// function overList() {
+    // 넘치는 요소 숨기기
+//     if (cart.length > 5) {
+//         cart.overList(5,i)
+        
+
+//         const overImg = document.createElement('img');
+//         overImg.classList.add('subtract-slot');
+//         orderListImg.src = "img/octicon_x-circle-16.svg";
+//         orderListImg.alt = "목록확장버튼";
+
+//         backetCart.appendChild(overImg);
+//     }
+// }
+
+function makeOrderlistObject(){
+    for(let i = 0 ; i < cart.length ; i ++){
+        const orderList = document.createElement('li');
+        orderList.classList.add('order-list');
+        
+        const orderListImg = document.createElement('img');
+        orderListImg.src = cart[i].menuImg;
+        orderListImg.alt = cart[i].menuImg;
+
+        const innerList = document.createElement('ul');
+        innerList.classList.add('total-order-inner-list');
+
+        const listName = document.createElement('li');
+        listName.innerText = cart[i].menuName;
+
+        const listSlot = document.createElement('li');
+
+        const pSlot = document.createElement('p');
+        pSlot.classList.add('add-slot');
+        pSlot.append('+', cart[i].addItem);
+
+        const mSlot = document.createElement('p');
+        mSlot.classList.add('subtract-slot');
+        mSlot.append('-', cart[i].subItem);
+        
+        listSlot.append(pSlot,mSlot);
+
+        const listCost = document.createElement('li');
+        const liMenuCost = document.createElement('span');
+        liMenuCost.classList.add('menu-cost');
+        liMenuCost.innerText = cart[i].menuCost;
+        listCost.append(liMenuCost,'원')
+
+        innerList.append(listName,listSlot,listCost);
+
+        orderList.append(orderListImg,innerList);
+        
+        totalOrderList.appendChild(orderList);
+    }
+}
+
+function calcCost(){
+    
     let allCost = 0;
 
     for(let i = 0 ; i < cart.length ; i ++) {
 
-        backetCart.children[i].children[1].addEventListener("click",()=>{
-            cart.splice(i,0)
-            backetCart.removeChild(backetCart.childNodes[i+1]);
-            totalOrderList.removeChild(totalOrderList.childNodes[i]);
-            // cart[i].index
-        }) 
+        // backetCart.children[i].children[1].addEventListener("click",()=>{
+        //     backetCart.removeChild(backetCart.childNodes[i+1]);
+        //     totalOrderList.removeChild(totalOrderList.childNodes[i]);
+        //     // cart[i].index
+        //     cart.splice(i,1)
+
+        //     console.log(cart)
+        // }) 
         
         const str = cart[i].menuCost;
         const regex = /[^0-9]/g;
@@ -645,10 +668,10 @@ addButton[0].addEventListener("click",()=>{
     totalCost.innerText = `${allCost.toLocaleString()}`
 
     totalCount.innerText = `${totalOrderList.childElementCount}`
+}
 
-    // <span class="total-order-select chg-drink">음표 변경</span>
-    // <span class="total-order-select chg-side">사이드 변경</span>
-})
+
+// 
 
 xButton2[0].addEventListener("click",()=>{
     menuSelect.style.display = 'none';
