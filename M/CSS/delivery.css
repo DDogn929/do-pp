@@ -436,7 +436,7 @@ header {
     position: relative;
 }
 
-.cart-item {
+.backet-list-img > img:first-of-type {
     width: 96px;
     height: 96px;
     object-fit: cover;
@@ -447,7 +447,7 @@ header {
     box-shadow: 2px 4px 4px #00000040;
 }
 
-.x-button {
+.backet-list-img > img:nth-of-type(2) {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -756,7 +756,7 @@ header {
     white-space: nowrap;
 }
 
-.total-order-select {
+.total-order-inner-list > li > p {
     color: var(--font-color-2);
     font-size: 16px;
     
