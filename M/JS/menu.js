@@ -422,14 +422,37 @@ menuData.menu.forEach(item => {
     const listItem = document.createElement('li');
     listItem.classList.add('menu-list');
 
-    listItem.innerHTML = `
-        <img src="${item.imgUrl}" alt="버거이미지">
-        <div class="menu-list-h">
-            <h2>${item.burgerName}</h2>
-            <h3>${item.engName}</h3>
-            <p class="menu-list-cost">${item.cost}</p>
-        </div>
-    `;
+    const listImg = document.createElement('img');
+    listImg.src = item.imgUrl;
+    listImg.alt = "버거이미지";
+
+    const listMenu = document.createElement('div');
+    listMenu.classList.add('menu-list-h');
+
+    const menuH2 = document.createElement('h2');
+    menuH2.innerText = item.burgerName;
+
+    const menuH3 = document.createElement('h3');
+    menuH3.innerText = item.engName;
+
+    const menuCost = document.createElement('p');
+    menuCost.classList.add('menu-list-cost');
+    menuCost.append(item.cost,"원")
+    
+    listMenu.append(menuH2,menuH3,menuCost)
+    
+    listItem.append(listImg,listMenu)
+
+    Container.appendChild(listItem)
+
+    // listItem.innerHTML = `
+    //     <img src="${item.imgUrl}" alt="버거이미지">
+    //     <div class="menu-list-h">
+    //         <h2>${item.burgerName}</h2>
+    //         <h3>${item.engName}</h3>
+    //         <p class="menu-list-cost">${item.cost}</p>
+    //     </div>
+    // `;
 
     listItem.addEventListener("click",()=>{
         menuSelect.style.display = 'flex';
@@ -527,7 +550,6 @@ addButton[0].addEventListener("click",()=>{
     resetCartAndOrderlist();
     makeCartObject();
     makeOrderlistObject();
-    overList()
     calcCost()
 
     // <span class="total-order-select chg-drink">음표 변경</span>
@@ -548,46 +570,49 @@ function resetCartAndOrderlist() {
 
 
 function makeCartObject(){
+    
     for(let i = 0 ; i < cart.length ; i ++){
+        if (i < 5) {
+            const backetList = document.createElement('li');
+            backetList.classList.add('backet-list-img');
+            
+            const cartItem = document.createElement('img');
+            cartItem.src = cart[i].menuImg;
+            cartItem.alt = cart[i].menuImg;
 
-        const backetList = document.createElement('li');
-        backetList.classList.add('backet-list-img');
-        
-        const cartItem = document.createElement('img');
-        cartItem.src = cart[i].menuImg;
-        cartItem.alt = cart[i].menuImg;
+            const xBtn = document.createElement('img');
+            xBtn.classList.add('x-button');
+            xBtn.src = "img/octicon_x-circle-16.svg";
+            xBtn.alt = "X-버튼";
+            xBtn.addEventListener('click',()=>{
+                const index = cart[i].index;
 
-        const xBtn = document.createElement('img');
-        xBtn.classList.add('x-button');
-        xBtn.src = "img/octicon_x-circle-16.svg";
-        xBtn.alt = "X-버튼";
-        xBtn.addEventListener('click',()=>{
-            const index = cart[i].index;
+                console.log(index);
+                cart = cart.filter((element) => element.index != index)
 
-            console.log(index);
-            cart = cart.filter((element) => element.index != index)
+                resetCartAndOrderlist();
+                makeCartObject();
+                makeOrderlistObject();
+                calcCost()
 
-            resetCartAndOrderlist();
-            makeCartObject();
-            makeOrderlistObject();
-            overList()
-            calcCost()
+            })
+            
+            backetList.append(cartItem,xBtn);
+            
+            // 장바구니 안에 들어가는 컨텐츠
+            backetCart.appendChild(backetList);
 
-        })
-        
-        backetList.append(cartItem,xBtn);
-        
-        // 장바구니 안에 들어가는 컨텐츠
-        backetCart.appendChild(backetList);
+        }
     }
-}
+    if(cart.length>=6){
+        backetCart.removeChild(backetCart.children[4]);
+        overList()
+    }
+    } 
 
 function overList() {
     // 넘치는 요소 숨기기
-    if (cart.length > 5) {
-        // cart.overList(5,i)
-
-        const moreList = document.createElement('li');
+    const moreList = document.createElement('li');
         moreList.classList.add('backet-list-more');
 
         const moreBtn = document.createElement('button');
@@ -601,11 +626,10 @@ function overList() {
 
         const moreBtnCount = document.createElement('div');
         moreBtnCount.classList.add('more-btn-count');
-        moreBtnCount.innerText = totalOrderList.childElementCount - 4;
+        moreBtnCount.innerText = cart.length - 4;
         
         moreList.append(moreBtn,moreBtnCount);
         backetCart.appendChild(moreList);
-    }
 }
 
 function makeOrderlistObject(){

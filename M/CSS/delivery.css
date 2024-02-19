@@ -1292,9 +1292,7 @@ footer {
     line-height: 20px;
 
     padding: 16px 0;
-    border-bottom: 3px;
-    border-color: var(--main-color1);
-    border-style: solid;
+    border-bottom: 3px solid var(--main-color1);
     box-sizing: border-box;
 }
 
@@ -1303,16 +1301,14 @@ footer {
     justify-content: space-between;
 
     padding: 16px 0;
-    border-bottom: 3px;
-    border-color: var(--main-color1);
-    border-style: solid;
+    border-bottom: 3px var(--main-color1) solid;
     box-sizing: border-box;
 }
 
 .burger-ingredients > p {
     color: var(--font-color-1);
     font-size: 14px;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .ingredients-list {
@@ -1776,7 +1772,7 @@ footer {
     }
 
     .menu-section {
-        padding: 0 32px;
+        padding: 0 16px;
         background-color: #FFF;
     }
 
@@ -1819,14 +1815,27 @@ footer {
     }
 
     .menu-list-h {
-        padding: 0 16px;
+        padding: 0 10px;
         width: 100%;
         text-align: left;
     }
 
+    .menu-list-h > h2 {
+        width: 200px;
+    }
+
+    .menu-list-h > h3 {
+        width: 200px;
+    }
+
+
     .menu-list-cost {
         display: block;
         text-align: right;
+
+        color: var(--font-color-1);
+        font-size: 18px;
+        font-weight: 900;
     }
 
     .basket-order {
@@ -2012,7 +2021,7 @@ footer {
     .menu-description-tl {
         width: 100%;
         height: 100vh;
-        padding: 80px 32px 0 32px;
+        padding: 0 32px 0 32px;
         flex-direction: column;
         border: none;
         border-radius: 0;
@@ -2020,8 +2029,7 @@ footer {
     }
 
     .img-url {
-        width: 355px;
-        height: 282px;
+        width: 100%;
 
         border: 5px solid var(--main-color1);;
         border-radius: 0px;
@@ -2033,10 +2041,46 @@ footer {
 
     .burger-name  {
         text-align: center;
+        padding-bottom: 8px;
     }
 
     .burger-name > h3 {
         font-size: 24px;
+    }
+
+    .burger-name > p {
+        font-size: 12px;
+        font-weight: 900;
+    }
+
+    .burger-ingredients {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 8px 0;
+    }
+
+    .burger-ingredients > p {
+        padding: 8px 0;
+
+        font-size: 12px;
+    }
+
+    .burger-information > p {
+        font-size: 14px;
+
+        padding: 8px 0;
+    }
+
+    .ingredients-list {
+        font-size: 12px;
+    }
+
+    .allergic-ingredients {
+        font-size: 12px;
+        line-height: 18px;  
+
+        padding: 8px 0;
     }
 
     .burger-set-select-button {
