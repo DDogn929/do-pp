@@ -527,7 +527,7 @@ addButton[0].addEventListener("click",()=>{
     resetCartAndOrderlist();
     makeCartObject();
     makeOrderlistObject();
-    // overList()
+    overList()
     calcCost()
 
     // <span class="total-order-select chg-drink">음표 변경</span>
@@ -570,7 +570,7 @@ function makeCartObject(){
             resetCartAndOrderlist();
             makeCartObject();
             makeOrderlistObject();
-            // overList()
+            overList()
             calcCost()
 
         })
@@ -582,20 +582,31 @@ function makeCartObject(){
     }
 }
 
-// function overList() {
+function overList() {
     // 넘치는 요소 숨기기
-//     if (cart.length > 5) {
-//         cart.overList(5,i)
+    if (cart.length > 5) {
+        // cart.overList(5,i)
+
+        const moreList = document.createElement('li');
+        moreList.classList.add('backet-list-more');
+
+        const moreBtn = document.createElement('button');
+        moreBtn.classList.add('more-btn');
+
+        const moreBtn1 = document.createElement('div');
+        const moreBtn2 = document.createElement('div');
+        const moreBtn3 = document.createElement('div');
+
+        moreBtn.append(moreBtn1,moreBtn2,moreBtn3);
+
+        const moreBtnCount = document.createElement('div');
+        moreBtnCount.classList.add('more-btn-count');
+        moreBtnCount.innerText = totalOrderList.childElementCount - 4;
         
-
-//         const overImg = document.createElement('img');
-//         overImg.classList.add('subtract-slot');
-//         orderListImg.src = "img/octicon_x-circle-16.svg";
-//         orderListImg.alt = "목록확장버튼";
-
-//         backetCart.appendChild(overImg);
-//     }
-// }
+        moreList.append(moreBtn,moreBtnCount);
+        backetCart.appendChild(moreList);
+    }
+}
 
 function makeOrderlistObject(){
     for(let i = 0 ; i < cart.length ; i ++){
