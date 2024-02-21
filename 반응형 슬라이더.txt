@@ -1,0 +1,17 @@
+컨텐츠 : 100
+최소갭 : 8 
+
+컨테이너가 500
+컨텐츠 n + 갭 n -1
+
+100 + n(100 + 8)
+
+500 / 4
+
+container - content + n(content + gap) = 여백
+
+gap : 여백 / n + 8
+
+gap : 76 / 3 + 8
+
+window.addeventlistener('resize', () => {리사이즈될마다 계산})

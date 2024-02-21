@@ -147,6 +147,13 @@ let subtractBtn = Array.from(document.querySelectorAll(".subtract-item-button"))
 const optionSelectList = document.getElementsByClassName("option-select-list");
 let optionSlide = Array.from(document.querySelectorAll(".option-slide"));
 
+const headerButton = document.getElementsByClassName(".header-button");
+
+function mobBtn() {
+    headerButton.style.transform="rotate(-90deg)";
+    console("-90도회전")
+}
+
 function optionReset () {
 
     for (let i = 0; i < addItem.length; i++) {
