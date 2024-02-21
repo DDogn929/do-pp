@@ -190,12 +190,9 @@ const headerButton = document.getElementsByClassName("header-button");
 //     console("-90도회전")
 // }
 
-// window.addeventlistener('resize', () => {리사이즈될마다 계산})
-
 let optionContainer = Array.from(document.querySelectorAll(".option-slide-container"));
 
-window.addeventlistener('resize', () => {리사이즈될마다 계산})
-
+// window.addeventlistener('resize', () => {리사이즈될마다 계산})
 
 function optionReset () {
 
