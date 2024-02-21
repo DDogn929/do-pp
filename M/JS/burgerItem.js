@@ -115,12 +115,33 @@ burgerItem.addItem.forEach(item => {
     addItem.classList.add('option-select-list-button');
     addItem.classList.add('add-item');
 
-    addItem.innerHTML = `
-        <img src="${item.imgUrl}" alt="재료" class="add-item-button option-select-button">
-        <p>${item.name}</p>
-        <p>${item.engName}</p>
-        <p>+ <span>${item.cost}</span>원</p>
-    `;
+    // addItem.innerHTML = `
+    //     <img src="${item.imgUrl}" alt="재료" class="add-item-button option-select-button">
+    //     <p>${item.name}</p>
+    //     <p>${item.engName}</p>
+    //     <p>+ <span>${item.cost}</span>원</p>
+    // `;
+
+    const addImg = document.createElement('img');
+        addImg.classList.add('add-item-button');
+        addImg.classList.add('option-select-button');
+        addImg.src = item.imgUrl;
+        addImg.alt = "재료";
+
+    const addName = document.createElement('p');
+        addName.innerText = item.name;
+
+    const addEngName = document.createElement('p');
+        addEngName.innerText = item.engName;
+
+    const addCostCon = document.createElement('p');
+    
+    const addCost = document.createElement('span');
+        addCost.innerText = item.cost;
+
+        addCostCon.append("+ ",addCost,"원");
+
+    addItem.append(addImg,addName,addEngName,addCostCon);
 
     itemContainer.appendChild(addItem);
 });
@@ -130,11 +151,25 @@ burgerItem.subtract.forEach(item => {
     subtract.classList.add('option-select-list-button');
     subtract.classList.add('subtract-item');
 
-    subtract.innerHTML = `
-        <img src="${item.imgUrl}" alt="재료" class="subtract-item-button option-select-button">
-        <p>${item.name}</p>
-        <p>${item.engName}</p>
-    `;
+    // subtract.innerHTML = `
+    //     <img src="${item.imgUrl}" alt="재료" class="subtract-item-button option-select-button">
+    //     <p>${item.name}</p>
+    //     <p>${item.engName}</p>
+    // `;
+
+    const addImg = document.createElement('img');
+        addImg.classList.add('subtract-item-button');
+        addImg.classList.add('option-select-button');
+        addImg.src = item.imgUrl;
+        addImg.alt = "재료";
+
+    const addName = document.createElement('p');
+        addName.innerText = item.name;
+
+    const addEngName = document.createElement('p');
+        addEngName.innerText = item.engName;
+
+    subtract.append(addImg,addName,addEngName);
 
     subtractContainer.appendChild(subtract);
 });
@@ -147,12 +182,20 @@ let subtractBtn = Array.from(document.querySelectorAll(".subtract-item-button"))
 const optionSelectList = document.getElementsByClassName("option-select-list");
 let optionSlide = Array.from(document.querySelectorAll(".option-slide"));
 
-const headerButton = document.getElementsByClassName(".header-button");
+const headerButton = document.getElementsByClassName("header-button");
 
-function mobBtn() {
-    headerButton.style.transform="rotate(-90deg)";
-    console("-90도회전")
-}
+// function mobBtn() {
+//     //모바일 회전 버튼
+//     headerButton.style.transform="rotate(-90deg)";
+//     console("-90도회전")
+// }
+
+// window.addeventlistener('resize', () => {리사이즈될마다 계산})
+
+let optionContainer = Array.from(document.querySelectorAll(".option-slide-container"));
+
+window.addeventlistener('resize', () => {리사이즈될마다 계산})
+
 
 function optionReset () {
 

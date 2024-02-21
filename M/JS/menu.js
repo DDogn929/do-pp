@@ -479,6 +479,8 @@ singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
     optionSelect.style.display = 'flex';
 
+    addOption()
+
     // const backetItem = document.createElement('li');
     // backet.appendChild(backetItem);
     // console.log(backet.childElementCount)
@@ -574,28 +576,28 @@ function makeCartObject(){
     for(let i = 0 ; i < cart.length ; i ++){
         if (i < 5) {
             const backetList = document.createElement('li');
-            backetList.classList.add('backet-list-img');
+                backetList.classList.add('backet-list-img');
             
             const cartItem = document.createElement('img');
-            cartItem.src = cart[i].menuImg;
-            cartItem.alt = cart[i].menuImg;
+                cartItem.src = cart[i].menuImg;
+                cartItem.alt = cart[i].menuImg;
 
             const xBtn = document.createElement('img');
-            xBtn.classList.add('x-button');
-            xBtn.src = "img/octicon_x-circle-16.svg";
-            xBtn.alt = "X-버튼";
-            xBtn.addEventListener('click',()=>{
-                const index = cart[i].index;
+                xBtn.classList.add('x-button');
+                xBtn.src = "img/octicon_x-circle-16.svg";
+                xBtn.alt = "X-버튼";
+                xBtn.addEventListener('click',()=>{
+                    const index = cart[i].index;
 
-                console.log(index);
-                cart = cart.filter((element) => element.index != index)
+                    console.log(index);
+                    cart = cart.filter((element) => element.index != index)
 
-                resetCartAndOrderlist();
-                makeCartObject();
-                makeOrderlistObject();
-                calcCost()
+                    resetCartAndOrderlist();
+                    makeCartObject();
+                    makeOrderlistObject();
+                    calcCost()
 
-            })
+                })
             
             backetList.append(cartItem,xBtn);
             
@@ -613,22 +615,22 @@ function makeCartObject(){
 function overList() {
     // 넘치는 요소 숨기기
     const moreList = document.createElement('li');
-        moreList.classList.add('backet-list-more');
+            moreList.classList.add('backet-list-more');
 
         const moreBtn = document.createElement('button');
-        moreBtn.classList.add('more-btn');
+            moreBtn.classList.add('more-btn');
 
         const moreBtn1 = document.createElement('div');
         const moreBtn2 = document.createElement('div');
         const moreBtn3 = document.createElement('div');
 
-        moreBtn.append(moreBtn1,moreBtn2,moreBtn3);
+            moreBtn.append(moreBtn1,moreBtn2,moreBtn3);
 
         const moreBtnCount = document.createElement('div');
-        moreBtnCount.classList.add('more-btn-count');
-        moreBtnCount.innerText = cart.length - 4;
+            moreBtnCount.classList.add('more-btn-count');
+            moreBtnCount.innerText = cart.length - 4;
         
-        moreList.append(moreBtn,moreBtnCount);
+            moreList.append(moreBtn,moreBtnCount);
         backetCart.appendChild(moreList);
 }
 
