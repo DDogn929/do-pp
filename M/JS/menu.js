@@ -467,6 +467,7 @@ menuData.menu.forEach(item => {
         menuSelect.querySelector('.setCost').innerText = item.setCost
         menuSelect.querySelector('img').setAttribute('src',item.imgUrl) 
 
+        moveMobBtn()
     })
 
     Container.appendChild(listItem);
@@ -474,6 +475,13 @@ menuData.menu.forEach(item => {
 
 const backet = document.querySelector('.backet-list');
 const singleButton = document.querySelector('.single');
+
+const backetBtnM= document.querySelector('backet-button-m');
+
+function setBacketBtnM() {
+    backetBtnM.classList.add('mob-option')
+    backetBtnM.classList.remove('mob-option')
+}
 
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
@@ -496,6 +504,10 @@ const backetCart = document.querySelector('.backet-list')
 
 const totalCount = document.querySelector('.total-count');
 const totalCost = document.querySelector('.total-cost');
+const cartCountM = document.querySelector('.menu-header-m-count');
+const totalCountM = document.querySelector('.total-count-m');
+const totalCostM = document.querySelector('.total-cost-m');
+
 
 function selectreset() {
     nowAddSelect.splice(0, nowAddSelect.length);
@@ -553,6 +565,8 @@ addButton[0].addEventListener("click",()=>{
     makeCartObject();
     makeOrderlistObject();
     calcCost()
+
+    removeMobBtn()
 
     // <span class="total-order-select chg-drink">음표 변경</span>
     // <span class="total-order-select chg-side">사이드 변경</span>
@@ -703,20 +717,25 @@ function calcCost(){
     // 전체 주문 금액
     console.log('항목 전체 금액 합계:', allCost)
     totalCost.innerText = `${allCost.toLocaleString()}`
+    totalCostM.innerText = `${allCost.toLocaleString()} 원`
 
     totalCount.innerText = `${totalOrderList.childElementCount}`
+    totalCountM.innerText = `${totalOrderList.childElementCount}`
+    cartCountM.innerText = `+${totalOrderList.childElementCount}`
 }
 
 
 // 
 
 xButton2[0].addEventListener("click",()=>{
+    removeMobBtn()
     menuSelect.style.display = 'none';
 })
 
 xButton2[1].addEventListener("click",()=>{
     optionReset()
     selectreset()
+    removeMobBtn()
     optionSelect.style.display = 'none';
 })
 
@@ -725,4 +744,16 @@ backButton[0].addEventListener("click",()=>{
     selectreset()
     optionSelect.style.display = 'none';
     menuSelect.style.display = 'flex';
+})
+
+let mobBtn = Array.from(document.querySelectorAll(".header-button"));
+
+mobBtn[0].addEventListener("click",()=>{
+    if (mobBtn[0].classList.contains('active')) {
+        menuSelect.style.display = 'none'
+        optionSelect.style.display = 'none'
+        removeMobBtn()
+    } else {
+        menuSelect.style.display = 'flex'
+    }
 })

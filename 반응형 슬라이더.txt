@@ -1,6 +1,7 @@
-컨텐츠 : 100
-최소갭 : 8 
+컨텐츠너비 : 100
+최소갭 : 8
 optionContainer[i].clientWidth = 컨테이너 너비
+optionContainer[i].children[0].childElementCount = 컨텐츠 개수
 
 컨테이너가 500
 컨텐츠 n + 갭 n -1
@@ -16,3 +17,11 @@ gap : 여백 / n + 8
 gap : 76 / 3 + 8
 
 window.addeventlistener('resize', () => {리사이즈될마다 계산})
+
+544
+
+
+
+
+
+

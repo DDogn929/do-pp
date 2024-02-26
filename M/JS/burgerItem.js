@@ -182,17 +182,32 @@ let subtractBtn = Array.from(document.querySelectorAll(".subtract-item-button"))
 const optionSelectList = document.getElementsByClassName("option-select-list");
 let optionSlide = Array.from(document.querySelectorAll(".option-slide"));
 
-const headerButton = document.getElementsByClassName("header-button");
+const mBackSpaceBtn = document.getElementsByClassName("m-b_space-btn");
 
-// function mobBtn() {
-//     //모바일 회전 버튼
-//     headerButton.style.transform="rotate(-90deg)";
-//     console("-90도회전")
-// }
+function moveMobBtn() {
+    //모바일 회전 버튼
+    // mBackSpaceBtn.style.transition = `0.5s`
+    // mBackSpaceBtn.style.transform=`rotate(-90deg)`;
+    mBackSpaceBtn[0].classList.add('active')
+    console.log('무브?')
+    
+}
+
+function removeMobBtn() {
+    //모바일 회전 버튼
+    mBackSpaceBtn[0].classList.remove('active')
+    console.log('회전')
+}
 
 let optionContainer = Array.from(document.querySelectorAll(".option-slide-container"));
 
-// window.addeventlistener('resize', () => {리사이즈될마다 계산})
+// window.addeventlistener('resize', () => {
+//     console.log('리사이징')
+// })
+
+window.addEventListener('resize',function() { 
+    console.log('리사이징')
+})
 
 function optionReset () {
 
