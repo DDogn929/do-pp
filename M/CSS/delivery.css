@@ -53,6 +53,7 @@ header {
     width: 60px;
     height: 60px;
     display: none;
+    cursor : pointer;
 }
 
 .yellow-cart{
@@ -1537,7 +1538,7 @@ footer {
     align-items: center;
 }
 
-.m-down-button > p:first-of-type {
+.total-count-m {
     position: absolute;
     left: 16px;
 
@@ -1557,12 +1558,30 @@ footer {
     font-weight: 900;
 }
 
-.m-down-button > p:last-of-type {
+.total-cost-m {
     position: absolute;
     right: 16px;
 
     color: #fff;
     font-size: 18px;
+    font-weight: 900;
+}
+
+.backet-button-m {
+    display: none;
+    transition: 1s;
+    transform: translateY(0);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    bottom: 0;
+
+    display: none;
+}
+
+.backet-button-m > div > button > p {
+    color: var(--font-color-1);
+    font-size: 28px;
     font-weight: 900;
 }
 
@@ -2154,6 +2173,11 @@ footer {
 
 .heightProtect {
     display: none;
+}
+
+.m-b_space-btn.active {
+    transition: all 0.5s ease 0s;
+    transform: rotate(-90deg);
 }
 
 @media screen and (max-height:615px) and (min-width:1200px){
