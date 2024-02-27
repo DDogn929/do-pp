@@ -627,11 +627,13 @@ header {
     align-items: center;
 }
 
-.Select-payment {
+.select-payment {
+    /* z-index: 999; */
     overflow: hidden;
+    transition-duration: 0.5s;
 }
 
-.Select-payment > div {
+.select-payment > div {
     width: 100%;
     /* text-align: center; */
     line-height: 40px;
@@ -656,17 +658,18 @@ header {
 .submenu {
     height: 0; /*ul의 높이를 안보이게 처리*/
     overflow: hidden;
-}
-
-.Select-payment > div:hover {
-    background-color: #fff;
-    transition-duration: 0.5s;
-}
-
-.Select-payment > div:hover .submenu {
-    height: 158px; /*서브메뉴 li한개의 높이 50*5*/
     transition-duration: 1s;
 }
+
+.select-payment-click {
+    background-color: #fff;
+}
+
+.select-payment-click-submenu {
+    height: 158px; /*서브메뉴 li한개의 높이 50*5*/
+    cursor : pointer;
+}
+
 
 .payment-button {
     width: 100%;

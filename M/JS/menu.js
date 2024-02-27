@@ -476,12 +476,12 @@ menuData.menu.forEach(item => {
 const backet = document.querySelector('.backet-list');
 const singleButton = document.querySelector('.single');
 
-const backetBtnM= document.querySelector('backet-button-m');
+// const backetBtnM= document.querySelector('backet-button-m');
 
-function setBacketBtnM() {
-    backetBtnM.classList.add('mob-option')
-    backetBtnM.classList.remove('mob-option')
-}
+// function setBacketBtnM() {
+//     backetBtnM.classList.add('mob-option')
+//     backetBtnM.classList.remove('mob-option')
+// }
 
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
