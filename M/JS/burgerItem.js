@@ -201,13 +201,33 @@ function removeMobBtn() {
 
 let optionContainer = Array.from(document.querySelectorAll(".option-slide-container"));
 
-// window.addeventlistener('resize', () => {
-//     console.log('리사이징')
+function 반응형슬라이드() {
+    const contentSize = 100
+    const minGap = 8
+
+    container = optionContainer[0].clientWidth;
+    contentCounts = optionContainer[0].children[0].childElementCount;
+    innerContent = Math.floor(optionContainer[0].clientWidth/100 - 1)
+
+    blank = container - (contentSize + innerContent * (contentSize + minGap));
+
+    gapSize = blank/(innerContent) + minGap
+    
+    for (let i = 0; i < 4; i++) {
+        document.getElementsByClassName("option-slide")[i].style.gap = `${gapSize}px`;
+    }
+
+    return (gapSize)
+}
+
+// window.addeventlistener('resize',()=>{
+//     console.log('너비가 조정됨')
 // })
 
-window.addEventListener('resize',function() { 
-    console.log('리사이징')
-})
+window.addEventListener('resize', function(){
+    반응형슬라이드()
+	console.log('너비가 조정됨');
+});
 
 function optionReset () {
 
