@@ -26,8 +26,7 @@ let subMenuList = Array.from(document.querySelectorAll(".submenu > li"));
 
 const selectPaymentOption = function(item) {
     selectPayment.children[0].children[0].innerHTML = item.textContent;  
-    selectPayment.classList.remove('select-payment-click');
-    selectSubMenu.classList.remove('select-payment-click-submenu');
+    console.log('닫힘')
 }
 
 // function selectPaymentOption() {

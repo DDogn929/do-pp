@@ -487,8 +487,6 @@ singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
     optionSelect.style.display = 'flex';
 
-    addOption()
-    optionSlideBtn()
     // const backetItem = document.createElement('li');
     // backet.appendChild(backetItem);
     // console.log(backet.childElementCount)
