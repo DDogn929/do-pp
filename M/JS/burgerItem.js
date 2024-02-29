@@ -110,6 +110,8 @@ const burgerItem = {
 const itemContainer = document.querySelector('.item-container')
 const subtractContainer = document.querySelector('.subtract-container')
 
+let gapSize;
+
 burgerItem.addItem.forEach(item => {
     const addItem = document.createElement('li');
     addItem.classList.add('option-select-list-button');
@@ -205,20 +207,22 @@ function 반응형슬라이드() {
     const contentSize = 100
     const minGap = 8
 
-    container = optionContainer[0].clientWidth;
-    contentCounts = optionContainer[0].children[0].childElementCount;
-    innerContent = Math.floor(optionContainer[0].clientWidth/100 - 1)
+    let container = optionContainer[0].clientWidth;
+    // console.log('콘테이너?',container)
+    // let contentCounts = optionContainer[0].children[0].childElementCount;
+    let innerContent = Math.floor(optionContainer[0].clientWidth/100 - 1)
 
-    blank = container - (contentSize + innerContent * (contentSize + minGap));
+    let blank = container - (contentSize + innerContent * (contentSize + minGap));
 
     gapSize = blank/(innerContent) + minGap
     
     for (let i = 0; i < 4; i++) {
         document.getElementsByClassName("option-slide")[i].style.gap = `${gapSize}px`;
     }
-
-    return (gapSize)
+    // console.log(`현재 갭은 ${gapSize}`)
+    // return (gapSize)
 }
+
 
 // window.addeventlistener('resize',()=>{
 //     console.log('너비가 조정됨')
@@ -226,19 +230,25 @@ function 반응형슬라이드() {
 
 window.addEventListener('resize', function(){
     반응형슬라이드()
+
+    // selectreset();
+    // optionReset();
 	console.log('너비가 조정됨');
 });
 
 function optionReset () {
 
+    // for (let i = 0; i < optionSlide.length - 1; i++) {
+    //     optionSlide[i].style.transform = `translateX(0)`;
+    // }
+
     for (let i = 0; i < addItem.length; i++) {
         addItemBtn[i].classList.remove('option-select-button-on');
     }
+
     for (let i = 0; i < subtract.length; i++) {
         subtractBtn[i].classList.remove('option-select-button-on');
     }
-
-    positionReset()
     
     addItemBtn[0].classList.add('option-select-button-on');
     subtractBtn[0].classList.add('option-select-button-on');
@@ -252,32 +262,42 @@ for (let i = 0; i <optionSelectList.length; i++) {
 
     let nowPosition = 0;
 
-    
-    function positionReset() {
-        for (let i = 0; i < optionSlide.length; i++) {
-            optionSlide[i].style.transform = `translateX(calc(0*${nowPosition})))`;  
-        }
-        console.log('reset')
+    function sliderMoveApply(){
+        optionSlide[i].style.transition = `0.5s`
+        optionSlide[i].style.transform = `translateX(calc((-100px - ${gapSize}px)*${nowPosition}))`;
     }
 
     leftButton.addEventListener("click",()=>{
         if(nowPosition > 0) {
         nowPosition--
-            optionSlide[i].style.transition = `0.5s`
-            optionSlide[i].style.transform = `translateX(calc((-132px + -16px)*${nowPosition}))`;
+            sliderMoveApply();
         }
 
         // nowPosition에 따라 translate 적용해주는 구문 넣기
     })
 
     rightButton.addEventListener("click",()=>{
-        if(nowPosition < optionSlide[i].childElementCount -1) {
+        if(nowPosition < optionSlide[i].childElementCount - (Math.ceil(optionSlide[i].clientWidth/100) - 1)) {
             nowPosition++
-            optionSlide[i].style.transition = `0.5s`
-            optionSlide[i].style.transform = `translateX(calc((-132px + -16px)*${nowPosition}))`;
+            sliderMoveApply();
         }
     })
 
+    // xButton2[1].addEventListener("click",()=>{
+    //     nowPosition*0
+    //     optionSlide[i].style.transform = `translateX(calc((-100px - ${gapSize}px)*${nowPosition}))`;
+    //     console.log('초기화')
+    // })
+    // backButton[0].addEventListener("click",()=>{
+    //     nowPosition*0
+    //     optionSlide[i].style.transform = `translateX(calc((-100px - ${gapSize}px)*${nowPosition}))`;
+    //     console.log('초기화')
+    // })
+    // addButton[0].addEventListener("click",()=>{
+    //     nowPosition*0
+    //     optionSlide[0].style.transform = `translateX(calc(0))`;
+    //     console.log('초기화')
+    // })
 }
 
 for (let i = 0; i < addItem.length; i++) {

@@ -315,16 +315,9 @@ header {
     gap: 20px;
 }
 
-.menu-ul {
-    max-width: 1200px;
-
-    margin: 0 auto;
-    padding: 20px 0;
-    
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.menu-ul::-webkit-scrollbar{
+    display:none;
+  }
 
 .menu-list {
     width: 280px;
@@ -1460,8 +1453,6 @@ footer {
 }
 
 .option-select-list-button {
-    padding: 0 16px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2063,8 +2054,6 @@ footer {
 
         border: 4px solid var(--main-color1);;
         border-radius: 0px;
-
-        height: 180px;
     }
 
     .burger-description {
@@ -2151,7 +2140,6 @@ footer {
     }
 
     .option-select-list-button {
-        padding: 0px;
         gap: 4px;
         font-size: 14px;
     }

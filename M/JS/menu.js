@@ -486,6 +486,7 @@ const singleButton = document.querySelector('.single');
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
     optionSelect.style.display = 'flex';
+    반응형슬라이드()
 
     // const backetItem = document.createElement('li');
     // backet.appendChild(backetItem);
@@ -750,6 +751,9 @@ mobBtn[0].addEventListener("click",()=>{
     if (mobBtn[0].classList.contains('active')) {
         menuSelect.style.display = 'none'
         optionSelect.style.display = 'none'
+
+        optionReset()
+        selectreset()
         removeMobBtn()
     } else {
         menuSelect.style.display = 'flex'
