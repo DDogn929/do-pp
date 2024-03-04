@@ -1020,14 +1020,14 @@ footer {
 }
 
 .non-members-login-button {
-    width: 300px;
+    min-width: 300px;
     height: 70px;
     background-color: var(--main-color1);
     color: var(--font-color-1);
     font-size: 28px;
     font-weight: 900;
 
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .x-button-1 > img {
@@ -1237,7 +1237,7 @@ footer {
 
 .img-url {
     width: 523px;
-    height: 523px;
+    max-height: 523px;
     
     object-fit: cover;
 
@@ -1562,11 +1562,10 @@ footer {
 }
 
 .backet-button-m {
-    display: none;
     transition: 1s;
     transform: translateY(0);
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     width: 100%;
     bottom: 0;
 
@@ -1879,7 +1878,7 @@ footer {
 
     .payment-list-ul {
         width: 100%;
-        height: calc(100vh - 80px - 125px);
+        /* height: calc(100vh - 80px - 125px); */
         padding: 10px;
         border: none;
         background-color: #FFF;
@@ -2013,6 +2012,10 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
+
+    .non-members-login {
+        /* padding-bottom: 10px; */
+    }
     
     .store-search-m {
         display: none;
@@ -2050,8 +2053,9 @@ footer {
     }
 
     .img-url {
+        
         width: 100%;
-
+        height: calc(100% - 350px);
         border: 4px solid var(--main-color1);;
         border-radius: 0px;
     }
@@ -2152,12 +2156,20 @@ footer {
         display: none;
     }
 
+    .x-button-1 {
+        
+    }
+
     .x-button-2 {
         display: none;
     }
 
     .m-down-button-section {
         display: block;
+    }
+
+    .backet-button-m {
+        display: none;
     }
 }
 

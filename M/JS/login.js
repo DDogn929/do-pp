@@ -133,6 +133,12 @@ addressSet.addEventListener("click",()=>{
     address.style.display = 'none';
 })
 
+// if (address.style.display = 'flex') {
+//     mBackSpaceBtn.addEventListener("click",()=>{
+//         address.style.display = 'none';
+//     })
+// }
+
 // address.addEventListener("click",()=>{
 //     address.style.display = 'none';
 //     reset()

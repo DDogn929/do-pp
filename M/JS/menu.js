@@ -476,16 +476,20 @@ menuData.menu.forEach(item => {
 const backet = document.querySelector('.backet-list');
 const singleButton = document.querySelector('.single');
 
-// const backetBtnM= document.querySelector('backet-button-m');
+const backetBtnM = document.querySelector('.backet-button-m');
 
-// function setBacketBtnM() {
-//     backetBtnM.classList.add('mob-option')
-//     backetBtnM.classList.remove('mob-option')
-// }
+function setBacketBtnM() {
+    if (optionSelect.style.display == 'flex') {
+    backetBtnM.style.display = 'flex';
+    console.log ('들어감')
+    }
+    backetBtnM.style.display = 'none';
+}
 
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
     optionSelect.style.display = 'flex';
+    setBacketBtnM()
     반응형슬라이드()
 
     // const backetItem = document.createElement('li');
