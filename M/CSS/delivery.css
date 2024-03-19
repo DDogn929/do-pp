@@ -19,6 +19,7 @@
 .main-section {
     height: calc(100vh - 80px);
     max-width: 100%;
+    min-height: calc(600px - 80px);
     position: relative;
     overflow: hidden;
 }
@@ -126,7 +127,7 @@ header {
     bottom: 0;
         
     margin: 0 auto;
-    width: calc(100% - 600px);
+    width: 670px;
     height: 100px;
     background-color: var(--main-color1);
     color: var(--font-color-1);
@@ -144,22 +145,46 @@ header {
 
 .slider-l {
     position: absolute;
-    width: 100px;
+    width: 300px;
     height: 100%;
     display: flex;
     align-items: center;
     top: 0;
-    left: 0;
+    left: ;
+    background: linear-gradient(to left,transparent 0%,white 100%);
+    transform: translateX(-50%); transition: 0.5s;
+}
+
+.slider-l:hover {
+    transform: translateY(0);
+}
+
+.slider-l > img {
+    width: 48px;
+    position: absolute;
+    left: 80px;
 }
 
 .slider-r {
     position: absolute;
-    width: 100px;
+    width: 300px;
     height: 100%;
     display: flex;
     align-items: center;
     top: 0;
     right: 0;
+    background: linear-gradient(to right,transparent 0%,white 100%);
+    transform: translateX(50%); transition: 0.5s;
+}
+
+.slider-r:hover {
+    transform: translateY(0);
+}
+
+.slider-r > img {
+    width: 48px;
+    position: absolute;
+    right: 80px;
 }
 
 .main-slider{
@@ -1661,7 +1686,7 @@ footer {
     .main-section {
         padding-top: 80px;
         height: calc(100vh - 80px - 220px);
-        min-height: 600px;
+        min-height: auto;
         max-width: 100%;
         background-color: var(--main-color3);
     }
@@ -1706,21 +1731,28 @@ footer {
         border: none;
     }
 
+    .slider-l {
+        width: 160px;
+    }
+
     .slider-l > img {
-        width: 50px;
-        height: 100px;
+        width: 36px;
+        left: 20px;
+    }
+
+    .slider-r {
+        width: 160px;
     }
 
     .slider-r > img{
-        position: absolute;
-        right: 0;
-        width: 50px;
-        height: 100px;
+        width: 36px;
+        right: 20px;
     }
 
     .select-order-section{
         height: 100%;
         max-width: 100%;
+        min-height: auto;
     }
 
     .select-order-section-title {
@@ -2195,6 +2227,8 @@ footer {
         display: none;
     }
 
+    
+
     .m-down-button-section {
         display: block;
     }
@@ -2202,6 +2236,8 @@ footer {
     .backet-button-m {
         display: none;
     }
+
+    
 
     .pc-main-button {
         display: none;
