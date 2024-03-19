@@ -199,6 +199,7 @@ function removeMobBtn() {
     //모바일 회전 버튼
     mBackSpaceBtn[0].classList.remove('active')
     console.log('회전')
+    backetBtnMOff()
 }
 
 let optionContainer = Array.from(document.querySelectorAll(".option-slide-container"));
@@ -231,8 +232,13 @@ function 반응형슬라이드() {
 window.addEventListener('resize', function(){
     반응형슬라이드()
 
+    // if (Window.innerWidth < 1220) {
+    //     console.log('모바일환경');
+    // }
+
     // selectreset();
     // optionReset();
+    console.log(`${window.innerWidth}px`)
 	console.log('너비가 조정됨');
 });
 
