@@ -1557,12 +1557,12 @@ footer {
 
 .m-down-button-section {
     display: none;
-    transition: 1s;
+    transition: 0.5s;
     transform: translateY(0);
     position: fixed;
     z-index: 99;
     width: 100%;
-    bottom: 0;
+    bottom: -125px;
 }
 
 .m-down-button-tl {
@@ -1686,7 +1686,7 @@ footer {
     .main-section {
         padding-top: 80px;
         height: calc(100vh - 80px - 220px);
-        min-height: auto;
+        min-height: 520px;
         max-width: 100%;
         background-color: var(--main-color3);
     }
@@ -2230,7 +2230,7 @@ footer {
     
 
     .m-down-button-section {
-        display: block;
+        display: flex;
     }
 
     .backet-button-m {

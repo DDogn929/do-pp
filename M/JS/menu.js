@@ -478,6 +478,53 @@ const singleButton = document.querySelector('.single');
 
 const backetBtnM = document.querySelector('.backet-button-m');
 
+// let windowWidth = window.innerWidth;
+
+window.onscroll = scrollF();
+
+function scrollF() {
+    index = window.innerHeight;
+    if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600 ){
+        document.querySelector('.m-down-button-section').style.bottom = '-125px';
+    }else{
+        document.querySelector('.m-down-button-section').style.bottom = '0';
+
+    }
+    console.log('작동')
+}
+
+function backetBtnMControl() {
+    let windowWidth = window.innerWidth;
+    // if (window.innerWidth < 1220) {
+    //     backetBtnM.style.display = 'flex';
+    //     console.log('mod')
+    // } {
+    //     backetBtnM.style.display = 'none';
+    //     console.log('pc')
+    // }
+
+    backetBtnM.style.display = 'flex';
+}
+
+function backetBtnMOff() {
+    backetBtnM.style.display = 'none';
+}
+
+backetBtnM.addEventListener("click",()=>{
+    optionSelect.style.display = 'none';
+    backetBtnMOff()
+
+    selectreset();
+    optionReset();
+
+    // resetCartAndOrderlist();
+    // makeCartObject();
+    // makeOrderlistObject();
+    // calcCost()
+
+    // removeMobBtn()
+})
+
 function setBacketBtnM() {
     if (optionSelect.style.display == 'flex') {
     backetBtnM.style.display = 'flex';
@@ -491,7 +538,7 @@ singleButton.addEventListener("click",()=>{
     optionSelect.style.display = 'flex';
     setBacketBtnM()
     반응형슬라이드()
-
+    backetBtnMControl()
     // const backetItem = document.createElement('li');
     // backet.appendChild(backetItem);
     // console.log(backet.childElementCount)
@@ -560,6 +607,8 @@ addButton[0].addEventListener("click",()=>{
     console.log(selectMenu.menuCost)
     console.log(selectMenu);
     cart.push(selectMenu)
+
+    backetBtnMOff()
 
     selectreset();
     optionReset();
