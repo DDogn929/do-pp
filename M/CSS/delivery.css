@@ -144,7 +144,7 @@ header {
     gap: 10px;
     
     border-radius: 10px;
-    border: 5px solid var(--font-color-1);
+    border: 4px solid var(--font-color-1);
 }
 
 .slider-l {
@@ -211,7 +211,7 @@ header {
     width: 30px;
     height: 30px;
     background-color: var(--main-color3);
-    border: #FFF 5px solid;
+    border: #FFF 4px solid;
     border-radius: 50%;
 }
 
@@ -278,9 +278,7 @@ header {
     gap: 10px;
     
     border-radius: 10px;
-    border: 5px;
-    border-style: solid;
-    border-color: var(--font-color-1);
+    border: 4px solid var(--font-color-1);
     box-sizing: border-box;
 }
 
@@ -345,9 +343,7 @@ header {
     font-size: 20px;
     font-weight: bold;
 
-    border-bottom: 5px;
-    border-style: solid;
-    border-color: transparent;
+    border-bottom: 4px solid transparent;
     box-sizing: border-box;
 }
 
@@ -679,9 +675,7 @@ header {
     color: var(--font-color-2);
     font-size: 18px;
     
-    border: 5px;
-    border-style: solid;
-    border-color: var(--main-color1);
+    border: 4px solid var(--main-color1);
     box-sizing: border-box;
 
     display: flex;
@@ -703,7 +697,7 @@ header {
     font-weight: 500;
 
     background-color: #fff;
-    border: 5px solid #FFC72C;
+    border: 4px solid #FFC72C;
 
     margin-top: 16px;
     padding: 0 8px;
@@ -762,7 +756,6 @@ header {
 
 .total-order-tl{
     padding: 32px 0;
-
 }
 
 .total-order{
@@ -806,7 +799,7 @@ header {
 .total-order-list > li {
     width: 500px;
     height: 100px;
-    border: 5px solid var(--main-color1);
+    border: 4px solid var(--main-color1);
     box-sizing: border-box;
 
     display: flex;
@@ -820,7 +813,7 @@ header {
     height: 100%;
     object-fit: cover;
 
-    border-right: 5px solid var(--main-color1);
+    border-right: 4px solid var(--main-color1);
     box-sizing: border-box;
 }
 
@@ -832,7 +825,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     gap: 6px;
-    padding: 0 12px;
+    padding: 4px 8px;
 }
 
 .total-option {
@@ -844,7 +837,7 @@ header {
     color: var(--font-color-2);
     font-size: 16px;
     
-    width: 300px;
+    width: 350px;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
@@ -991,7 +984,7 @@ footer {
     color: var(--font-color-2);
     font-size: 18px;
 
-    border-bottom: 5px solid var(--main-color1);
+    border-bottom: 4px solid var(--main-color1);
     box-sizing: border-box;
     
     display: flex;
@@ -1014,7 +1007,7 @@ footer {
     font-weight: 900;
 
     border-radius: 20px;
-    border: 5px solid var(--main-color1);
+    border: 4px solid var(--main-color1);
     box-sizing: border-box;
 }
 
@@ -1164,9 +1157,7 @@ footer {
     color: var(--font-color-2);
     font-size: 14px;
 
-    border: 5px;
-    border-style: solid;
-    border-color: var(--main-color1);
+    border: 4px solid var(--main-color1);
     box-sizing: border-box;
 
     display: flex;
@@ -1238,7 +1229,7 @@ footer {
     width: 560px;
     height: 60px;
 
-    border: 5px solid var(--main-color1);
+    border: 4px solid var(--main-color1);
     box-sizing: border-box;
 
     display: flex;
@@ -1273,9 +1264,7 @@ footer {
 
     color: var(--font-color-2);
     font-size: 14px;
-    border: 5px;
-    border-color: var(--main-color1);
-    border-style: solid;
+    border: 4px var(--main-color1) solid;
     box-sizing: border-box;
 }
 
@@ -1911,7 +1900,7 @@ footer {
         width: 100px;
         height: 100%;
 
-        border-right: 5px solid var(--main-color1);
+        border-right: 4px solid var(--main-color1);
     }
 
     .menu-list-h {
@@ -1967,6 +1956,7 @@ footer {
         padding: 10px;
         border: none;
         background-color: #FFF;
+        overflow-y: unset;
     }
 
     .payment-list:first-of-type > h3 {
@@ -2010,12 +2000,20 @@ footer {
         width: 100%;
     }
 
+    .total-order-list {
+        overflow-y: unset;
+    }
+
     .total-order-list > li {
         width: 100%;
     }
 
+    .order-list:last-of-type {
+        /* margin-bottom: 125px; */
+    }
+
     .total-order-inner-list {
-        width: 100%;
+        width: calc(100% - 132px);
     }
 
     .total-order-inner-list > li:first-of-type {
@@ -2034,6 +2032,10 @@ footer {
 
     .total-order-inner-list > li:last-of-type {
         font-size: 16px;
+    }
+
+    .total-order-inner-list > li > p {
+        width: calc(100% - 64px);
     }
 
     .footer-menu {
@@ -2140,7 +2142,7 @@ footer {
     .img-url {
         
         width: 100%;
-        height: calc(100% - 350px);
+        height: calc(100% - 424px);
         border: 4px solid var(--main-color1);;
         border-radius: 0px;
     }
@@ -2234,7 +2236,10 @@ footer {
     }
 
     .backet-button {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        bottom: 24px;
+        width: calc(100% - 32px);
     }
 
     .backspace-button{

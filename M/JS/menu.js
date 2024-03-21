@@ -480,17 +480,23 @@ const backetBtnM = document.querySelector('.backet-button-m');
 
 // let windowWidth = window.innerWidth;
 
-window.onscroll = scrollF();
+// window.onscroll = scrollF();
+
+window.addEventListener('scroll', function(){
+    scrollF()
+    console.log('스크롤')
+})
 
 function scrollF() {
     index = window.innerHeight;
-    if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600 ){
-        document.querySelector('.m-down-button-section').style.bottom = '-125px';
+
+    if(document.body.scrollTop >= index - 80 || document.documentElement.scrollTop >= index - 80 ){
+        document.querySelector('.m-down-button-section').style.bottom = '0px';
     }else{
-        document.querySelector('.m-down-button-section').style.bottom = '0';
+        document.querySelector('.m-down-button-section').style.bottom = '-125px';
 
     }
-    console.log('작동')
+    // console.log('작동')
 }
 
 // function backetBtnMControl() {
