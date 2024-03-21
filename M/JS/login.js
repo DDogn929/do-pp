@@ -69,6 +69,30 @@ function setLogin () {
 
 }
 
+function scrollLock() {
+    document.body.style.overflow = 'hidden';
+}
+
+function scrollUnlock() {
+    document.body.style.removeProperty('overflow');
+}
+
+// window.onload = function () {
+//     setTimeout (function () {
+//         scrollTo(0,0);
+//     }, 100);
+// }
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+if (logined) {
+    document.body.style.removeProperty('overflow');
+} else {
+    document.body.style.overflow = 'hidden';
+}
+
 headerLogin.addEventListener("click",()=>{
     if(logined){
         loginSet.style.display = 'flex';
@@ -76,7 +100,9 @@ headerLogin.addEventListener("click",()=>{
         logined = false;
     } else {
         login.style.display = 'flex';
+        scrollLock()
     }
+    
 })
 
 pcStart.addEventListener("click",()=>{
@@ -86,13 +112,15 @@ pcStart.addEventListener("click",()=>{
         // logined = false;
     } else {
         login.style.display = 'flex';
+        scrollLock();
     }
 })
 
 delivery.addEventListener("click",()=>{
     deliveryed = true;
     packaginged = false;
-    openLogin ();
+    openLogin();
+    scrollLock();
     setDelivery.style.display = 'flex';
     setPackaging.style.display = 'none';
 
@@ -102,7 +130,8 @@ delivery.addEventListener("click",()=>{
 packaging.addEventListener("click",()=>{
     deliveryed = false;
     packaginged = true;
-    openLogin ();
+    openLogin();
+    scrollLock();
     setDelivery.style.display = 'none';
     setPackaging.style.display = 'flex';
     
@@ -111,13 +140,13 @@ packaging.addEventListener("click",()=>{
 
 memberIn.addEventListener("click",()=>{
     setLogin ();
-
+    scrollUnlock();
     console.log('회원로그인');
 })
 
 noMemberIn.addEventListener("click",()=>{
     setLogin ();
-
+    scrollUnlock();
     console.log('비회원로그인');
 })
 
@@ -125,7 +154,7 @@ for (let i = 0; i < socialIn.length; i++) {
     
     socialIn[i].addEventListener("click",()=>{
         setLogin ();
-    
+        scrollUnlock();
         console.log('소셜로그인');
     })
     
@@ -133,6 +162,7 @@ for (let i = 0; i < socialIn.length; i++) {
 
 storeSet.addEventListener("click",()=>{
     store.style.display = 'none';
+    scrollUnlock();
 })
 
 // store.addEventListener("click",()=>{
@@ -142,6 +172,7 @@ storeSet.addEventListener("click",()=>{
 
 addressSet.addEventListener("click",()=>{
     address.style.display = 'none';
+    scrollUnlock();
 })
 
 // if (address.style.display = 'flex') {
@@ -158,21 +189,24 @@ addressSet.addEventListener("click",()=>{
 
 xButton[0].addEventListener("click",()=>{
     login.style.display = 'none';
-    loginReset()
+    loginReset();
+    scrollUnlock();
     console.log('로그인취소');
 })
 
 xButton[1].addEventListener("click",()=>{
     store.style.display = 'none';
     address.style.display = 'none';
-    loginReset()
+    loginReset();
+    scrollUnlock();
     console.log('선택취소');
 })
 
 xButton[2].addEventListener("click",()=>{
     store.style.display = 'none';
     address.style.display = 'none';
-    loginReset()
+    loginReset();
+    scrollUnlock();
     console.log('선택취소');
 })
 

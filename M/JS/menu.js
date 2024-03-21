@@ -467,7 +467,8 @@ menuData.menu.forEach(item => {
         menuSelect.querySelector('.setCost').innerText = item.setCost
         menuSelect.querySelector('img').setAttribute('src',item.imgUrl) 
 
-        moveMobBtn()
+        moveMobBtn();
+        scrollLock();
     })
 
     Container.appendChild(listItem);
@@ -625,6 +626,7 @@ addButton[0].addEventListener("click",()=>{
     calcCost()
 
     removeMobBtn()
+    scrollUnlock();
 
     // <span class="total-order-select chg-drink">음표 변경</span>
     // <span class="total-order-select chg-side">사이드 변경</span>
@@ -787,6 +789,7 @@ function calcCost(){
 
 xButton2[0].addEventListener("click",()=>{
     removeMobBtn()
+    scrollUnlock();
     menuSelect.style.display = 'none';
 })
 
@@ -794,6 +797,7 @@ xButton2[1].addEventListener("click",()=>{
     optionReset()
     selectreset()
     removeMobBtn()
+    scrollUnlock();
     optionSelect.style.display = 'none';
 })
 
@@ -805,6 +809,7 @@ backButton[0].addEventListener("click",()=>{
 })
 
 let mobBtn = Array.from(document.querySelectorAll(".header-button"));
+let modal = Array.from(document.querySelectorAll(".modal"));
 
 mobBtn[0].addEventListener("click",()=>{
     if (mobBtn[0].classList.contains('active')) {
@@ -814,7 +819,11 @@ mobBtn[0].addEventListener("click",()=>{
         optionReset()
         selectreset()
         removeMobBtn()
+        scrollUnlock();
     } else {
-        menuSelect.style.display = 'flex'
+        // menuSelect.style.display = 'flex'
     }
+    login.style.display = 'none';
+    store.style.display = 'none';
+    address.style.display = 'none';
 })
