@@ -493,52 +493,52 @@ function scrollF() {
     console.log('작동')
 }
 
-function backetBtnMControl() {
-    let windowWidth = window.innerWidth;
-    // if (window.innerWidth < 1220) {
-    //     backetBtnM.style.display = 'flex';
-    //     console.log('mod')
-    // } {
-    //     backetBtnM.style.display = 'none';
-    //     console.log('pc')
-    // }
+// function backetBtnMControl() {
+//     let windowWidth = window.innerWidth;
+//     // if (window.innerWidth < 1220) {
+//     //     backetBtnM.style.display = 'flex';
+//     //     console.log('mod')
+//     // } {
+//     //     backetBtnM.style.display = 'none';
+//     //     console.log('pc')
+//     // }
 
-    backetBtnM.style.display = 'flex';
-}
+//     backetBtnM.style.display = 'flex';
+// }
 
-function backetBtnMOff() {
-    backetBtnM.style.display = 'none';
-}
+// function backetBtnMOff() {
+//     backetBtnM.style.display = 'none';
+// }
 
-backetBtnM.addEventListener("click",()=>{
-    optionSelect.style.display = 'none';
-    backetBtnMOff()
+// backetBtnM.addEventListener("click",()=>{
+//     optionSelect.style.display = 'none';
+//     backetBtnMOff()
 
-    selectreset();
-    optionReset();
+//     selectreset();
+//     optionReset();
 
-    // resetCartAndOrderlist();
-    // makeCartObject();
-    // makeOrderlistObject();
-    // calcCost()
+//     // resetCartAndOrderlist();
+//     // makeCartObject();
+//     // makeOrderlistObject();
+//     // calcCost()
 
-    // removeMobBtn()
-})
+//     // removeMobBtn()
+// })
 
-function setBacketBtnM() {
-    if (optionSelect.style.display == 'flex') {
-    backetBtnM.style.display = 'flex';
-    console.log ('들어감')
-    }
-    backetBtnM.style.display = 'none';
-}
+// function setBacketBtnM() {
+//     if (optionSelect.style.display == 'flex') {
+//     backetBtnM.style.display = 'flex';
+//     console.log ('들어감')
+//     }
+//     backetBtnM.style.display = 'none';
+// }
 
 singleButton.addEventListener("click",()=>{
     menuSelect.style.display = 'none';
     optionSelect.style.display = 'flex';
-    setBacketBtnM()
+    // setBacketBtnM()
     반응형슬라이드()
-    backetBtnMControl()
+    // backetBtnMControl()
     // const backetItem = document.createElement('li');
     // backet.appendChild(backetItem);
     // console.log(backet.childElementCount)
@@ -608,7 +608,7 @@ addButton[0].addEventListener("click",()=>{
     console.log(selectMenu);
     cart.push(selectMenu)
 
-    backetBtnMOff()
+    // backetBtnMOff()
 
     selectreset();
     optionReset();

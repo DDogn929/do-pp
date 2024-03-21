@@ -199,7 +199,7 @@ function removeMobBtn() {
     //모바일 회전 버튼
     mBackSpaceBtn[0].classList.remove('active')
     console.log('회전')
-    backetBtnMOff()
+    // backetBtnMOff()
 }
 
 let optionContainer = Array.from(document.querySelectorAll(".option-slide-container"));

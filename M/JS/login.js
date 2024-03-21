@@ -2,6 +2,7 @@ const headerLogin = document.querySelector('.header-login')
 const loginSet = headerLogin.querySelector('.in')
 const loginSetOut = headerLogin.querySelector('.out')
 
+const pcStart = document.querySelector('.pc-main-button')
 
 const order = document.querySelector('.Select-order-button-tl');
 const delivery = order.querySelector('.delivery');
@@ -73,6 +74,16 @@ headerLogin.addEventListener("click",()=>{
         loginSet.style.display = 'flex';
         loginSetOut.style.display = 'none';
         logined = false;
+    } else {
+        login.style.display = 'flex';
+    }
+})
+
+pcStart.addEventListener("click",()=>{
+    if(logined){
+        // loginSet.style.display = 'flex';
+        // loginSetOut.style.display = 'none';
+        // logined = false;
     } else {
         login.style.display = 'flex';
     }
