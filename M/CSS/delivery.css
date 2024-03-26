@@ -355,6 +355,7 @@ header {
     border-color: var(--main-color1);
     /* transition: all 0.2s ease-in-out; */
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .button-action {
@@ -854,7 +855,7 @@ header {
 
 }
 
-.subtract-slot {
+.total-order-inner-list > li > p:last-of-type {
     color: var(--main-color2);
 }
 
@@ -1732,7 +1733,7 @@ footer {
     }
 
     .main-slider > li {
-        padding: 20px;
+        padding: 16px;
     }
     
     .main-slider-button{
@@ -1943,7 +1944,7 @@ footer {
 
     .payment-section {
         height: 200vh;
-        padding: 0 32px;
+        padding: 0 16px;
     }
 
     .section-container {
