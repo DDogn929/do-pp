@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/reset.css">
+  <link rel="stylesheet" href="../CSS/port.css">
+  <title>Document</title>
+  <style>
+    #player {
+      background-image: url(../Img/Run_test-Sheetx4.png);
+      width: 132px;
+      height: 132px;
+      position: absolute;
+      bottom: 0;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="player">
+
+  </div>
+  <div>Test</div>
+
+  <section>
+
+  </section>
+
+  <script>
+    const plyaer = document.getElementById('player');
+    const moveCheck = {
+      left: false,
+      right: false
+    }
+    let view = 'right';
+    let move;
+    let posX = 0;
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' && !moveCheck['right']) {
+        clearInterval(move)
+        view = 'right'
+        moveCheck['right'] = true;
+        let runIndex = 0;
+        move = setInterval(() => {
+          console.log(runIndex)
+          plyaer.style.backgroundPosition = `${runIndex * -132}px`
+          runIndex++;
+
+          posX += 33;
+          plyaer.style.left = `${posX}px`
+
+          if (runIndex === 8) {
+            runIndex = 0;
+          }
+
+        }, 82);
+      }
+
+      if (e.key === 'ArrowLeft' && !moveCheck['left']) {
+        clearInterval(move)
+        view = 'left'
+        moveCheck['left'] = true;
+        let runIndex = 0;
+        move = setInterval(() => {
+          console.log(runIndex)
+          plyaer.style.backgroundPosition = `${runIndex * -132}px`
+          runIndex++;
+
+          posX -= 33;
+          plyaer.style.left = `${posX}px`
+
+          if (runIndex === 8) {
+            runIndex = 0;
+          }
+
+        }, 82);
+      }
+
+      if (view === 'right') {
+        plyaer.style.transform = `scaleX(1)`
+      } else {
+        plyaer.style.transform = `scaleX(-1)`
+
+      }
+    })
+
+    window.addEventListener('keyup', (e) => {
+      if (e.key === 'ArrowRight' && moveCheck['right']) {
+        clearInterval(move)
+        moveCheck['right'] = false;
+      }
+      if (e.key === 'ArrowLeft' && moveCheck['left']) {
+        clearInterval(move)
+        moveCheck['left'] = false;
+      }
+    })
+
+  </script>
+</body>
+
+</html>
