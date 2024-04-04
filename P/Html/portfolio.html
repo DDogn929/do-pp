@@ -8,76 +8,148 @@
   <link rel="stylesheet" href="../CSS/port.css">
   <title>Document</title>
   <style>
+    body {
+      background-color: #b8d3f2;
+    }
+
+    section:first-of-type {
+      background-image: url(../Img/Background_01_x4.png);
+      background-size: contain;
+      width: 100%;
+      height: 336px;
+      position: absolute;
+      bottom: 0;
+    }
+
     #player {
-      background-image: url(../Img/Run_test-Sheetx4.png);
+      background-image: url(../Img/Run_test_x4-Sheet.png);
       width: 132px;
       height: 132px;
       position: absolute;
-      bottom: 0;
-
+      bottom: 84px;
+      background-position: 0 264px;
     }
   </style>
 </head>
 
 <body>
-  <div id="player">
-
-  </div>
-  <div>Test</div>
-
   <section>
+    <div id="player">
+
+    </div>
 
   </section>
 
+  <div>Test</div>
+
   <script>
+    const cellSize = 132;
     const plyaer = document.getElementById('player');
     const moveCheck = {
       left: false,
-      right: false
+      right: false,
+      stand: false,
+      jump: false
     }
     let view = 'right';
     let move;
     let posX = 0;
 
+    function standing() {
+      clearInterval(move)
+      view = 'stand'
+      moveCheck['stand'] = true;
+      let runIndex = 0;
+      move = setInterval(() => {
+        console.log(runIndex)
+        plyaer.style.backgroundPosition = `${runIndex * -cellSize}px ${cellSize * 2}px`
+        runIndex++;
+
+        if (runIndex === 8) {
+          runIndex = 0;
+        }
+
+      }, 82);
+
+    }
+
+
+    function jumping() {
+      clearInterval(move)
+      view = 'jump'
+      moveCheck['jump'] = true;
+      let runIndex = 0;
+      move = setInterval(() => {
+        console.log(runIndex)
+        plyaer.style.backgroundPosition = `${runIndex * -cellSize}px ${cellSize * 1}px`
+        runIndex++;
+
+        if (runIndex === 8) {
+          runIndex = 0;
+        }
+
+      }, 82);
+    }
+
+    function rightRunning() {
+      clearInterval(move)
+      view = 'right'
+      moveCheck['right'] = true;
+      let runIndex = 0;
+      move = setInterval(() => {
+        console.log(runIndex)
+        plyaer.style.backgroundPosition = `${runIndex * -cellSize}px ${cellSize * 0}px`
+        runIndex++;
+
+        posX += 33;
+        plyaer.style.left = `${posX}px`
+
+        if (runIndex === 8) {
+          runIndex = 0;
+          moveCheck['jump'] = false;
+          standing();
+        }
+
+      }, 82);
+    }
+
+    function leftRunning() {
+      clearInterval(move)
+      view = 'left'
+      moveCheck['left'] = true;
+      let runIndex = 0;
+      move = setInterval(() => {
+        console.log(runIndex)
+        plyaer.style.backgroundPosition = `${runIndex * -cellSize}px ${cellSize * 0}px`
+        runIndex++;
+
+        posX -= 33;
+        plyaer.style.left = `${posX}px`
+
+        if (runIndex === 8) {
+          runIndex = 0;
+        }
+
+      }, 82);
+    }
+
+    window.addEventListener('load', (e) => {
+      standing()
+    })
+
     window.addEventListener('keydown', (e) => {
+      console.log(e.key);
       if (e.key === 'ArrowRight' && !moveCheck['right']) {
-        clearInterval(move)
-        view = 'right'
-        moveCheck['right'] = true;
-        let runIndex = 0;
-        move = setInterval(() => {
-          console.log(runIndex)
-          plyaer.style.backgroundPosition = `${runIndex * -132}px`
-          runIndex++;
-
-          posX += 33;
-          plyaer.style.left = `${posX}px`
-
-          if (runIndex === 8) {
-            runIndex = 0;
-          }
-
-        }, 82);
+        rightRunning();
       }
 
       if (e.key === 'ArrowLeft' && !moveCheck['left']) {
-        clearInterval(move)
-        view = 'left'
-        moveCheck['left'] = true;
-        let runIndex = 0;
-        move = setInterval(() => {
-          console.log(runIndex)
-          plyaer.style.backgroundPosition = `${runIndex * -132}px`
-          runIndex++;
+        leftRunning();
+      }
 
-          posX -= 33;
-          plyaer.style.left = `${posX}px`
-
-          if (runIndex === 8) {
-            runIndex = 0;
-          }
-
-        }, 82);
+      if (e.key === ' ' && !moveCheck['jump']) {
+        jumping();
+        // 점프동작은 keyup과는 상관없이 실행 이후 점프가 끝난 뒤 standing으로 돌아가야함
       }
 
       if (view === 'right') {
@@ -92,12 +164,22 @@
       if (e.key === 'ArrowRight' && moveCheck['right']) {
         clearInterval(move)
         moveCheck['right'] = false;
+        standing();
       }
       if (e.key === 'ArrowLeft' && moveCheck['left']) {
         clearInterval(move)
         moveCheck['left'] = false;
+        standing();
       }
+      // if (e.key === ' ' && moveCheck['jump']) {
+      //   clearInterval(move)
+      //   moveCheck['jump'] = false;
+      //   standing();
+
+      // }
     })
+
+
 
   </script>
 </body>
