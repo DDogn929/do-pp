@@ -101,11 +101,13 @@
         <button class="pc-main-button">
             <p>주문 시작</p>
         </button>
-        <div class="slider-l">
-            <img src="img/slider L.svg" alt="L버튼">
-        </div>
-        <div class="slider-r">
-            <img src="img/slider R.svg" alt="R버튼">
+        <div class="arrow">
+            <a class="slider-l">
+                <img src="img/slider L.svg" alt="L버튼">
+            </a>
+            <a class="slider-r">
+                <img src="img/slider R.svg" alt="R버튼" class="next">
+            </a>
         </div>
     </section>
 
@@ -284,11 +286,11 @@
                     </div>
                     <div>
                         <input type="text" name="tel" placeholder="아이디 입력" class="password-login-input">
-                        <input type="text" name="tel" placeholder="비밀번호 입력" class="password-login-input">
+                        <input type="password" name="tel" placeholder="비밀번호 입력" class="password-login-input">
                     </div>
                     <div class="login-button-tl">
                         <button class="login-button member-login-button">로그인</button>
-                        <button class="login-button yellow-button">회원가입</button>
+                        <button class="login-button join-member">회원가입</button>
                     </div>
                 </div>
                 <div class="social-login">
@@ -305,6 +307,27 @@
             </div>
             <div class="non-members-login">
                 <button class="non-members-login-button">비회원 주문</button>
+            </div>
+            <button class="x-button-1">
+                <img src="img/octicon_x-circle-16.svg" alt="X-버튼" class="x-button-img">
+            </button>
+        </section>
+    </div>
+
+    <div class="modal join-menbership">
+        <section class="login-section">
+            <div class="password-login">
+                <div>
+                    <span>회원 가입</span>
+                    <img src="img/ph_user-bold.png" alt="자물쇠">
+                </div>
+                <div>
+                    <input type="text" name="tel" placeholder="아이디 입력" class="password-login-input">
+                    <input type="text" name="tel" placeholder="비밀번호 입력" class="password-login-input">
+                </div>
+                <div class="login-button-tl">
+                    <button class="login-button">회원가입</button>
+                </div>
             </div>
             <button class="x-button-1">
                 <img src="img/octicon_x-circle-16.svg" alt="X-버튼" class="x-button-img">

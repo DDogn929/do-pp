@@ -13,6 +13,9 @@ const memberIn = login.querySelector('.member-login-button');
 const noMemberIn = login.querySelector('.non-members-login-button');
 const socialIn = login.querySelectorAll('.social-login-button');
 
+const joinMenberBtn = document.querySelector('.join-member')
+const joinMenbership = document.querySelector('.join-menbership')
+
 let xButton = Array.from(document.querySelectorAll(".x-button-img"));
 
 const store = document.querySelector('.store-search-m');
@@ -105,6 +108,11 @@ headerLogin.addEventListener("click",()=>{
     
 })
 
+joinMenberBtn.addEventListener("click",()=>{
+    login.style.display = 'none';
+    joinMenbership.style.display = 'flex';
+})
+
 pcStart.addEventListener("click",()=>{
     if(logined){
         // loginSet.style.display = 'flex';
@@ -195,6 +203,13 @@ xButton[0].addEventListener("click",()=>{
 })
 
 xButton[1].addEventListener("click",()=>{
+    joinMenbership.style.display = 'none';
+    loginReset();
+    scrollUnlock();
+    console.log('로그인취소');
+})
+
+xButton[2].addEventListener("click",()=>{
     store.style.display = 'none';
     address.style.display = 'none';
     loginReset();
@@ -202,7 +217,7 @@ xButton[1].addEventListener("click",()=>{
     console.log('선택취소');
 })
 
-xButton[2].addEventListener("click",()=>{
+xButton[3].addEventListener("click",()=>{
     store.style.display = 'none';
     address.style.display = 'none';
     loginReset();

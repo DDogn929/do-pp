@@ -1,0 +1,82 @@
+:root {
+    --main-color1:#FFC72C;
+    --main-color2:#DA291C;
+    --main-color3:#27251F;
+
+    --header-color:#292929;
+    --header-font-color:#FFF;
+
+    --font-color-1:#292929;
+    --font-color-2:#808080;
+
+    --footer-background-color:#292929;
+
+    --footer-font-color-1:#FFFF00;
+    --footer-font-color-2:#FFFFFF;
+    --footer-font-color-3:#808080;
+} 
+
+header {
+    
+}
+
+.header-menu{
+    display: flex;
+    justify-content: center;
+    padding: 0 32px;
+
+    height: 120px;
+
+    background-color: var(--header-color);
+}
+
+.header-menu > img {
+}
+
+.header-menu > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+    padding-bottom: 16px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--header-font-color);
+}
+
+.header-menu > ul > li {
+    width: 64px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-menu > ul > li > img {
+    width: 36px;
+}
+
+/* .cart-count {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    right: -8px;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--main-color2);
+} */
+
+.header-slider {
+}
+
+.header-slider > li > img {
+    width: 100vw;
+    height: 540px;
+    object-fit: cover;
+}

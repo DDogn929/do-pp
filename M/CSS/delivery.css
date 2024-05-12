@@ -1022,7 +1022,7 @@ footer {
     box-sizing: border-box;
 }
 
-.yellow-button {
+.join-member {
     background-color: var(--main-color1);
 }
 
@@ -1921,11 +1921,11 @@ footer {
     }
 
     .menu-list-h > h2 {
-        width: 200px;
+       min-width: 200px;
     }
 
     .menu-list-h > h3 {
-        width: 200px;
+       min-width: 200px;
     }
 
 

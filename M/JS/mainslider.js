@@ -2,39 +2,94 @@ const main = document.querySelector('.main-section')
 const sliderButton =document.querySelectorAll('.main-slider > li');
 const button = document.querySelectorAll('.main-slider-button');
 
-const sliderTl = main.querySelector('.main-title-img');
 const leftButton = main.querySelector('.slider-l');
 const rightButton = main.querySelector('.slider-r');
+const moveButton = main.querySelector('.arrow');
 
-const slider = sliderTl.querySelector('.main-title-img > ul')
-const mainContent = sliderTl.querySelectorAll('.main-content');
+const kindWrap = main.querySelector('.main-title-img');
+const slider = kindWrap.querySelector('.main-title-img > ul')
+const slideLis = kindWrap.querySelectorAll('.main-content');
 
 // // 무한 슬라이드를 위해 start, end 슬라이드 복사하기
-// const startSlide = mainContent[0];
-// const endSlide = mainContent[slideItems.length - 1];
-// // 엘리먼트 생성
-// const startElem = document.createElement(startSlide.tagName);
-// const endElem = document.createElement(endSlide.tagName);
-// // 엘리먼트에 클래스 적용, 내용 복사 동일하게 하기
-// endSlide.classList.forEach((c) => endElem.classList.add(c));
-// endElem.innerHTML = endSlide.innerHTML;
-// startSlide.classList.forEach((c) => startElem.classList.add(c));
-// startElem.innerHTML = startSlide.innerHTML;
-// // 각 복제한 엘리먼트를 각 위치에 추가하기
-// mainContent[0].before(endElem);
-// mainContent[mainContent.length - 1].after(startElem);
-// // 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택하기
-// mainContent = document.querySelectorAll(".main-content");
-// let offset = slideWidth * currSlide;
-// mainContent.forEach((i) => {
-//   i.setAttribute("style", `left: ${-offset}px`);
-// });
+// const clone1 = slideLis[0].cloneNode(true);
+// const cloneLast = slideLis[slideLis.length - 1].cloneNode(true);
+// slider.insertBefore(cloneLast,slideLis[0]);
+// slider.appendChild(clone1);
 
-let nowScreen = 0;
+// /* 주요 변수 초기화 */
+// let currentIdx = 0;
+// let translate = 0;
+// const speedTime = 500;
+
+// /* CSSOM 셋업 */
+// const sliderCloneLis = slider.querySelectorAll('li');
+// const liWidth = slideLis[0].clientWidth;
+// const sliderWidth = liWidth * sliderCloneLis.length;
+// slider.style.width = `${sliderWidth}px`;
+// currentIdx = 1;
+// translate = -liWidth;
+// slider.style.transform = `translateX(${translate}px)`
+
+// /* 리스너 설치하기 */
+// moveButton.addEventListener('click', moveSlide);
+
+// /* 슬라이드 실행 */
+// function move(D) {
+//     currentIdx += (-1 * D);
+//     translate += liWidth * D;
+//     slider.style.transform = `translateX(${translate}px)`;
+//     // slider.style.transform = `translateX(calc((-100vw)*${currentIdx}))`;
+//     slider.style.transition = `all ${speedTime}ms ease`
+//     for(let i = 0 ; i < sliderButton.length ; i ++) {
+//         button[i].classList.remove('main-slider-button-select');
+//     }
+//     button[currentIdx - 1].classList.add('main-slider-button-select');
+// }
+
+// /* 클릭 버튼 */
+// function moveSlide(event) {
+//     event.preventDefault();
+//     if (event.target.className === 'slider-r' || event.target.className === 'next') {
+//         move(-1);
+//         if (currentIdx === sliderCloneLis.length -1) {
+//             setTimeout(() => {
+//                 slider.style.transition = 'none';
+//                 currentIdx = 1;
+//                 translate = -liWidth;
+//                 slider.style.transform = `translateX(${translate}px)`;
+//             }, speedTime);
+//         }
+//     } else {
+//         move(1);
+//         if (currentIdx === 0) {
+//             setTimeout(() => {
+//             slider.style.transition = 'none';
+//             currentIdx = sliderCloneLis.length -2;
+//             translate = -(liWidth * currentIdx);
+//             slider.style.transform = `translateX(${translate}px)`;
+//             }, speedTime);
+//         }
+//     }
+// }
+
+// for (let i = 0; i < sliderButton.length; i++) {
+//     const button = sliderButton[i];
+
+//     button.addEventListener("click",()=>{
+        
+//         // currentIdx = i;
+
+//         move(i * -1);
+//         console.log(currentIdx)
+//     })
+
+// }
+
+let currentIdx = 0;
 
 let intervalId;
 
-console.log(mainContent);
+console.log(slideLis);
 
 intervalId = setInterval(slideTransition, 5000);
 
@@ -48,31 +103,31 @@ function nextButtonClicked() {
 function apply() {
     nextButtonClicked();
     slider.style.transition = `0.5s`
-    slider.style.transform = `translateX(calc((-100vw)*${nowScreen}))`;
+    slider.style.transform = `translateX(calc((-100vw)*${currentIdx}))`;
     for(let i = 0 ; i < sliderButton.length ; i ++) {
         button[i].classList.remove('main-slider-button-select');
     }
-    button[nowScreen].classList.add('main-slider-button-select');
+    button[currentIdx].classList.add('main-slider-button-select');
 }
 
 leftButton.addEventListener("click",()=>{
     nextButtonClicked()
-    if(nowScreen > 0) {
-        nowScreen--
+    if(currentIdx > 0) {
+        currentIdx--
         apply()
     } else {
-        nowScreen = sliderButton.length -1;
+        currentIdx = sliderButton.length -1;
         apply()
     }
 })
 
 rightButton.addEventListener("click",()=>{
     nextButtonClicked()
-    if(nowScreen < slider.childElementCount -1) {
-        nowScreen++
+    if(currentIdx < slider.childElementCount -1) {
+        currentIdx++
         apply();
     } else {
-        nowScreen = 0;
+        currentIdx = 0;
         apply()
     }
 })
@@ -82,7 +137,7 @@ for (let i = 0; i < sliderButton.length; i++) {
 
     button.addEventListener("click",()=>{
         
-        nowScreen = i;
+        currentIdx = i;
 
         apply();
         
@@ -91,11 +146,11 @@ for (let i = 0; i < sliderButton.length; i++) {
 }
 
 function slideTransition() {
-    if(nowScreen < slider.childElementCount -1) {
-        nowScreen++
+    if(currentIdx < slider.childElementCount -1) {
+        currentIdx++
         apply();
     } else {
-        nowScreen = 0;
+        currentIdx = 0;
         apply()
     }
     console.log("5초마다 작동");
